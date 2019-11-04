@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_groupBox1" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Đơn vị"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="height" value="130px"/>
+</properties>
+<children>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_radFact1" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Xưởng"/>
+<property name="foreground" value="#008080"/>
+<property name="buttonGroup" value="donvi"/>
+<property name="actionCommand" value="xuong"/>
+<property name="selected" value="true"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="donviChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_sfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="sfFactoriesChanged"/>
+</event-set>
+</events>
+<properties>
+<property name="disabledBackground" value="#808080"/>
+</properties>
+</component>
+<component id="Component_groupFVL" type="dsc.echo2app.component.DscGroupCheckBox" visibility="private">
+<children>
+<component id="Component_chkFv1" type="nextapp.echo2.app.CheckBox">
+<properties>
+<property name="text" value="FV1"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_chkFv2" type="nextapp.echo2.app.CheckBox">
+<properties>
+<property name="text" value="FV2"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_chkFv3" type="nextapp.echo2.app.CheckBox">
+<properties>
+<property name="text" value="FV3"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_chkFv4" type="nextapp.echo2.app.CheckBox">
+<properties>
+<property name="text" value="FV4"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_chkFv5" type="nextapp.echo2.app.CheckBox">
+<properties>
+<property name="text" value="FV5"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_chkOther" type="nextapp.echo2.app.CheckBox">
+<properties>
+<property name="text" value="Khác"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+<property name="insets" value="15px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="size" value="3"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_radFact2" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Nhóm đơn vị"/>
+<property name="foreground" value="#008080"/>
+<property name="buttonGroup" value="donvi"/>
+<property name="actionCommand" value="nhomdv"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="donviChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radFG1" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+<property name="insets" value="15px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="FVL - KDAO - TB019"/>
+<property name="buttonGroup" value="nhomdv"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+<property name="selected" value="true"/>
+</properties>
+</component>
+<component id="Component_radFG2" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+<property name="insets" value="15px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="FVS - TB020"/>
+<property name="buttonGroup" value="nhomdv"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="2px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_groupBox2" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Bảng lương"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="height" value="130px"/>
+</properties>
+<children>
+<component id="Component_grid3" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_rowMonthYear" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_radMonthYear" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Tháng"/>
+<property name="buttonGroup" value="bangluong"/>
+<property name="actionCommand" value="thangnam"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="foreground" value="#008080"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="bangluongChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_sfMonth" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Năm"/>
+</properties>
+</component>
+<component id="Component_sfYear" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="60px"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_radQuitDate" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Đợt TV"/>
+<property name="buttonGroup" value="bangluong"/>
+<property name="selected" value="true"/>
+<property name="actionCommand" value="dottv"/>
+<property name="foreground" value="#008080"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="bangluongChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_dfDotTV" type="dsc.echo2app.component.DscDateField" visibility="private"/>
+<component id="Component_rowDotTV" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_radDot1" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="buttonGroup" value="dottv"/>
+<property name="text" value="Đợt 1"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radDot2" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="buttonGroup" value="dottv"/>
+<property name="text" value="Đợt 2"/>
+<property name="selected" value="true"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radDot3" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="buttonGroup" value="dottv"/>
+<property name="text" value="Cả 2"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="---------------------------"/>
+</properties>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+<component id="Component_chkTV" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Thôi việc"/>
+<property name="selected" value="true"/>
+<property name="foreground" value="#004000"/>
+</properties>
+</component>
+<component id="Component_chkBV" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Bỏ việc"/>
+<property name="foreground" value="#004000"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="size" value="2"/>
+<property name="insets" value="2px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_groupBox3" type="echopointng.GroupBox">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="title" value="Loại báo cáo"/>
+</properties>
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_radTonghop" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="actionCommand" value="bctonghop"/>
+<property name="text" value="Báo cáo tổng hợp"/>
+<property name="buttonGroup" value="loaibc"/>
+<property name="foreground" value="#008080"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="baocaoChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_groupTongHop" type="dsc.echo2app.component.DscGroupRadioButton" visibility="private">
+<children>
+<component id="Component_radBangTong" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Bảng tổng"/>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="selected" value="true"/>
+</properties>
+</component>
+<component id="Component_radBHXH" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="DS CNV mua BHXH"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radBHYT" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="DS CNV mua BHYT"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radBHTN" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="DS CNV mua BHTN"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radBuBH" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="DS CNV được bù BH"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="15px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_radExcel" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Xuất dữ liệu ra excel"/>
+<property name="buttonGroup" value="loaibc"/>
+<property name="actionCommand" value="bcexcel"/>
+<property name="selected" value="true"/>
+<property name="foreground" value="#008080"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="baocaoChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_groupExcel" type="dsc.echo2app.component.DscGroupRadioButton" visibility="private">
+<children>
+<component id="Component_radTongLuongTV" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Tổng lương thôi việc"/>
+<property name="selected" value="true"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radTongTroCap" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Tổng trợ cấp"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radBangThanhToan" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Bảng thanh toán"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radBangKyNhan" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Bảng ký nhận"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="15px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="size" value="1"/>
+<property name="insets" value="2px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="insets" value="3px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

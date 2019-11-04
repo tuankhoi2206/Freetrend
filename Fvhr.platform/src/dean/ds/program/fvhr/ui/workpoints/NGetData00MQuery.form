@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value=""/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_YEARS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value=""/>
+            </properties>
+          </component>
+          <component id="Component_YEARS_SelectField1"
+            type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="YEARS_SelectField1"/>
+            </properties>
+          </component>
+          <component id="Component_MONTHS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value=""/>
+            </properties>
+          </component>
+          <component id="Component_MONTHS_SelectField2"
+            type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="MONTHS_SelectField2"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="2"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

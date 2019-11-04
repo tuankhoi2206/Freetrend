@@ -1,0 +1,2096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Tokhai" pageWidth="595" pageHeight="842" columnWidth="590" leftMargin="5" rightMargin="0" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.9965000000000035"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="148"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1"/>
+	<subDataset name="dataset1"/>
+	<subDataset name="Table Dataset 2"/>
+	<subDataset name="Table Dataset 3"/>
+	<parameter name="NAME_FACT" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NAME_GROUP" class="java.lang.String">
+		<property name="IN" value="IN"/>
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NAME_DEPT_NAME" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="M_DATE" class="java.util.Date" isForPrompting="false">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="MIN_DATE" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="S_DATE" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="FName_CBT" class="java.lang.String"/>
+	<parameter name="LName_CBT" class="java.lang.String"/>
+	<parameter name="FName_CBS" class="java.lang.String"/>
+	<parameter name="LName_CBS" class="java.lang.String"/>
+	<parameter name="Month" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * from (SELECT  E.EMPSN,( E.FNAME ||''||E.LNAME) FULLNAME,(D.NAME_FACT||''||D.NAME_GROUP) NAMEFACT ,E.BIRTHDAY,E.SEX,E.POSITION,E.BIRTHPLACE, E.ETHNIC, E.PERMANENT_ADDRESS,Bsaly_By_Date(E.EMPSN,to_date('30/04/2013','dd/MM/yyyy')) SALARY,
+(select  s.name_hospital from  n_health h, n_hospital  s where E.empsn=h.empsn and  h.id_hos=s.id_hos and h.id_pro=s.id_province)name_hospital
+, (SELECT (GIATRI3+GIATRI4)*100 from N_THAMSO  WHERE TENTHAMSO='TYLEBHXH') BHXH,  (SELECT (GIATRI3+GIATRI4)*100 from N_THAMSO  WHERE TENTHAMSO='TYLEBHTN' )BHTN, B.ID_LABOUR,B.DATE_S,D.NAME_FACT,D.NAME_GROUP,D.NAME_DEPT_NAME, E.DATE_HIRED, E.ID_NO, E.NGAYCAP_ID, E.ID_PLACE,  E.DATE_LAMLAI,(SELECT ID_SOCIAL from N_SOCIAL S WHERE E.EMPSN=S.EMPSN AND S.CLOCK=1) ID_SOCIAL from N_EMPLOYEE E, N_LABOUR B,N_DEPARTMENT D WHERE E.DEPSN=D.ID_DEPT  AND E.EMPSN=B.EMPSN  AND B.CLOCK='1' AND ( ((B.DATE_S= to_date('01/04/2013','dd/MM/yyyy') or B.DATE_S=to_date('15/03/2013','dd/MM/yyyy'))  AND B.TIMES=1) OR (E.NGAYNX_MOI=to_date('01/04/2013','dd/MM/yyyy') AND EXISTS ( SELECT C.* from N_NEWWORKER_TEST C WHERE C.EMPSN=E.EMPSN AND C.DD_KHU=1))) AND E.DEPSN<>'00000'   AND E.EMPSN NOT IN  (SELECT Q.EMPSN from N_EMP_QUIT Q WHERE Q.from_DATE IS NULL AND Q.TO_DATE   IS NULL AND (Q.NOTE_GIAM_BHYT<>'GIAM TANG MOI' OR Q.NOTE_GIAM_BHYT IS NULL) AND Q.REAL_OFF_DATE<=to_date('30/04/2013','dd/MM/yyyy')) AND E.EMPSN NOT IN (SELECT T.EMPSN from N_SOCIAL T WHERE T.EMPSN=E.EMPSN AND T.CLOCK='1'  AND T.SOCIAL_OLD='Y')  AND E.EMPSN NOT IN(SELECT N.EMPSN  from N_NOT_INSURANCE N  WHERE N.EMPSN=E.EMPSN  AND N.DATES<=to_date('01/04/2013','dd/MM/yyyy')) AND D.NAME_FACT='TB')]]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="FULLNAME" class="java.lang.String"/>
+	<field name="NAMEFACT" class="java.lang.String"/>
+	<field name="BIRTHDAY" class="java.lang.String"/>
+	<field name="SEX" class="java.lang.String"/>
+	<field name="POSITION" class="java.lang.String"/>
+	<field name="BIRTHPLACE" class="java.lang.String"/>
+	<field name="ETHNIC" class="java.lang.String"/>
+	<field name="PERMANENT_ADDRESS" class="java.lang.String"/>
+	<field name="SALARY" class="java.math.BigDecimal"/>
+	<field name="NAME_HOSPITAL" class="java.lang.String"/>
+	<field name="BHXH" class="java.math.BigDecimal"/>
+	<field name="BHTN" class="java.math.BigDecimal"/>
+	<field name="ID_LABOUR" class="java.lang.String"/>
+	<field name="DATE_S" class="java.sql.Timestamp"/>
+	<field name="NAME_FACT" class="java.lang.String"/>
+	<field name="NAME_GROUP" class="java.lang.String"/>
+	<field name="NAME_DEPT_NAME" class="java.lang.String"/>
+	<field name="DATE_HIRED" class="java.sql.Timestamp"/>
+	<field name="ID_NO" class="java.lang.String"/>
+	<field name="NGAYCAP_ID" class="java.sql.Timestamp"/>
+	<field name="ID_PLACE" class="java.lang.String"/>
+	<field name="DATE_LAMLAI" class="java.sql.Timestamp"/>
+	<field name="ID_SOCIAL" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="169" width="317" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[I. THÔNG TIN NGƯỜI THAM GIA BẢO HIỂM:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="191" width="160" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[01].Họ và tên ( viết chữ in hoa):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="182" y="191" width="163" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{FULLNAME})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="205" width="132" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[03].Ngày tháng năm sinh:]]></text>
+			</staticText>
+			<line>
+				<reportElement mode="Transparent" x="185" y="203" width="140" height="1" forecolor="#666666"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="279" y="25" width="273" height="20"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="49" width="176" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Độc lập - Tự do - Hạnh phúc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="25" width="204" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[BẢO HIỂM XÃ HỘI VIỆT NAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="81" width="157" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TỜ KHAI THAM GIA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="101" width="244" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BẢO HIỂM XÃ HỘI, BẢO HIỂM Y TẾ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="123" width="42" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mã số:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="254" y="121" width="120" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ID_SOCIAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="101" width="122" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{NAME_DEPT_NAME})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="118" width="66" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EMPSN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="357" y="192" width="79" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[02]. Giới tính:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="158" y="217" width="82" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="158" y="205" width="90" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{BIRTHDAY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="262" y="206" width="70" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[04]. Dân tộc: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="338" y="206" width="66" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{ETHNIC})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="407" y="207" width="129" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[05].Quốc tịch: Việt Nam]]></text>
+			</staticText>
+			<line>
+				<reportElement x="335" y="218" width="36" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="220" width="132" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[06].Hộ Khẩu Thường Trú: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="161" y="221" width="343" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{PERMANENT_ADDRESS})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="161" y="233" width="266" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="235" width="100" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[07].Địa chỉ liên hệ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="236" width="208" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Công ty TNHH FREETREND]]></text>
+			</staticText>
+			<line>
+				<reportElement x="188" y="248" width="367" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="250" width="224" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[08].Số điện thoại liên hệ ( nếu có): cố định: ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="249" y="259" width="125" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="447" y="259" width="108" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="377" y="249" width="51" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[, di động]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="264" width="72" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[09].CMT số:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="265" width="100" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Ngày cấp:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="264" width="100" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ID_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="265" width="100" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{ID_PLACE})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="92" y="277" width="53" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="248" y="277" width="88" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="257" y="264" width="100" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{NGAYCAP_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="374" y="266" width="42" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nơi cấp:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="431" y="278" width="89" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="5" y="289" width="414" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[II. THAM GIA BẢO HIỂM XÃ HỘI BẮT BUỘC, BẢO HIỂM Y TẾ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="313" width="313" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[10].Quyết định tuyển dụng, hợp đồng lao động ( hoặc HDLD ): số]]></text>
+			</staticText>
+			<line>
+				<reportElement x="335" y="323" width="220" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="342" width="171" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[11]. Tên cơ quan, đơn vị, địa chỉ :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="327" width="344" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[ngày__/__/____ có hiệu lực từ ngày:     __/__/_____  loại hợp đồng:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="364" y="337" width="193" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="210" y="354" width="345" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="230" y="341" width="244" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cty TNHH FREETREND INDUSTRIAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="356" width="177" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[KCX Linh Trung I - Thủ Đức]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="357" width="100" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[12]. Nơi làm việc: ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="277" y="444" width="278" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="274" y="430" width="281" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="250" y="374" width="100" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Công nhân viên]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="388" width="100" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[14]. Lương chính: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="418" width="313" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[16]. Mã số bảo hiểm xã hội đã được cấp  ( nếu có ):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="374" width="209" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[13]. Chức vụ, chức danh nghề, công việc: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="402" width="508" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[15]. Phụ cấp:  [15.1]. PCCV             ,  [15.2]. TNN             , [15.3]. TNVK            , [15.4] Khác]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="449" width="401" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[18]. Nơi đăng ký khám chữa bệnh ban đầu ( theo hướng dẫn của cơ quan BHXH):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="434" width="255" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[17]. Mã số thẻ bảo hiểm y tế đã được cấp ( nếu có ): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="465" width="240" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[[19]. Quyền lợi hưởng bảo hiểm y tế ( nếu có ):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="464" width="100" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<line>
+				<reportElement x="266" y="476" width="289" height="2"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="224" y="387" width="269" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="161" y="413" width="25" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="493" y="413" width="61" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="382" y="413" width="25" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="268" y="412" width="28" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="41" y="523" width="198" height="45"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tôi xin cam đoan những nội dung kê khai trên là đúng sự thật và xin chịu hoàn toàn trách nhiệm trước pháp luật]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="566" width="203" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[............., ngày..........tháng .........năm............]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="582" width="100" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Người khai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="596" width="100" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(ký,ghi rõ họ tên)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="588" width="100" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thủ trưởng đơn vị]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="527" width="197" height="55"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[sau khi kiểm tra, đối chiếu xác nhận các nội dung kê khai trên là đúng và xin chịu hoàn toàn trách nhiệm trước pháp luật]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="509" width="202" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Xác nhận của người sử dụng lao động]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="604" width="154" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(ký, ghi rõ họ tên và đóng dấu)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="573" width="203" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[............., ngày..........tháng .........năm............]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="690" width="189" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Duyệt của cơ quan bảo hiểm xã hội]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="705" width="74" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[cán bộ thu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="705" width="81" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[cán bộ sổ, thẻ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="691" width="106" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CHIU FU YUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="703" width="203" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[............., ngày..........tháng .........năm............]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="715" width="114" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TL Giám đốc BHXH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="720" width="99" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(ký,ghi rõ họ tên)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="720" width="99" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(ký,ghi rõ họ tên)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="727" width="160" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(ký, ghi rõ họ tên và đóng dấu)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="136" y="388" width="100" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SALARY}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="139" y="400" width="60" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<textField pattern="">
+				<reportElement x="276" y="417" width="100" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ID_SOCIAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="737" width="118" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($P{FName_CBT})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="757" width="94" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($P{LName_CBT})]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="44" y="73" width="58" height="74"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="49" y="101" width="45" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[Ảnh 3x4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="192" width="26" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="193" width="22" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nữ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="176" y="737" width="107" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($P{FName_CBS})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="757" width="107" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($P{LName_CBS})]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="485" y="193" width="15" height="15"/>
+			</rectangle>
+			<textField>
+				<reportElement x="487" y="194" width="13" height="12"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{SEX}.equals("NAM") ? "V" : "")]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="523" y="193" width="15" height="15"/>
+			</rectangle>
+			<textField>
+				<reportElement x="524" y="194" width="13" height="12"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{SEX}.equals("NU") ? "V" : "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="86" width="116" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{NAMEFACT})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="118" y="369" width="437" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="477" y="4" width="80" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mẫu số: A01-TS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="413" y="451" width="177" height="14"/>
+				<textElement>
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{NAME_HOSPITAL})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="416" y="462" width="139" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.75" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+		<band height="802">
+			<staticText>
+				<reportElement x="125" y="20" width="336" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PHỤ LỤC : THỜI GIAN LÀM VIỆC CÓ ĐÓNG BHXH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="36" width="201" height="18"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CHƯA HƯỞNG MỘT LẦN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="14" y="86" width="70" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="95" width="69" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Từ tháng năm]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="84" y="86" width="85" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="88" y="96" width="86" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Đến tháng năm]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="169" y="86" width="209" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="86" width="100" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="378" y="96" width="89" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Căn cứ đóng]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="447" y="86" width="108" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="456" y="87" width="71" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tỷ lệ đóng(%)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="447" y="106" width="50" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="453" y="107" width="34" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BHXH]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="496" y="106" width="59" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="504" y="108" width="34" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BHTN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="14" y="126" width="70" height="25"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="126" width="85" height="25"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="126" width="209" height="25"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="126" width="100" height="25"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="126" width="50" height="25"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="40" y="131" width="14" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="VNI-Times" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="130" width="14" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="VNI-Times" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="131" width="14" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="VNI-Times" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="131" width="14" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="VNI-Times" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="131" width="14" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="VNI-Times" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="496" y="126" width="59" height="25"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="519" y="130" width="14" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="VNI-Times" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="14" y="151" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="197" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="174" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="220" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="266" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="243" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="312" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="289" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="381" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="358" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="335" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="404" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="450" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="427" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="473" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="519" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="496" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="565" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="542" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="588" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="610" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="633" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="656" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="679" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="702" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="14" y="725" width="70" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="151" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="174" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="197" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="266" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="220" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="243" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="335" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="312" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="289" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="381" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="358" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="404" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="427" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="450" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="473" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="496" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="519" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="542" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="565" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="588" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="610" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="633" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="656" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="679" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="702" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="84" y="725" width="85" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="151" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="174" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="197" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="243" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="220" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="289" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="266" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="312" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="358" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="335" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="381" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="427" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="450" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="473" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="496" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="519" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="542" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="565" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="633" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="610" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="587" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="679" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="656" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="725" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="702" width="209" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="151" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="243" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="197" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="220" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="174" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="266" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="289" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="335" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="312" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="381" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="358" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="427" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="404" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="473" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="450" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="519" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="496" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="565" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="542" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="587" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="610" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="633" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="656" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="679" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="702" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="176" y="159" width="203" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CNV CÔNG TY TNHH FREETREND INDUSTRIAL]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="447" y="151" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="174" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="197" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="266" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="220" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="243" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="335" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="289" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="312" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="404" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="358" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="381" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="473" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="427" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="450" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="542" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="496" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="519" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="610" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="565" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="587" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="679" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="633" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="656" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="702" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="725" width="49" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="378" y="725" width="69" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="151" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="174" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="197" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="220" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="243" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="266" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="289" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="312" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="335" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="358" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="381" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="404" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="427" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="450" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="473" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="496" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="519" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="542" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="565" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="587" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="610" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="679" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="702" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="633" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="656" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="496" y="725" width="59" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="239" y="95" width="58" height="15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diễn giải]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="159" width="52" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SALARY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="158" width="34" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BHXH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="19" y="158" width="52" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{Month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="506" y="158" width="39" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BHTN}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

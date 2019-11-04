@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<properties>
+<property name="styleName" value="Default.Window"/>
+<property name="modal" value="true"/>
+<property name="title" value="Xác nhận dữ liệu nhiều số thẻ, nhiều ngày"/>
+
+
+<property name="height" value="430px"/>
+<property name="width" value="720px"/>
+</properties>
+<children>
+
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane">
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label8" type="nextapp.echo2.app.Label">
+<properties>
+<property name="font">
+<font italic="true" size="9pt"/>
+</property>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="1. Nhập số thẻ và nhấn enter để thêm số thẻ vào danh sách"/>
+<property name="foreground" value="#808080"/>
+</properties>
+</component>
+<component id="Component_label11" type="nextapp.echo2.app.Label">
+<properties>
+<property name="font">
+<font italic="true" size="9pt"/>
+</property>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="2. Nhập vào 2 ô số thẻ và enter để thêm những số thẻ liên tiếp trong khoảng từ số thẻ 1 -&gt; số thẻ 2"/>
+<property name="foreground" value="#808080"/>
+</properties>
+</component>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_txtSothe" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="maximumLength" value="8"/>
+<property name="width" value="80px"/>
+</properties>
+
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="addEmpsn"/>
+</event-set>
+</events>
+</component>
+<component id="Component_chkDenSoThe" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="đến số thẻ"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="chkSoTheClicked"/>
+</event-set>
+</events>
+</component>
+
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_txtSothe2" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="maximumLength" value="8"/>
+<property name="width" value="80px"/>
+<property name="disabledBackground" value="#808080"/>
+<property name="enabled" value="false"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="loadInfo"/>
+</event-set>
+</events>
+</component>
+<component id="Component_btnClear" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Xóa danh sách"/>
+<property name="border">
+<border color="#800000" size="1px" style="solid"/>
+</property>
+<property name="background" value="#ffffff"/>
+<property name="toolTipText" value="Xóa danh sách số thẻ"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doClearList"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="1px"/>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Từ ngày"/>
+</properties>
+</component>
+<component id="Component_dfFromDate" type="dsc.echo2app.component.DscDateField" visibility="private"/>
+<component id="Component_chkDenNgay" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Đến ngày"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="chkDenNgayClicked"/>
+</event-set>
+</events>
+</component>
+<component id="Component_dfToDate" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label3" type="nextapp.echo2.app.Label"/>
+<component id="Component_chkCN" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Có đi làm ngày chủ nhật"/>
+</properties>
+</component>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Lý do"/>
+</properties>
+</component>
+<component id="Component_sfLyDo" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+
+<property name="width" value="250px"/>
+</properties>
+</component>
+<component id="Component_label9" type="nextapp.echo2.app.Label">
+<properties>
+
+<property name="text" value="Ca làm việc"/>
+</properties>
+</component>
+<component id="Component_sfCaLamViec" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+
+<property name="width" value="250px"/>
+<property name="disabledBackground" value="#808080"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="shiftHint"/>
+</event-set>
+</events>
+</component>
+
+<component id="Component_chkGioVao" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Giờ vào"/>
+<property name="selected" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="chkGioVaoSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_txtGioVao" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="60px"/>
+<property name="maximumLength" value="4"/>
+<property name="disabledBackground" value="#808080"/>
+</properties>
+</component>
+
+<component id="Component_chkGioRa" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Giờ ra"/>
+<property name="selected" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="chkGioRaSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_txtGioRa" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="60px"/>
+<property name="maximumLength" value="4"/>
+<property name="disabledBackground" value="#808080"/>
+</properties>
+</component>
+
+
+
+<component id="Component_label10" type="nextapp.echo2.app.Label"/>
+<component id="Component_btnSave" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Lưu"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="foreground" value="#ffffff"/>
+<property name="insets" value="3px"/>
+<property name="border">
+<border color="#800000" size="1px" style="solid"/>
+</property>
+<property name="rolloverEnabled" value="true"/>
+<property name="pressedEnabled" value="true"/>
+<property name="font">
+<font bold="true" size="11pt"/>
+</property>
+<property name="width" value="56px"/>
+<property name="pressedForeground" value="#804000"/>
+<property name="rolloverForeground" value="#ff8040"/>
+<property name="background" value="#004080"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSave"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label7" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Lưu ý: Sẽ lưu những số thẻ có trong danh sách"/>
+<property name="font">
+<font italic="true" size="9pt"/>
+</property>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="2px"/>
+</properties>
+</component>
+
+<component id="Component_lstEmpsn" type="nextapp.echo2.app.ListBox" visibility="private">
+<properties>
+
+<property name="height" value="99%"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="resizable" value="true"/>
+
+<property name="separatorPosition" value="420px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

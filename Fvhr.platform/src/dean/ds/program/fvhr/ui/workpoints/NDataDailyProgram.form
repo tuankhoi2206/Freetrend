@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_defaultProgram1" type="dsc.echo2app.program.DefaultProgram">
+<children>
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane">
+<children>
+<component id="Component_toolbar" type="nextapp.echo2.app.Row" visibility="private">
+<properties>
+<property name="styleName" value="Default.Toolbar"/>
+</properties>
+<children>
+<component id="Component_btnRefresh" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/btnRefresh.gif"/>
+</property>
+<property name="styleName" value="Default.ToolbarButton"/>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/btnRefreshD.gif"/>
+</property>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_splitPane2" type="nextapp.echo2.app.SplitPane">
+<children>
+<component id="Component_contentPane3" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_splitPane3" type="nextapp.echo2.app.SplitPane">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="separatorPosition" value="30px"/>
+</properties>
+<children>
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+
+
+
+
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Từ ngày"/>
+</properties>
+</component>
+<component id="Component_dscDateField1" type="dsc.echo2app.component.DscDateField"/>
+<component id="Component_label5" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đến ngày"/>
+</properties>
+</component>
+<component id="Component_dscDateField2" type="dsc.echo2app.component.DscDateField"/>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="insets" value="9px 3px 3px 3px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_radEmpsn" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Chọn theo số thẻ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="font">
+<font bold="true" size="10pt" underline="true"/>
+</property>
+<property name="actionCommand" value="cmd_emp"/>
+<property name="buttonGroup" value="group_emp"/>
+<property name="selected" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="empGroupSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_txtEmpsn" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="addToList"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radDept" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Chọn theo đơn vị"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="font">
+<font bold="true" size="10pt" underline="true"/>
+</property>
+<property name="actionCommand" value="cmd_dept"/>
+<property name="buttonGroup" value="group_emp"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="empGroupSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Xưởng"/>
+</properties>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_sfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="sfFactChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_groupFVL" type="dsc.echo2app.component.DscGroupCheckBox" visibility="private">
+<properties>
+<property name="size" value="3"/>
+<property name="enabled" value="false"/>
+</properties>
+<children>
+<component id="Component_chkFv1" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="FV1"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_chkFv2" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="FV2"/>
+</properties>
+</component>
+<component id="Component_chkFv3" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="FV3"/>
+</properties>
+</component>
+<component id="Component_chkFv4" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="FV5"/>
+</properties>
+</component>
+<component id="Component_chkFv5" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="FV6"/>
+</properties>
+</component>
+<component id="Component_chkOther" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="Khác"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</component>
+
+
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Lean"/>
+</properties>
+</component>
+<component id="Component_sfLean" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="140px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="sfLeanChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label6" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đơn vị"/>
+</properties>
+</component>
+<component id="Component_sfDept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="180px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+
+</component>
+<component id="Component_label8" type="nextapp.echo2.app.Label"/>
+<component id="Component_chkNV" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Nghỉ việc"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="chkNVChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label9" type="nextapp.echo2.app.Label"/>
+<component id="Component_chkVS" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Về sớm - con nhỏ"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="chkVSChanged"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="insets" value="2px"/>
+</properties>
+</component>
+<component id="Component_lstEmpsn" type="nextapp.echo2.app.ListBox" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+
+<property name="rowSpan" value="8"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="150px"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+
+
+<property name="height" value="190px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="size" value="2"/>
+
+<property name="insets" value="3px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+
+
+
+</children>
+<properties>
+<property name="cellSpacing" value="5px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+
+
+<property name="overflow" value="nextapp.echo2.app.layout.SplitPaneLayoutData.OVERFLOW_HIDDEN"/>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="8px 5px"/>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+
+
+
+
+<property name="resizable" value="true"/>
+<property name="separatorHorizontalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitHerzBar.png"/>
+</image>
+</fill-image>
+</property>
+<property name="separatorVerticalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitVertBar.png"/>
+</image>
+</fill-image>
+</property>
+<property name="separatorPosition" value="240px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="resizable" value="true"/>
+<property name="separatorPosition" value="35px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

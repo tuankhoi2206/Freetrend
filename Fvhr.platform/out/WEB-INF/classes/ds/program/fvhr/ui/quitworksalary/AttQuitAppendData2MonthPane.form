@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<properties>
+<property name="title" value="Cộng ngày công"/>
+</properties>
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_txtEmpsn" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Tháng 1"/>
+</properties>
+</component>
+<component id="Component_sfMonth1" type="nextapp.echo2.app.SelectField" visibility="private"/>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Tháng 2"/>
+</properties>
+</component>
+<component id="Component_sfMonth2" type="nextapp.echo2.app.SelectField" visibility="private"/>
+<component id="Component_label4" type="nextapp.echo2.app.Label"/>
+<component id="Component_btnCong" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Cộng"/>
+<property name="background" value="#c0c0c0"/>
+<property name="insets" value="3px"/>
+<property name="width" value="80px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="border">
+<border color="#004080" size="1px" style="solid"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doAdd"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

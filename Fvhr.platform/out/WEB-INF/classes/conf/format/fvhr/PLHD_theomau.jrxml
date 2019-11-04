@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[Select a.empsn,dt.name_dept_name,a.fname||' '||a.lname as fname  ,b.dates_sign ,b.new_sal as bsalary,b.id_contract,c.id_labour,c.date_s as datesign,b.new_job as newjob ,SUBSTR(A.BIRTHDAY,1,2) AS NGAY_SINH,SUBSTR(A.BIRTHDAY,4,2) AS THANG_SINH,SUBSTR(A.BIRTHDAY,7,4) AS NAM_SINH ,A.BIRTHPLACE,A.PERMANENT_ADDRESS,A.ID_NO,a.id_place ,SUBSTR(TO_CHAR(A.NGAYCAP_ID,'DD/MM/YYYY'),1,2) AS NGAY_CAP ,SUBSTR(TO_CHAR(A.NGAYCAP_ID,'DD/MM/YYYY'),4,2) AS THANG_CAP ,SUBSTR(TO_CHAR(A.NGAYCAP_ID,'DD/MM/YYYY'),7,4) AS NAM_CAP ,dt.name_group  From n_Employee a, N_SUB_LABOUR b, N_LABOUR c , n_User_Limit f ,n_department dt  where a.empsn in ('10111550') and a.depsn=dt.id_dept  and a.empsn=c.empsn and c.ID_LABOUR=b.ID_labour  and A.EMPSN=SUBSTR(B.ID_CONTRACT,1,8) and b.dates_sign= to_date('01/02/2013','dd/mm/yyyy') and a.User_Manage_Id=f.ma_ql AND f.ma_user='666' and b.idsub_kind='00002']]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="NAME_DEPT_NAME" class="java.lang.String"/>
+	<field name="FNAME" class="java.lang.String"/>
+	<field name="DATES_SIGN" class="java.sql.Timestamp"/>
+	<field name="BSALARY" class="java.math.BigDecimal"/>
+	<field name="ID_CONTRACT" class="java.lang.String"/>
+	<field name="ID_LABOUR" class="java.lang.String"/>
+	<field name="DATESIGN" class="java.sql.Timestamp"/>
+	<field name="NEWJOB" class="java.lang.String"/>
+	<field name="NGAY_SINH" class="java.lang.String"/>
+	<field name="THANG_SINH" class="java.lang.String"/>
+	<field name="NAM_SINH" class="java.lang.String"/>
+	<field name="BIRTHPLACE" class="java.lang.String"/>
+	<field name="PERMANENT_ADDRESS" class="java.lang.String"/>
+	<field name="ID_NO" class="java.lang.String"/>
+	<field name="ID_PLACE" class="java.lang.String"/>
+	<field name="NGAY_CAP" class="java.lang.String"/>
+	<field name="THANG_CAP" class="java.lang.String"/>
+	<field name="NAM_CAP" class="java.lang.String"/>
+	<field name="NAME_GROUP" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="93" splitType="Stretch">
+			<textField>
+				<reportElement x="26" y="73" width="141" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ID_CONTRACT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="58" width="240" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EMPSN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="73" width="110" height="15"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{NAME_GROUP})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="424" y="73" width="5" height="15"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="73" width="126" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{NAME_DEPT_NAME})]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="709" splitType="Stretch">
+			<staticText>
+				<reportElement x="443" y="476" width="53" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chức vụ:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="63" y="249" width="25" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NGAY_SINH}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="122" y="249" width="25" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{THANG_SINH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="181" y="249" width="42" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NAM_SINH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="249" width="252" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{BIRTHPLACE})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="129" y="311" width="426" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{PERMANENT_ADDRESS})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="342" width="100" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ID_NO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="266" y="342" width="26" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NGAY_CAP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="342" width="37" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NAM_CAP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="296" y="342" width="25" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{THANG_CAP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="342" width="123" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{ID_PLACE})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="404" width="100" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ID_LABOUR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="236" y="404" width="84" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{DATESIGN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="498" y="476" width="57" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NEWJOB}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="315" y="510" width="135" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{DATES_SIGN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="257" y="541" width="100" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ID_LABOUR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="465" width="64" height="15"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Number"><![CDATA[$F{BSALARY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="494" width="47" height="15"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Number"><![CDATA[$F{BSALARY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="689" width="200" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{FNAME})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="218" width="223" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{FNAME})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

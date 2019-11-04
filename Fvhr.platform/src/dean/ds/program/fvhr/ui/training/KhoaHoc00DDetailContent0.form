@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_ID_KHOA_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_CT_KHOA_HOC.ID_KHOA"/>
+            </properties>
+          </component>
+          <component id="Component_ID_KHOA_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_KHOA_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_ID_MONHOC_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_CT_KHOA_HOC.ID_MONHOC"/>
+            </properties>
+          </component>
+          <component id="Component_ID_MONHOC_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_MONHOC_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_ID_KHOA_Object_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_CT_KHOA_HOC.ID_KHOA"/>
+            </properties>
+          </component>
+          <component id="Component_ID_KHOA_Object_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_KHOA_Object_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_CT_KHOA_HOC.NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField4"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_rootRow" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_Grip" type="nextapp.echo2.app.Grid">
+<properties>
+<property name="insets" value="0px 5px"/>
+<property index="0" name="columnWidth" value="150px"/>
+<property index="1" name="columnWidth" value="250px"/>
+</properties>
+<children>
+<component id="Component_lblEmpsn" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMP_DEPENDENT.EMPSN"/>
+</properties>
+</component>
+
+<component id="Component_rowEmpsn" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_txtEmpsn" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+
+<property name="width" value="166px"/>
+<property name="disabledBackground" value="#eeeeee"/>
+<property name="id" value="txtEmpsn"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+<property name="maximumLength" value="8"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="id" value="rowEmpsn"/>
+</properties>
+</component>
+<component id="Component_lblEmpName" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Họ và Tên CNV"/>
+</properties>
+</component>
+
+<component id="Component_txtEmpName" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="background" value="#f1fafe"/>
+<property name="width" value="166px"/>
+<property name="disabledBackground" value="#eeeeee"/>
+<property name="enabled" value="false"/>
+<property name="id" value="txtEmpName"/>
+</properties>
+</component>
+<component id="Component_lblBirthday" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMP_DEPENDENT.BIRTHDAY"/>
+</properties>
+</component>
+
+
+
+<component id="Component_dtfBirthday" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="width" value="170px"/>
+
+<property name="id" value="dtfBirthday"/>
+</properties>
+</component>
+<component id="Component_lblKind" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMP_DEPENDENT.IDKIND"/>
+</properties>
+</component>
+<component id="Component_slfKind" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+
+<property name="width" value="170px"/>
+</properties>
+</component>
+<component id="Component_lblBegin" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMP_DEPENDENT.BEGINDATE"/>
+</properties>
+</component>
+
+<component id="Component_dtfBegin" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+
+<property name="width" value="168px"/>
+</properties>
+</component>
+<component id="Component_lblUpdateName" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="N_EMP_DEPENDENT.USER_UPDATE"/>
+</properties>
+</component>
+
+<component id="Component_txtUpdateName" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+
+<property name="width" value="166px"/>
+<property name="disabledBackground" value="#eeeeee"/>
+</properties>
+</component>
+<component id="Component_dscField1" type="dsc.echo2app.component.DscField"/>
+</children>
+</component>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<properties>
+<property index="0" name="columnWidth" value="150px"/>
+<property index="1" name="columnWidth" value="200px"/>
+<property name="insets" value="0px 5px"/>
+</properties>
+<children>
+<component id="Component_lblIdkey" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="N_EMP_DEPENDENT.IDKEY"/>
+</properties>
+</component>
+
+<component id="Component_txtIdkey" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="background" value="#f1fafe"/>
+<property name="width" value="166px"/>
+<property name="disabledBackground" value="#eeeeee"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblRelativeName" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMP_DEPENDENT.NAME_RELATIVE"/>
+</properties>
+</component>
+
+<component id="Component_txtRelativeName" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+
+<property name="width" value="166px"/>
+<property name="disabledBackground" value="#eeeeee"/>
+<property name="id" value="txtRelativeName"/>
+</properties>
+</component>
+<component id="Component_lblSex" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMP_DEPENDENT.SEX"/>
+</properties>
+</component>
+<component id="Component_slfSex" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+
+<property name="width" value="170px"/>
+</properties>
+</component>
+<component id="Component_lblConfirm" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMP_DEPENDENT.CONFIRM_DATE"/>
+</properties>
+</component>
+
+<component id="Component_dtfConfirm" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="width" value="170px"/>
+
+</properties>
+</component>
+<component id="Component_lblEnd" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMP_DEPENDENT.ENDDATE"/>
+</properties>
+</component>
+
+<component id="Component_dtfEnd" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="width" value="170px"/>
+
+</properties>
+</component>
+<component id="Component_lblUpdateDay" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMP_DEPENDENT.DATE_UPDATE"/>
+</properties>
+</component>
+
+<component id="Component_dtfUpdateDay" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="width" value="170px"/>
+
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="insets" value="10px 10px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

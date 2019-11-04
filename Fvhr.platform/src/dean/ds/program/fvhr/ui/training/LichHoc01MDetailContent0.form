@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_ID_TRAINING_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_DETAIL.ID_TRAINING"/>
+            </properties>
+          </component>
+          <component id="Component_ID_TRAINING_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_TRAINING_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_DETAIL.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_THI_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_DETAIL.DATE_THI"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_THI_DscDateField1"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_THI_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_DIEM_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_DETAIL.DIEM"/>
+            </properties>
+          </component>
+          <component id="Component_DIEM_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="DIEM_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_XEPLOAI_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_DETAIL.XEPLOAI"/>
+            </properties>
+          </component>
+          <component id="Component_XEPLOAI_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="XEPLOAI_DscField4"/>
+            </properties>
+          </component>
+          <component id="Component_LANTHI_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_DETAIL.LANTHI"/>
+            </properties>
+          </component>
+          <component id="Component_LANTHI_DscField5"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="LANTHI_DscField5"/>
+            </properties>
+          </component>
+          <component id="Component_GHICHU_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_DETAIL.GHICHU"/>
+            </properties>
+          </component>
+          <component id="Component_GHICHU_DscField6"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="GHICHU_DscField6"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

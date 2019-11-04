@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_cbx_fact2" type="echopointng.ComboBox">
+<children/>
+</component>
+<component id="Component_comboBox1" type="echopointng.ComboBox"/>
+<component id="Component_comboBox2" type="echopointng.ComboBox"/>
+</children>
+<properties>
+<property name="size" value="1"/>
+<property name="insets" value="5px"/>
+</properties>
+</component>
+</form>

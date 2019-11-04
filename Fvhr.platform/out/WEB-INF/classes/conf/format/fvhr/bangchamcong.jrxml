@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bangchamcong" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="570" leftMargin="15" rightMargin="10" topMargin="15" bottomMargin="10">
+	<property name="ireport.zoom" value="1.9487171000000123"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="92"/>
+	<parameter name="mon" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="yy" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\dsc_dev\\workspace\\Fvhr.platform\\src\\dean\\conf\\format\\fvhr\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="MONTH_YEAR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Tháng " + $P{mon} + "/" + $P{yy}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="USER_ID" class="java.lang.String"/>
+	<parameter name="col_break" class="java.lang.Number"/>
+	<queryString>
+		<![CDATA[select t.empsn, t.months, t.years, t.ducls, t.nducls, t.addhol, t.addcls1, t.naddcls, t.late, t.sign,
+t.acn, t.acnm, t.rest, t.rest_pay, t.rest_sick, t.other, t.nwhour, t.addholn, t.lmater,
+e.fname || ' ' || e.lname as fullname, e.date_hired, e.shift, e.position, d.name_dept, e.empcn from n_get_data t, n_employee e, n_department d
+where t.empsn=e.empsn and e.depsn=d.id_dept
+and t.empsn in ('10101311','10101312','10081509','05110396') and t.months=$P{mon} and t.years=$P{yy}]]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="MONTHS" class="java.lang.String"/>
+	<field name="YEARS" class="java.lang.String"/>
+	<field name="DUCLS" class="java.math.BigDecimal"/>
+	<field name="NDUCLS" class="java.math.BigDecimal"/>
+	<field name="ADDHOL" class="java.math.BigDecimal"/>
+	<field name="ADDCLS1" class="java.math.BigDecimal"/>
+	<field name="NADDCLS" class="java.math.BigDecimal"/>
+	<field name="LATE" class="java.math.BigDecimal"/>
+	<field name="SIGN" class="java.math.BigDecimal"/>
+	<field name="ACN" class="java.math.BigDecimal"/>
+	<field name="ACNM" class="java.math.BigDecimal"/>
+	<field name="REST" class="java.math.BigDecimal"/>
+	<field name="REST_PAY" class="java.math.BigDecimal"/>
+	<field name="REST_SICK" class="java.math.BigDecimal"/>
+	<field name="OTHER" class="java.math.BigDecimal"/>
+	<field name="NWHOUR" class="java.math.BigDecimal"/>
+	<field name="ADDHOLN" class="java.math.BigDecimal"/>
+	<field name="LMATER" class="java.math.BigDecimal"/>
+	<field name="FULLNAME" class="java.lang.String"/>
+	<field name="DATE_HIRED" class="java.util.Date"/>
+	<field name="SHIFT" class="java.lang.String"/>
+	<field name="POSITION" class="java.lang.String"/>
+	<field name="NAME_DEPT" class="java.lang.String"/>
+	<field name="EMPCN" class="java.lang.String"/>
+	<group name="empsn">
+		<groupExpression><![CDATA[$F{EMPSN}]]></groupExpression>
+		<groupHeader>
+			<band height="123">
+				<textField isBlankWhenNull="true">
+					<reportElement x="48" y="37" width="100" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{EMPSN}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="26" width="42" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Họ và tên]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="205" y="20" width="107" height="16"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Ngày công]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="331" y="20" width="107" height="16"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Tăng ca]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="460" y="20" width="90" height="16"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nghỉ phép]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="205" y="36" width="63" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Ngày công(ngày)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="274" y="36" width="16" height="14" isPrintWhenDetailOverflows="true"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{DUCLS}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="185" y="0" width="167" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="12" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[BIỂU THỜI GIAN LÀM VIỆC]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="353" y="0" width="116" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="12" isBold="true" isUnderline="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{MONTH_YEAR}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="42" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Người in:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="48" y="0" width="100" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9" isBold="false" isItalic="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{USER_ID}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="42" y="0" width="6" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="42" y="13" width="6" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="13" width="42" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Ngày in:]]></text>
+				</staticText>
+				<textField pattern="dd/MM/yyyy h.mm a" isBlankWhenNull="true">
+					<reportElement x="48" y="13" width="100" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9" isBold="false" isItalic="true"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="37" width="42" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Số thẻ đeo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="42" y="37" width="6" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="42" y="26" width="6" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="48" y="26" width="128" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{FULLNAME}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="48" y="50" width="100" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.util.Date"><![CDATA[$F{DATE_HIRED}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="42" y="50" width="6" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="50" width="42" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[NNX]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="48" y="63" width="128" height="13" isPrintWhenDetailOverflows="true"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{NAME_DEPT}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="42" y="63" width="6" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="63" width="42" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Đơn vị]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="48" y="76" width="100" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{SHIFT}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="76" width="42" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Ca LV]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="42" y="76" width="6" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="48" y="89" width="100" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{POSITION}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="89" width="42" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Chức vụ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="42" y="89" width="6" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="48" y="102" width="100" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{EMPCN}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="102" width="42" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Số thẻ IC]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="42" y="102" width="6" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="268" y="36" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="205" y="50" width="63" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Ngày công(đêm)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="268" y="50" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="274" y="50" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{NDUCLS}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="274" y="64" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ADDHOL}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="268" y="64" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="205" y="64" width="63" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Ngày công CN]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="274" y="78" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ADDHOLN}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="205" y="78" width="63" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Ngày công Lễ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="268" y="78" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="268" y="92" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="274" y="92" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{LATE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="205" y="92" width="63" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Vô trễ, về sớm]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="393" y="36" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="331" y="36" width="62" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Tăng ca thường]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="399" y="36" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ADDCLS1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="399" y="50" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{NADDCLS}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="331" y="50" width="62" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Tăng ca đêm]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="393" y="50" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="399" y="64" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ACNM}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="331" y="64" width="62" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Tăng ca 1->1.5H]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="393" y="64" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="399" y="78" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ACN}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="331" y="78" width="62" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Số đêm tăng ca]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="393" y="78" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="399" y="92" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{SIGN}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="331" y="92" width="62" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Ký xác nhận]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="393" y="92" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="512" y="36" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{REST_PAY}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="460" y="36" width="46" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Có lương]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="506" y="36" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="460" y="50" width="46" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Phép bệnh]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="512" y="50" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{REST_SICK}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="506" y="50" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="506" y="64" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="512" y="64" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{OTHER}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="460" y="64" width="46" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Dưỡng sức]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="506" y="78" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="460" y="78" width="46" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Phép khác]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="512" y="78" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{REST}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="506" y="92" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="460" y="92" width="46" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Không phép]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="512" y="92" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{NWHOUR}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="506" y="106" width="6" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="460" y="106" width="46" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Nghỉ sản]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="512" y="106" width="16" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{LMATER}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="290" y="36" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[ngày]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="290" y="50" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[đêm]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="290" y="64" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[giờ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="290" y="78" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[giờ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="290" y="92" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[phút]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="415" y="36" width="23" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[giờ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="415" y="50" width="23" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[giờ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="415" y="64" width="23" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[đêm]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="415" y="78" width="23" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[đêm]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="415" y="92" width="23" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[lần]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="528" y="36" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[ngày]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="528" y="50" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[ngày]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="528" y="64" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[ngày]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="528" y="78" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[ngày]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="528" y="92" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[ngày]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="528" y="106" width="22" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[ngày]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="8">
+				<line>
+					<reportElement x="9" y="0" width="545" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="260">
+			<subreport isUsingCache="false" runToBottom="false">
+				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="570" height="53"/>
+				<subreportParameter name="col_break">
+					<subreportParameterExpression><![CDATA[$P{col_break}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="emp">
+					<subreportParameterExpression><![CDATA[$F{EMPSN}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dateStr">
+					<subreportParameterExpression><![CDATA[$P{mon}+"/"+$P{yy}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "bangchamcong_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

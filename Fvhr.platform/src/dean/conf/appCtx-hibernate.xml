@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="VFT" class="dsc.echo2app.info.CompanyInfo">
+		<property name="companyID" value="VFT" />
+		<property name="companyName" value="QLNS" />
+		<property name="connectionName" value="dataSource_VFT" />
+	</bean>
+
+	<!-- 系統資訊 -->
+	<bean id="systemInfo" class="dsc.echo2app.info.SystemInfo">
+		<!-- 系統資料瀏覽時， 資料最大Catch資料筆數  -->
+		<property name="browserMaxRecord" value="10000" />
+		<!-- 系統資料瀏覽時， 每頁資料筆數 -->
+		<property name="browserPageRecord" value="10" />
+		<!-- 系統查詢後， 資料最大Catch資料筆數-->
+		<property name="queryMaxRecord" value="10000" />
+		<!-- 系統資料瀏覽時， 每頁資料筆數 -->
+		<property name="queryPageRecord" value="10" />
+		<!-- 即時執行後端作業的前端最大等待秒數 -->
+		<property name="executeTaskMaxWaitingTime" value="30" />
+		<!-- 報表產生的輸出路徑 -->
+		<!--		<property name="reportOutputFolder" value="/usr/local/tomcat/webapps/report/output"/> -->
+		<property name="reportOutputFolder" value="d:\report\output" />
+		<!-- 		<property name="reportOutputFolder" value="/web/tomcat/webapps/report/output"/>--><!-- FT -->
+		<!-- 報表產生暫存的路徑 -->
+		<property name="reportTempFolder" value="d:\report\temp" />
+		<property name="optionalParams">
+			<map>
+				<entry key="openofficeInstallDir">
+					<value>
+						C:\Program Files\OpenOffice.org 2.0\program
+					</value>
+					<!--				  <value>/opt/openoffice.org2.2/program</value>--><!-- ftn -->
+					<!--				  <value>/opt/openoffice.org2.4/program</value>--><!-- ft -->
+					<!--						<value>/usr/lib/oowriter</value>-->
+					<!-- 				  <value>/usr/lib/ooo-1.1/program</value>-->
+					<!-- fvn/fva -->
+				</entry>
+			</map>
+		</property>
+
+		<property name="companies">
+			<list>
+				<ref bean="VFT" />
+			</list>
+		</property>
+
+
+		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+		<!-- 國別設定 -->
+		<!-- 
+			請符合java.util.Local的設定方式設定
+			請參閱
+			http://java.sun.com/j2se/1.5.0/docs/api/java/util/Locale.html
+		-->
+		<property name="langs">
+			<map>
+				<entry key="en" value="English" />
+				<!-- 正體中文 -->
+				<entry key="zh_TW" value="繁體中文" />
+				<!-- 簡體中文 -->
+				<entry key="zh_CN" value="简体中文" />
+				<!-- 英文 -->
+				<entry key="vi" value="Tiếng việt" />
+			</map>
+		</property>
+
+	</bean>
+
+	<!-- ============== 廠別資料庫設定  ================ -->
+	<!-- 
+		如果資料庫密碼需編密處理請用以下格式
+		<property name="password">
+		<bean class="dsc.util.function.StringDecrypter">
+		<property name="originalString" value="編密過的password)"/>
+		</bean>
+		</property>
+		編密過的password可透過呼叫 
+	-->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+	<!-- Khai bao Driver va String Connection -->
+
+	<bean id="dataSource_VFT"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url"
+			value="jdbc:oracle:thin:@5.1.1.14:1521:fvordb" />
+		<property name="username" value="vft" />
+		<property name="password" value="fvit831" />
+		<property name="removeAbandoned" value="true" />
+		<property name="removeAbandonedTimeout" value="30" />
+		<property name="maxWait" value="3000" />
+		<property name="maxActive" value="50" />
+	</bean>
+
+	<!-- ============== 以下的設定請不要亂動，除非你知道你在幹什麼 ================ -->
+	<!-- lazy-init="true"可以讓資料庫在第一次取用時才進行連線，而不是init context時 -->
+
+
+	<bean id="sessionFactory_Base" abstract="true"
+		class="dsc.util.hibernate.AnnotationSessionFactoryBean"
+		singleton="true" lazy-init="true">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop
+					key="hibernate.bytecode.use_reflection_optimizer">
+					true
+				</prop>
+				<!-- for MSSQL  -->
+				<!-- 
+					<prop key="hibernate.dialect">dsc.util.hibernate.DSCSQLServerDialect</prop>
+				-->
+				<!-- for oracle -->
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.OracleDialect
+				</prop>
+				<!-- 
+				-->
+				<!-- for hypersonic -->
+				<!--
+					<prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+				-->
+				<!-- Echo all executed SQL to stdout -->
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.use_sql_comments">false</prop>
+
+				<!-- Drop and re-create the database schema on startup -->
+				<!--  
+					<prop key="hibernate.hbm2ddl.auto">update</prop>
+				-->
+			</props>
+		</property>
+
+		<!-- /////////////////////////////////////////////////////////////////////////////////// -->
+
+		<!-- Khai bao Package cho Java Entity Bean-->
+
+		<property name="annotatedDirs">
+			<list>
+				<value>ds/program/users/domain</value>
+				<value>ds/program/fvhr/domain</value>
+			</list>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>dsc.echo2app.schedule.SYS_TASK_SCHEDULE</value>
+				<value>
+					dsc.echo2app.schedule.info.SYS_TASK_SCHEDULEInfo
+				</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+	<bean id="sessionFactory" class="dsc.dao.MultiSessionFactory"
+		singleton="true" lazy-init="false">
+		<property name="sessionFactories">
+			<map>
+				<entry key-ref="dataSource_VFT">
+					<bean
+						class="dsc.util.hibernate.AnnotationSessionFactoryBean"
+						lazy-init="false" singleton="true" parent="sessionFactory_Base">
+						<property name="dataSource"
+							ref="dataSource_VFT" />
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<!-- data source (MSSQL)
+	-->
+	<!-- 
+		<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver"/>
+		<property name="url" value="jdbc:jtds:sqlserver://localhost:1433/dean"/>
+		<property name="username" value="sa"/>
+		<property name="password" value="sa!@#"/>
+		</bean>
+	-->
+	<!-- data source (ORACLE)  -->
+	<!-- 
+		<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@10.40.200.90:1521:orcl"/>
+		<property name="username" value="dean"/>
+		<property name="password" value="dean"/>
+		</bean>
+	-->
+	<!-- =============== hibernate transcation manager ================= -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+		singleton="false">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean name="dao" class="dsc.dao.GenericHibernateDAO"
+		singleton="false">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	
+	<!--<bean name="dao1" class="fv.util.DynaHibernateDAO"
+		singleton="false">
+		<property name="sessionFactory">
+		<bean class="dsc.util.hibernate.AnnotationSessionFactoryBean"
+		lazy-init="false" singleton="true" parent="sessionFactory_Base">
+		<property name="dataSource" ref="dataSource_VFT" />
+		</bean>
+		</property>
+	</bean>
+	--><!-- 
+		- 用來inert一些測試資料到資料庫的，只要把comment拿掉就會動了 
+	-->
+	<!-- 
+		<bean id="sysDataSourcePopulator" class="dsc.dao.TestDataPopulator">
+		<property name="userDao" ref="dao"/>
+		<property name="orderDao" ref="dao"/>
+		</bean>
+	-->
+	<!-- =========================== 多國語系資源 =========================== -->
+	<!-- DSC.J Framework通用訊息 -->
+	<bean id="commonMessageResource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames"
+			value="dsc.echo2app.resource.localization.CommonMsg" />
+	</bean>
+	<!-- DSC.J Framework模組程式(tree menu)訊息 -->
+	<bean id="moduleProgramName"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames"
+			value="resource.localization.ModuleProgramName" />
+	</bean>
+	<!-- 各種作業程式用的訊息 -->
+	<bean id="UICaption"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames"
+			value="resource.localization.UICaption" />
+	</bean>
+
+	<!-- =========================== UI核心程式 =========================== -->
+	<bean id="loginScreen" class="ds.LoginScreen" singleton="false" />
+	<bean id="mainScreen" class="ds.MainScreen" singleton="false" />
+
+	<!-- =========================== License 相關程式 =========================== -->
+	<bean id="license" class="dsc.dotj.license.LicenseManager">
+		<property name="serverHost" value="10.1.60.38" />
+	</bean>
+	<bean id="expirationScreen" class="ds.ExpirationScreen"
+		singleton="false" />
+	<bean id="registerScreen" class="ds.RegisterScreen"
+		singleton="false" />
+	<bean id="rightHolder" class="fv.util.RightsHolder"
+		singleton="true" />
+
+	<bean id="empValidator" class="fv.util.EmpsnValidator"
+		singleton="true" />
+	<bean id="wpValidator" class="fv.util.WorkPointsValidator"
+		singleton="true" />
+	<bean id="permissionValidator" class="fv.util.Permission"
+		singleton="true" />
+
+	<bean id="hrUtils" class="fv.util.HRUtils" singleton="true">
+		<property name="empsnValidator" ref="empValidator" />
+		<property name="permissionValidator" ref="permissionValidator" />
+		<property name="workpointsValidator" ref="wpValidator" />
+	</bean>
+</beans>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle="resource.localization.UICaption" resource-bundle-id="resourceBundle">
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_ID_TRAINING_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.ID_TRAINING"/>
+</properties>
+          </component>
+          <component id="Component_ID_TRAINING_DscField1" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_TRAINING_DscField1"/>
+            <property name="enabled" value="false"/>
+</properties>
+          </component>
+          <component id="Component_TRAINING_TYPE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.TRAINING_TYPE"/>
+</properties>
+          </component>
+<component id="Component_sfType" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="155px"/>
+</properties>
+</component>
+<component id="Component_COURSE_ID_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.COURSE_ID"/>
+</properties>
+          </component>
+          
+          <component id="Component_cboCourse" type="echopointng.ComboBox" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="3"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="360px"/>
+<property name="actionOnSelection" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="courseSelect"/>
+</event-set>
+</events>
+</component>
+<component id="Component_SUBJECT_ID_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.SUBJECT_ID"/>
+</properties>
+          </component>
+          <component id="Component_cboSubject" type="echopointng.ComboBox" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="3"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="360px"/>
+</properties>
+</component>
+          
+          
+          <component id="Component_BDATE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.BDATE"/>
+</properties>
+          </component>
+          <component id="Component_BDATE_DscDateField1" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="BDATE_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_EDATE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.EDATE"/>
+</properties>
+          </component>
+          <component id="Component_EDATE_DscDateField2" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="EDATE_DscDateField2"/>
+            </properties>
+          </component>
+          <component id="Component_GUIDE_EMPSN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.GUIDE_EMPSN"/>
+</properties>
+          </component>
+          
+          <component id="Component_sfGuide" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="220px"/>
+</properties>
+</component>
+<component id="Component_EMPSN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.EMPSN"/>
+</properties>
+          </component>
+          <component id="Component_EMPSN_DscField6" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField6"/>
+            </properties>
+          </component>
+          <component id="Component_EXAM_DATE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.EXAM_DATE"/>
+</properties>
+          </component>
+          <component id="Component_EXAM_DATE_DscDateField3" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="EXAM_DATE_DscDateField3"/>
+            </properties>
+          </component>
+          <component id="Component_EXAM_TIME_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.EXAM_TIME"/>
+</properties>
+          </component>
+          <component id="Component_EXAM_TIME_DscField7" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EXAM_TIME_DscField7"/>
+            <property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+<property name="maximumLength" value="1"/>
+</properties>
+          </component>
+          <component id="Component_MARK_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.MARK"/>
+</properties>
+          </component>
+          <component id="Component_MARK_DscField8" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="MARK_DscField8"/>
+            <property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_NUMERIC"/>
+<property name="maximumLength" value="4"/>
+</properties>
+          </component>
+          <component id="Component_RANK_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.RANK"/>
+</properties>
+          </component>
+          <component id="Component_cboRank" type="echopointng.ComboBox" visibility="private"/>
+          <component id="Component_NOTE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="%N_TRAINING_DETAILS.NOTE"/>
+</properties>
+          </component>
+          <component id="Component_NOTE_DscField10" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField10"/>
+            <property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="3"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="360px"/>
+</properties>
+          </component>
+        </children>
+        <properties>
+          
+          
+        
+<property name="size" value="4"/>
+</properties>
+      </component>
+    </children>
+  </component>
+</form>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImageMenu image="/conf/menu/MAP.gif">
+<!-- 左上X,Y 右下X,Y -->
+	<coord range="250,67,450,113" id="DSBO00" /><!-- 鞋型部位 -->	
+
+	<coord range="250,146,450,180" id="DSBO01" /><!-- BOM鞋型主檔 -->	
+	<coord range="490,146,690,191" id="DSEL00" /><!-- 材料基本資料 -->				
+
+	<coord range="255,181,455,215" id="DSBO02" /><!-- 型號標準用量 -->		
+	<coord range="255,216,455,261" id="DSBO18" /><!-- 鞋型料號供應商 -->			
+	
+	<coord range="250,285,450,320" id="DSBO09" /><!-- 指令表需求展開作業 -->		
+	<coord range="490,285,690,330" id="DSBO04" /><!-- 材料BOM組合資料維護 -->			
+	
+	<coord range="5,390,205,435" id="DSBO011" /><!-- 材料逆展查詢作業 -->				
+	<coord range="255,390,450,435" id="DSBOPRT01" /><!-- 鞋型物料明細表 -->		
+			
+	<coord range="5,440,205,485" id="DSBO012" /><!-- 特性逆展查詢作業 -->			
+	<coord range="255,440,450,485" id="DSBO0901" /><!-- 鞋型整體結構BOM表 -->					
+</ImageMenu>

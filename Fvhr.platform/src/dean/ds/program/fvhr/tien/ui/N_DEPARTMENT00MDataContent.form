@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_ID_DEPT_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ID_DEPT"/>
+            </properties>
+          </component>
+          <component id="Component_ID_DEPT_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_DEPT_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_NAME_DEPT_NAME_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="NAME_DEPT_NAME"/>
+            </properties>
+          </component>
+          <component id="Component_NAME_DEPT_NAME_SelectField1"
+            type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="NAME_DEPT_NAME_SelectField1"/>
+            </properties>
+          </component>
+          <component id="Component_NAME_FACT_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="NAME_FACT"/>
+            </properties>
+          </component>
+          <component id="Component_NAME_FACT_SelectField2"
+            type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="NAME_FACT_SelectField2"/>
+            </properties>
+          </component>
+          <component id="Component_NAME_GROUP_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="NAME_GROUP"/>
+            </properties>
+          </component>
+          <component id="Component_NAME_GROUP_SelectField3"
+            type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="NAME_GROUP_SelectField3"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_ID_SPDEPT_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ID_SPDEPT"/>
+            </properties>
+          </component>
+          <component id="Component_ID_SPDEPT_SelectField4"
+            type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="ID_SPDEPT_SelectField4"/>
+            </properties>
+          </component>
+          <component id="Component_ID_GROUPNI_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ID_GROUPNI"/>
+            </properties>
+          </component>
+          <component id="Component_ID_GROUPNI_SelectField5"
+            type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="ID_GROUPNI_SelectField5"/>
+            </properties>
+          </component>
+          <component id="Component_ID_GROUP_DIRECT_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_DEPARTMENT.ID_GROUP_DIRECT"/>
+            </properties>
+          </component>
+          <component id="Component_ID_GROUP_DIRECT_SelectField6"
+            type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="ID_GROUP_DIRECT_SelectField6"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

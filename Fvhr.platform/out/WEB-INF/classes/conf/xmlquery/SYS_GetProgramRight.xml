@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QryWin>
+	<SQL>
+<!-- COMMENT ON TABLE DSOD.DSPB01 IS '使用者權限檔';
+COMMENT ON COLUMN DSOD.DSPB01.PB_RH04 IS '權限-修改';
+COMMENT ON COLUMN DSOD.DSPB01.PB_RH05 IS '權限-確認';
+COMMENT ON COLUMN DSOD.DSPB01.PB_RH06 IS '權限-取消確認';
+COMMENT ON COLUMN DSOD.DSPB01.PB_RH07 IS '權限-成本';
+COMMENT ON COLUMN DSOD.DSPB01.UP_USER IS '異動人員';
+COMMENT ON COLUMN DSOD.DSPB01.UP_DATE IS '異動日期';
+COMMENT ON COLUMN DSOD.DSPB01.PB_RH08 IS '權限E-Mail';
+COMMENT ON COLUMN DSOD.DSPB01.PB_USERID IS '使用者代號';
+COMMENT ON COLUMN DSOD.DSPB01.PB_ID IS '系統代號';
+COMMENT ON COLUMN DSOD.DSPB01.PB_PRG IS '程式名稱';
+COMMENT ON COLUMN DSOD.DSPB01.PB_RH01 IS '權限-新增';
+COMMENT ON COLUMN DSOD.DSPB01.PB_RH02 IS '權限-查詢';
+COMMENT ON COLUMN DSOD.DSPB01.PB_RH03 IS '權限-刪除';
+-->		
+		<BaseCondition></BaseCondition>
+		<OrderBy></OrderBy>
+		<SQLStatement>SELECT C.* FROM (SELECT A.PB_USERID AS USER_ID, A.PB_PRG AS PROG_ID, B.PB_NA AS PROG_NAME, 
+			A.PB_RH01 AS R_NEW,
+			A.PB_RH02 AS R_QUERY,
+			A.PB_RH03 AS R_DELETE,
+			A.PB_RH04 AS R_MODIFY,
+			A.PB_RH05 AS R_CONFIRM,
+			A.PB_RH06 AS R_UNCONFIRM,
+			A.PB_RH07 AS R_COST,
+			A.PB_RH08 AS R_PRINT,
+			A.PB_RH08 AS R_EMAIL
+			FROM DSPB01 A, DSPB00 B where A.PB_PRG=B.PB_PRG and (A.PB_RH02='Y' or A.PB_RH02='y')) C</SQLStatement>
+	</SQL>
+	<Fields>
+		<Field Name="PROG_ID" Caption="" Type="S" /> 
+		<Field Name="PROG_NAME" Caption="" Type="S" /> 
+		<Field Name="R_NEW" Caption="" Type="S" /> 
+		<Field Name="R_QUERY" Caption="" Type="S" />
+		<Field Name="R_DELETE" Caption="" Type="S" />
+		<Field Name="R_MODIFY" Caption="" Type="S" />
+		<Field Name="R_CONFIRM" Caption="" Type="S" />
+		<Field Name="R_UNCONFIRM" Caption="" Type="S" />
+		<Field Name="R_COST" Caption="" Type="S" />
+		<Field Name="R_PRINT" Caption="" Type="S" />
+		<Field Name="R_EMAIL" Caption="" Type="S" />
+	</Fields>
+</QryWin>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QryWin>
+	<SQL>
+		<BaseCondition></BaseCondition>
+		<OrderBy></OrderBy>
+		<SQLStatement>SELECT T.ID_KEY, T.NAME_JOB, T.MONEY FROM N_JOB T WHERE T.IN_FACT IN (SELECT B.NAME_FACT FROM N_USER_LIMIT A, N_QUANLY B WHERE A.MA_QL=B.MAQL AND A.MA_USER=?)</SQLStatement>
+	</SQL>
+	<Fields>
+		<Field Name="ID_KEY" Caption="" Type="S" /> 
+		<Field Name="NAME_JOB" Caption="" Type="S" />
+		<Field Name="MONEY" Caption="" Type="N" />
+	</Fields>
+</QryWin>

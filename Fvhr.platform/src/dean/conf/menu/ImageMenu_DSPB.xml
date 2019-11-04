@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImageMenu image="/conf/menu/DSPBFrame.jpg">
+	<coord range="200,114,338,148" id="DSPB00"  />
+	<coord range="200,172,338,206" id="DSPB01" />
+</ImageMenu>

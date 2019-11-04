@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_EMPSN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField1" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_DEPSN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.DEPSN"/>
+            </properties>
+          </component>
+          <component id="Component_DEPSN_DscField2" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="DEPSN_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_ID_QUIT_REASON_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.ID_QUIT_REASON"/>
+            </properties>
+          </component>
+          <component id="Component_sfQuitReason" type="nextapp.echo2.app.SelectField" visibility="private"/>
+          <component id="Component_NOTE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_DscField7" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField7"/>
+            </properties>
+          </component>
+          <component id="Component_OFF_DATE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.OFF_DATE"/>
+            </properties>
+          </component>
+          <component id="Component_OFF_DATE_DscDateField1" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="OFF_DATE_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_REAL_OFF_DATE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.REAL_OFF_DATE"/>
+            </properties>
+          </component>
+          <component id="Component_REAL_OFF_DATE_DscDateField2" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="REAL_OFF_DATE_DscDateField2"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_HEN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.DATE_HEN"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_HEN_DscDateField3" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_HEN_DscDateField3"/>
+            </properties>
+          </component>
+          <component id="Component_MM_DENBU_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.M_DENBU"/>
+            </properties>
+          </component>
+          <component id="Component_MM_DENBU_DscField8" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="MM_DENBU_DscField8"/>
+            </properties>
+          </component>
+          <component id="Component_SO_QDNV_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.SO_QDNV"/>
+            </properties>
+          </component>
+          <component id="Component_SO_QDNV_DscField9" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="SO_QDNV_DscField9"/>
+            </properties>
+          </component>
+          <component id="Component_DOT_TV_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.DOT_TV"/>
+            </properties>
+          </component>
+          <component id="Component_DOT_TV_DscDateField4" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DOT_TV_DscDateField4"/>
+            </properties>
+          </component>
+          <component id="Component_THANG_TRUBH_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.THANG_TRUBH"/>
+            </properties>
+          </component>
+          <component id="Component_THANG_TRUBH_DscDateField5" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="THANG_TRUBH_DscDateField5"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_BHYT_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.DATE_BHYT"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_BHYT_DscDateField6" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_BHYT_DscDateField6"/>
+            </properties>
+          </component>
+          <component id="Component_THE_BHYT_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.THE_BHYT"/>
+            </properties>
+          </component>
+          <component id="Component_THE_BHYT_DscField10" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="THE_BHYT_DscField10"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_GIAM_BHYT_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.NOTE_GIAM_BHYT"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_GIAM_BHYT_DscField11" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_GIAM_BHYT_DscField11"/>
+            </properties>
+          </component>
+          <component id="Component_FROM_DATE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.FROM_DATE"/>
+            </properties>
+          </component>
+          <component id="Component_FROM_DATE_DscDateField7" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="FROM_DATE_DscDateField7"/>
+            </properties>
+          </component>
+          <component id="Component_TO_DATE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.TO_DATE"/>
+            </properties>
+          </component>
+          <component id="Component_TO_DATE_DscDateField8" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="TO_DATE_DscDateField8"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_AGAIN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.DATE_AGAIN"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_AGAIN_DscDateField9" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_AGAIN_DscDateField9"/>
+            </properties>
+          </component>
+          <component id="Component_THANG_TANGLAI_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.THANG_TANGLAI"/>
+            </properties>
+          </component>
+          <component id="Component_THANG_TANGLAI_DscDateField10" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="THANG_TANGLAI_DscDateField10"/>
+            </properties>
+          </component>
+          <component id="Component_TYLE_TANGLAI_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.TYLE_TANGLAI"/>
+            </properties>
+          </component>
+          <component id="Component_TYLE_TANGLAI_DscField12" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TYLE_TANGLAI_DscField12"/>
+            </properties>
+          </component>
+          <component id="Component_MONTH_GIAMBH_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.MONTH_GIAMBH"/>
+            </properties>
+          </component>
+          <component id="Component_MONTH_GIAMBH_DscField13" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="MONTH_GIAMBH_DscField13"/>
+            </properties>
+          </component>
+          <component id="Component_GIAM_BHYT_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.GIAM_BHYT"/>
+            </properties>
+          </component>
+          <component id="Component_GIAM_BHYT_DscField14" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="GIAM_BHYT_DscField14"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_BH_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_QUIT.NOTE_BH"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_BH_DscField15" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_BH_DscField15"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

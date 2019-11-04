@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_column1" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="100px 10px 0px 20px"/>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#ff0000"/>
+<property name="text" value="XUẤT NGÀY CÔNG"/>
+<property name="font">
+<font size="20pt">
+<typeface name="sans-serif"/>
+</font>
+</property>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_column2" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Từ ngày"/>
+</properties>
+</component>
+<component id="Component_dtfFromDate" type="dsc.echo2app.component.DscDateField" visibility="private"/>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đến ngày"/>
+</properties>
+</component>
+<component id="Component_dtfToDate" type="dsc.echo2app.component.DscDateField" visibility="private"/>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Xưởng"/>
+</properties>
+</component>
+<component id="Component_slfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="150px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property index="0" name="columnWidth" value="100px"/>
+<property index="1" name="columnWidth" value="150px"/>
+<property name="insets" value="0px 5px"/>
+</properties>
+</component>
+<component id="Component_groupBox1" type="echopointng.GroupBox">
+<children>
+<component id="Component_rbtnFVL" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+
+<property name="rolloverForeground" value="#43afc2"/>
+<property name="foreground" value="#136993"/>
+<property name="rolloverEnabled" value="true"/>
+
+<property name="text" value="FVL-KDAO-TB019-BEP"/>
+<property name="insets" value="5px 5px"/>
+<property name="buttonGroup" value="btng"/>
+</properties>
+</component>
+<component id="Component_rbtnFVS" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+
+<property name="rolloverForeground" value="#43afc2"/>
+<property name="foreground" value="#136993"/>
+<property name="rolloverEnabled" value="true"/>
+
+<property name="insets" value="5px 5px"/>
+<property name="text" value="FVS-TB020"/>
+<property name="buttonGroup" value="btng"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="title" value="Lựa chọn"/>
+<property name="insets" value="0px 5px"/>
+<property name="width" value="250px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="20px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_column3" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_btnExport" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="background" value="#43afc2"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="foreground" value="#ffffff"/>
+<property name="insets" value="0px 10px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="insets" value="0px 0px 0px 0px"/>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="rolloverEnabled" value="true"/>
+<property name="width" value="150px"/>
+<property name="text" value="Xuất Excel"/>
+</properties>
+</component>
+<component id="Component_btnCancel" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="background" value="#43afc2"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="foreground" value="#ffffff"/>
+<property name="insets" value="0px 10px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+<property name="insets" value="0px 20px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="rolloverEnabled" value="true"/>
+<property name="width" value="150px"/>
+
+<property name="text" value="Hủy"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="20px 0px"/>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

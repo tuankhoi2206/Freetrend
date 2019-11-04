@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_ID_TRAINING_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_ITEM.ID_TRAINING"/>
+            </properties>
+          </component>
+          <component id="Component_ID_TRAINING_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_TRAINING_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_ITEM.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_ID_KHOA_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_ITEM.ID_KHOA"/>
+            </properties>
+          </component>
+          <component id="Component_ID_KHOA_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_KHOA_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_ID_MON_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_ITEM.ID_MON"/>
+            </properties>
+          </component>
+          <component id="Component_ID_MON_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_MON_DscField4"/>
+            </properties>
+          </component>
+          <component id="Component_TRAINING_TYPE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_ITEM.TRAINING_TYPE"/>
+            </properties>
+          </component>
+          <component id="Component_TRAINING_TYPE_DscField5"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TRAINING_TYPE_DscField5"/>
+            </properties>
+          </component>
+          <component id="Component_BDATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_ITEM.BDATE"/>
+            </properties>
+          </component>
+          <component id="Component_BDATE_DscDateField1"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="BDATE_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_EDATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_ITEM.EDATE"/>
+            </properties>
+          </component>
+          <component id="Component_EDATE_DscDateField2"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="EDATE_DscDateField2"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_HL_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_ITEM.EMPSN_HL"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_HL_DscField6"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_HL_DscField6"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_ITEM.NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_DscField7"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField7"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

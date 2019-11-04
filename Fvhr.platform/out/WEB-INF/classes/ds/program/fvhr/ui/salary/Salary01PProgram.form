@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Tháng"/>
+</properties>
+</component>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_sfMonth" type="nextapp.echo2.app.SelectField" visibility="private"/>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Năm"/>
+</properties>
+</component>
+<component id="Component_sfYear" type="nextapp.echo2.app.SelectField" visibility="private"/>
+</children>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

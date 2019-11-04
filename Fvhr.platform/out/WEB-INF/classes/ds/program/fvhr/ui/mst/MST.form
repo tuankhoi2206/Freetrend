@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="dsc.echo2app.program.DefaultProgram">
+<children>
+<component id="Component_tabPane1" type="nextapp.echo2.extras.app.TabPane" visibility="private">
+<children>
+<component id="Component_contentPane2" type="nextapp.echo2.app.ContentPane">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.extras.app.layout.TabPaneLayoutData">
+<properties>
+<property name="title" value="Tìm kiếm"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+
+<component id="Component_splitPane2" type="nextapp.echo2.app.SplitPane">
+<children>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_txtEmpsn" type="dsc.echo2app.component.DscField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSearch"/>
+</event-set>
+</events>
+<properties>
+<property name="maximumLength" value="8"/>
+</properties>
+</component>
+<component id="Component_btnFind1" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Tìm"/>
+<property name="actionCommand" value="fe"/>
+<property name="foreground" value="#004080"/>
+<property name="border">
+<border color="#8080c0" size="1px" style="solid"/>
+</property>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="insets" value="2px"/>
+<property name="width" value="50px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverBackground" value="#8080c0"/>
+<property name="rolloverForeground" value="#008000"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSearch"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Mã số thuế"/>
+</properties>
+</component>
+<component id="Component_txtMST" type="dsc.echo2app.component.DscField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSearch"/>
+</event-set>
+</events>
+<properties>
+<property name="maximumLength" value="10"/>
+</properties>
+</component>
+<component id="Component_btnFind2" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Tìm"/>
+<property name="foreground" value="#004080"/>
+<property name="border">
+<border color="#8080c0" size="1px" style="solid"/>
+</property>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="insets" value="2px"/>
+<property name="width" value="50px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverBackground" value="#8080c0"/>
+<property name="rolloverForeground" value="#008000"/>
+<property name="actionCommand" value="fc"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSearch"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label5" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="CMND"/>
+</properties>
+</component>
+<component id="Component_txtCMND" type="dsc.echo2app.component.DscField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSearch"/>
+</event-set>
+</events>
+<properties>
+<property name="maximumLength" value="9"/>
+</properties>
+</component>
+<component id="Component_btnFind3" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Tìm"/>
+<property name="foreground" value="#004080"/>
+<property name="border">
+<border color="#8080c0" size="1px" style="solid"/>
+</property>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="insets" value="2px"/>
+<property name="width" value="50px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverBackground" value="#8080c0"/>
+<property name="rolloverForeground" value="#008000"/>
+<property name="actionCommand" value="fi"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSearch"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label6" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="3"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="---Kết quả tìm kiếm---"/>
+</properties>
+</component>
+<component id="Component_label7" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_lblSothe" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#008000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+<component id="Component_label8" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Họ tên"/>
+</properties>
+</component>
+<component id="Component_lblHoTen" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#008000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+<component id="Component_label9" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đơn vị"/>
+</properties>
+</component>
+<component id="Component_lblDonVi" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#008000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+<component id="Component_label10" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Mã số thuế"/>
+</properties>
+</component>
+<component id="Component_lblMST" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#008000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+<component id="Component_label11" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Ngày cấp"/>
+</properties>
+</component>
+<component id="Component_lblNgayCap" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#008000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+<component id="Component_label12" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Ghi chú"/>
+</properties>
+</component>
+<component id="Component_lblGhichu" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#008000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+<component id="Component_label13" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Trạng thái"/>
+</properties>
+</component>
+<component id="Component_lblTrangThai" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#008000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="size" value="3"/>
+<property name="insets" value="2px"/>
+</properties>
+</component>
+<component id="Component_splitPane" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="resizable" value="true"/>
+<property name="separatorPosition" value="120px"/>
+<property name="separatorVerticalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitVertBar.png"/>
+</image>
+</fill-image>
+</property>
+</properties>
+<children>
+<component id="Component_grid4" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label20" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Xưởng"/>
+</properties>
+</component>
+<component id="Component_sfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="factChanged"/>
+</event-set>
+</events>
+<properties>
+<property name="width" value="200px"/>
+</properties>
+</component>
+<component id="Component_label21" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Nhóm"/>
+</properties>
+</component>
+<component id="Component_sfLean" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="leanChanged"/>
+</event-set>
+</events>
+<properties>
+<property name="width" value="200px"/>
+</properties>
+</component>
+<component id="Component_label22" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đơn vị"/>
+</properties>
+</component>
+<component id="Component_sfDept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="200px"/>
+</properties>
+</component>
+<component id="Component_label23" type="nextapp.echo2.app.Label"/>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnListSearch" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Tìm"/>
+<property name="width" value="60px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="background" value="#c0c0c0"/>
+<property name="border">
+<border color="#008080" size="1px" style="solid"/>
+</property>
+<property name="foreground" value="#004080"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="insets" value="3px"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSearchList"/>
+</event-set>
+</events>
+</component>
+<component id="Component_btnExcel" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="background" value="#c0c0c0"/>
+<property name="border">
+<border color="#008080" size="1px" style="solid"/>
+</property>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="foreground" value="#004080"/>
+<property name="insets" value="3px"/>
+<property name="text" value="Excel"/>
+<property name="width" value="60px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doExport"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="5px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="3px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="resizable" value="true"/>
+<property name="separatorPosition" value="350px"/>
+<property name="separatorHorizontalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitHerzBar.png"/>
+</image>
+</fill-image>
+</property>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_contentPane3" type="nextapp.echo2.app.ContentPane">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.extras.app.layout.TabPaneLayoutData">
+<properties>
+<property name="title" value="Cập nhật từ Excel"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Chọn file excel : "/>
+</properties>
+</component>
+<component id="Component_fileUploadSelect1" type="fv.components.FileUploadSelect" visibility="private">
+<properties>
+<property name="fileType" value="application/vnd.ms-excel"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/excel_upload_icon.png"/>
+</property>
+<property name="iconHeight" value="24px"/>
+<property name="iconWidth" value="24px"/>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label"/>
+<component id="Component_btnImport" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Cập nhật"/>
+<property name="border">
+<border color="#004080" size="1px" style="solid"/>
+</property>
+<property name="insets" value="3px"/>
+<property name="foreground" value="#800040"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="background" value="#c0c0c0"/>
+<property name="width" value="80px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doImport"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+
+<property name="insets" value="3px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_contentPane4" type="nextapp.echo2.app.ContentPane">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.extras.app.layout.TabPaneLayoutData">
+<properties>
+<property name="title" value="Thêm mới"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+<component id="Component_grid3" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_lblInfo" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_label14" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_txtNewEmpsn" type="dsc.echo2app.component.DscField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="searchEmployee"/>
+</event-set>
+</events>
+<properties>
+<property name="maximumLength" value="8"/>
+</properties>
+</component>
+<component id="Component_label15" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Mã số thuế"/>
+</properties>
+</component>
+<component id="Component_txtNewMST" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="maximumLength" value="10"/>
+</properties>
+</component>
+<component id="Component_label16" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Ngày cấp"/>
+</properties>
+</component>
+<component id="Component_dfNgayCap" type="dsc.echo2app.component.DscDateField" visibility="private"/>
+<component id="Component_label17" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Ghi chú"/>
+</properties>
+</component>
+<component id="Component_txtNewGhiChu" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="250px"/>
+<property name="maximumLength" value="100"/>
+</properties>
+</component>
+<component id="Component_label18" type="nextapp.echo2.app.Label"/>
+<component id="Component_btnSave" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Lưu"/>
+<property name="insets" value="3px"/>
+<property name="foreground" value="#004080"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="border">
+<border color="#0080c0" size="1px" style="solid"/>
+</property>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="width" value="60px"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverForeground" value="#0000ff"/>
+<property name="background" value="#c0c0c0"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSave"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="insets" value="3px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_contentPane5" type="nextapp.echo2.app.ContentPane">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.extras.app.layout.TabPaneLayoutData">
+<properties>
+<property name="title" value="Hướng dẫn"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="separatorPosition" value="40px"/>
+</properties>
+<children>
+<component id="Component_row1" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_label19" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="File Excel mẫu"/>
+</properties>
+</component>
+<component id="Component_btnDownload" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/download.gif"/>
+</property>
+<property name="height" value="16px"/>
+<property name="width" value="16px"/>
+<property name="insets" value="3px"/>
+<property name="border">
+<border color="#800000" size="1px" style="solid"/>
+</property>
+<property name="background" value="#808080"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doDownload"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="insets" value="8px"/>
+</properties>
+</layout-data>
+</property>
+<property name="cellSpacing" value="3px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="tabSpacing" value="1px"/>
+
+
+
+</properties>
+</component>
+</children>
+</component>
+</form>

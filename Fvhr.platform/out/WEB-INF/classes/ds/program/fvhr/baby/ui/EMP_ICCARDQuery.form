@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<properties>
+<property name="title" value="Tìm kiếm"/>
+<property name="modal" value="true"/>
+<property name="titleFont">
+<font size="13pt">
+<typeface name="monospace"/>
+</font>
+</property>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnSearch.png"/>
+</property>
+<property name="width" value="300px"/>
+<property name="height" value="200px"/>
+<property name="resizable" value="false"/>
+</properties>
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<properties>
+<property name="size" value="2"/>
+<property name="insets" value="10px 10px 0px 10px"/>
+</properties>
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ: "/>
+</properties>
+</component>
+<component id="Component_txtEmpsn" type="nextapp.echo2.app.TextField" visibility="private"/>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số IC:"/>
+</properties>
+</component>
+<component id="Component_txtIC" type="nextapp.echo2.app.TextField" visibility="private"/>
+<component id="Component_btnFind" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnFind.png"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doQuery"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

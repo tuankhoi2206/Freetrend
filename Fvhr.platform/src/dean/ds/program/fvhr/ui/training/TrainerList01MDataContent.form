@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_EMPSN_HL_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINER_LIST.EMPSN_HL"/>
+            </properties>
+          </component>
+          <component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_EMPSN_HL_DscField1" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_HL_DscField1"/>
+            </properties>
+          <events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="fetchInfo"/>
+</event-set>
+</events>
+</component>
+<component id="Component_lblInfo" type="nextapp.echo2.app.Label" visibility="private"/>
+</children>
+</component>
+          
+<component id="Component_ID_MONHOC_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINER_LIST.ID_MONHOC"/>
+            </properties>
+          </component>
+          
+          <component id="Component_sfMonHoc" type="nextapp.echo2.app.SelectField" visibility="private"/>
+
+<component id="Component_NOTE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINER_LIST.NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_DscField5" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField5"/>
+            
+<property name="width" value="250px"/>
+</properties>
+          </component>
+        </children>
+        <properties>
+          
+          
+        
+<property name="size" value="2"/>
+</properties>
+      </component>
+    </children>
+  </component>
+</form>

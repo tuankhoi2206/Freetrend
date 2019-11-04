@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<salary>
+	<user id="ADMIN">
+		<tsal id="01">
+			<file>C:/FV/ADMIN/tsal011.xls</file>
+			<file>C:/FV/ADMIN/tsal012.xls</file>
+		</tsal>
+		<tsal id="02">
+			<file>C:/FV/ADMIN/tsal021.xls</file>
+			<file default="true">C:/FV/ADMIN/tsal022.xls</file>
+		</tsal>
+		<tsal id="03">
+			<file>C:/FV/ADMIN/tsal031.xls</file>
+			<file>C:/FV/ADMIN/tsal032.xls</file>
+		</tsal>
+	</user>
+</salary>

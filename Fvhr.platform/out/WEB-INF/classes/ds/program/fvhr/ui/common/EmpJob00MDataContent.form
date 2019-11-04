@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_EMP_JOB.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_ID_JOB_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_EMP_JOB.ID_JOB"/>
+            </properties>
+          </component>
+          <component id="Component_ID_JOB_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_JOB_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_B_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_EMP_JOB.DATE_B"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_B_DscDateField1"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_B_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_EMP_JOB.NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField3"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

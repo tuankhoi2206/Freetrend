@@ -1,0 +1,2177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bangluongtong" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="822" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="10" isSummaryWithPageHeaderAndFooter="true">
+	<property name="ireport.zoom" value="2.593742460100006"/>
+	<property name="ireport.x" value="982"/>
+	<property name="ireport.y" value="48"/>
+	<parameter name="month" class="java.lang.String"/>
+	<parameter name="dept" class="java.lang.String"/>
+	<parameter name="pos" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select t.empsn, t.bac, t.empna, t.bsaly/1000 as bsaly, t.ducls, t.nucls, t.rest_pay, t.rest, (t.rest_sick+t.other) as rest_sick, t.nwhour,
+t.addcls1, t.naddcls, t.addhol, t.addholn, t.tyaddcls, (t.ducls_s+t.nucls_s)/1000 as ducls_s, t.rest_pay_s/1000 as rest_pay_s, t.addcls1_s/1000 as addcls1_s, t.naddcls_s/1000 as naddcls_s,
+t.addhol_s/1000 as addhol_s, t.addholn_s/1000 as addholn_s, t.bsaly_n/1000 as bsaly_n, (t.bonus1+t.bonus1_hol)/1000 as bonus1, t.bonus2/1000 as bonus2, t.bonus3/1000 as bonus3,
+t.bonus6/1000 as bonus6, t.bonus_acn/1000 as bonus_acn, (t.bonus4+t.bonus9)/1000 as bonus4, t.bonus7/1000 as bonus7, t.bonus5/1000 as bonus5, t.tincome/1000 as tincome,
+(t.joininsu+t.bh_tnghiep)/1000 as joininsu, t.ylbx/1000 as ylbx, t.borm/1000 as borm, t.joinlum/1000 as joinlum,
+t.paytax/1000 as paytax, t.kqt/1000 as kqt, t.tkq/1000 as tkq, t.ts1/1000 as ts1, t.ts/1000 as tts, t.bonus10, t.note
+from att201111 t where 1<>1]]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="BAC" class="java.math.BigDecimal"/>
+	<field name="EMPNA" class="java.lang.String"/>
+	<field name="BSALY" class="java.math.BigDecimal"/>
+	<field name="DUCLS" class="java.math.BigDecimal"/>
+	<field name="NUCLS" class="java.math.BigDecimal"/>
+	<field name="REST_PAY" class="java.math.BigDecimal"/>
+	<field name="REST" class="java.math.BigDecimal"/>
+	<field name="REST_SICK" class="java.math.BigDecimal"/>
+	<field name="NWHOUR" class="java.math.BigDecimal"/>
+	<field name="ADDCLS1" class="java.math.BigDecimal"/>
+	<field name="NADDCLS" class="java.math.BigDecimal"/>
+	<field name="ADDHOL" class="java.math.BigDecimal"/>
+	<field name="ADDHOLN" class="java.math.BigDecimal"/>
+	<field name="TYADDCLS" class="java.math.BigDecimal"/>
+	<field name="DUCLS_S" class="java.math.BigDecimal"/>
+	<field name="REST_PAY_S" class="java.math.BigDecimal"/>
+	<field name="ADDCLS1_S" class="java.math.BigDecimal"/>
+	<field name="NADDCLS_S" class="java.math.BigDecimal"/>
+	<field name="ADDHOL_S" class="java.math.BigDecimal"/>
+	<field name="ADDHOLN_S" class="java.math.BigDecimal"/>
+	<field name="BSALY_N" class="java.math.BigDecimal"/>
+	<field name="BONUS1" class="java.math.BigDecimal"/>
+	<field name="BONUS2" class="java.math.BigDecimal"/>
+	<field name="BONUS3" class="java.math.BigDecimal"/>
+	<field name="BONUS6" class="java.math.BigDecimal"/>
+	<field name="BONUS_ACN" class="java.math.BigDecimal"/>
+	<field name="BONUS4" class="java.math.BigDecimal"/>
+	<field name="BONUS7" class="java.math.BigDecimal"/>
+	<field name="BONUS5" class="java.math.BigDecimal"/>
+	<field name="TINCOME" class="java.math.BigDecimal"/>
+	<field name="JOININSU" class="java.math.BigDecimal"/>
+	<field name="YLBX" class="java.math.BigDecimal"/>
+	<field name="BORM" class="java.math.BigDecimal"/>
+	<field name="JOINLUM" class="java.math.BigDecimal"/>
+	<field name="PAYTAX" class="java.math.BigDecimal"/>
+	<field name="KQT" class="java.math.BigDecimal"/>
+	<field name="TKQ" class="java.math.BigDecimal"/>
+	<field name="TS1" class="java.math.BigDecimal"/>
+	<field name="TTS" class="java.math.BigDecimal"/>
+	<field name="BONUS10" class="java.math.BigDecimal"/>
+	<field name="NOTE" class="java.lang.String"/>
+	<variable name="DUCLS_S_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{DUCLS_S}]]></variableExpression>
+	</variable>
+	<variable name="REST_PAY_S_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{REST_PAY_S}]]></variableExpression>
+	</variable>
+	<variable name="ADDCLS1_S_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{ADDCLS1_S}]]></variableExpression>
+	</variable>
+	<variable name="NADDCLS_S_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{NADDCLS_S}]]></variableExpression>
+	</variable>
+	<variable name="ADDHOL_S_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{ADDHOL_S}]]></variableExpression>
+	</variable>
+	<variable name="ADDHOLN_S_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{ADDHOLN_S}]]></variableExpression>
+	</variable>
+	<variable name="BSALY_N_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BSALY_N}]]></variableExpression>
+	</variable>
+	<variable name="BONUS1_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BONUS1}]]></variableExpression>
+	</variable>
+	<variable name="BONUS2_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BONUS2}]]></variableExpression>
+	</variable>
+	<variable name="BONUS3_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BONUS3}]]></variableExpression>
+	</variable>
+	<variable name="BONUS6_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BONUS6}]]></variableExpression>
+	</variable>
+	<variable name="BONUS_ACN_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BONUS_ACN}]]></variableExpression>
+	</variable>
+	<variable name="BONUS4_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BONUS4}]]></variableExpression>
+	</variable>
+	<variable name="BONUS7_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BONUS7}]]></variableExpression>
+	</variable>
+	<variable name="BONUS5_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BONUS5}]]></variableExpression>
+	</variable>
+	<variable name="TINCOME_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TINCOME}]]></variableExpression>
+	</variable>
+	<variable name="JOININSU_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{JOININSU}]]></variableExpression>
+	</variable>
+	<variable name="YLBX_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{YLBX}]]></variableExpression>
+	</variable>
+	<variable name="BORM_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BORM}]]></variableExpression>
+	</variable>
+	<variable name="JOINLUM_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{JOINLUM}]]></variableExpression>
+	</variable>
+	<variable name="PAYTAX_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{PAYTAX}]]></variableExpression>
+	</variable>
+	<variable name="KQT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{KQT}]]></variableExpression>
+	</variable>
+	<variable name="TKQ_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TKQ}]]></variableExpression>
+	</variable>
+	<variable name="TS1_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TS1}]]></variableExpression>
+	</variable>
+	<variable name="BAC_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BAC}]]></variableExpression>
+	</variable>
+	<variable name="TTS_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TTS}]]></variableExpression>
+	</variable>
+	<variable name="BONUS10_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BONUS10}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="41">
+			<staticText>
+				<reportElement x="306" y="0" width="162" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[BẢNG LƯƠNG THÁNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="306" y="20" width="162" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="HanWangMingMedium" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[月份薪資總表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="6" width="30" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Đơn vị]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="30" height="14"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="HanWangMingMedium" size="10"/>
+				</textElement>
+				<text><![CDATA[ 部門]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="688" y="20" width="30" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Ngày in]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="752" y="20" width="60" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="469" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{month}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="718" y="19" width="34" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="HanWangMingMedium" size="8"/>
+				</textElement>
+				<text><![CDATA[列印日期]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="30" y="20" width="270" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{dept}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="30" y="6" width="270" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{pos}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="145">
+			<rectangle>
+				<reportElement x="0" y="0" width="21" height="145"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="72" width="21" height="30"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[STT ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="42" width="21" height="30"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[  次序]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="21" y="0" width="36" height="145"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="21" y="72" width="36" height="43"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[SỐ THẺ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="42" width="36" height="30"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[  工號]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="57" y="0" width="54" height="145"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="57" y="42" width="54" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[HỌ VÀ TÊN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="72" width="54" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="110" y="0" width="42" height="145"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="110" y="72" width="42" height="73"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[KÝ NHẬN ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="42" height="72"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[  簽收]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="152" y="0" width="20" height="145"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="152" y="59" width="20" height="86"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[LƯƠNG CĂN BẢN ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="0" width="20" height="59"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[  底薪]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="172" y="0" width="32" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="172" y="0" width="32" height="24"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[NGÀY LÀM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="24" width="32" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[工作天數]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="172" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="172" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CA NGÀY ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 日班天數]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="188" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="188" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CA ĐÊM ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 夜班天數]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="204" y="0" width="64" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="204" y="0" width="64" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[NGÀY NGHỈ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="20" width="64" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[休假]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="204" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="204" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CÓ LƯƠNG ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 有薪假天數]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="220" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="220" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[PHÉP KHÁC ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 其他]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="236" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="236" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[PHÉP BỆNH ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="236" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 病假]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="252" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="252" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[KHÔNG PHÉP ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 曠工(H)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="268" y="0" width="82" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="268" y="0" width="82" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[SỐ GIỜ TĂNG CA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="20" width="82" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[加班時間]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="268" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="268" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[THƯỜNG (1.5) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 平日(H)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="284" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="284" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[ĐÊM (2.15) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 夜班(H)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="300" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="300" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CHỦ NHẬT (2.0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 節假日(H)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="316" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="316" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[LỄ (3.0) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 節假日(H)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="332" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="332" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[LŨY KẾ TRONG NĂM ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 年度累計時數]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="350" y="40" width="22" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="350" y="90" width="22" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CA NGÀY ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="40" width="22" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 正常上班薪水]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="372" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="372" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[NGÀY NGHỈ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 有薪假補給]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="390" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="390" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[NGÀY (1.5) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 日班加班薪水]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="408" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="408" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[ĐÊM (2.15) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 夜班加班薪水]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="426" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="426" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CHỦ NHẬT (2.0) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 假日加班薪水]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="442" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="442" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[NGÀY LỄ (3.0) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 假日加班薪水]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="458" y="40" width="22" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="458" y="40" width="11" height="105"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CL_PC.TCA(0.3/0.35,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="469" y="40" width="11" height="105"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[0.5,1.15,1,2) 加班津貼差異]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="350" y="20" width="40" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="350" y="20" width="40" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[LƯƠNG CB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="30" width="40" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[基本薪]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="390" y="20" width="90" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="390" y="20" width="90" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[TIỀN TĂNG CA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="30" width="90" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[加班費]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="480" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="480" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[TIỀN THƯỞNG ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 生產獎金]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="498" y="40" width="24" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="498" y="90" width="24" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CHỨC VỤ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="40" width="24" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 職務津貼]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="522" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="522" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 工種津貼]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CÔNG VIỆC ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="540" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="540" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 全勤]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CHUYÊN CẦN ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="556" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="556" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 加班全勤]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="556" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CHUYÊN CẦN TCA ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="572" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="572" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 其他津貼]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="572" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[PHỤ CẤP KHÁC ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="590" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="590" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 伙食津貼]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="590" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[TIỀN CƠM TĂNG CA 1-1.5H ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="606" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="606" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 前月補薪]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="606" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[BÙ LƯƠNG THÁNG TRƯỚC ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="638" y="0" width="26" height="145"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="650" y="0" width="14" height="145"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[毛算]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="638" y="0" width="12" height="145"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CỘNG]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="480" y="20" width="158" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="480" y="30" width="158" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[津貼]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="20" width="158" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[PHỤ CẤP]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="350" y="0" width="288" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="346" y="0" width="292" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[THÀNH TIỀN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="10" width="288" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 金額]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="664" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="664" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[BHXH+TN ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="664" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[社會保險+失業]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="682" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="682" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 醫療保險]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="682" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[BẢO HIỂM Y TẾ ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="700" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="700" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[TẠM ỨNG ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 借金]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="718" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="718" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[ĐOÀN PHÍ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="718" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 工會費]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="734" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="734" y="87" width="18" height="58"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[THUẾ THU NHẬP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="734" y="40" width="18" height="47"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 所得稅]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="752" y="40" width="18" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="752" y="90" width="18" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[KHÁC ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="752" y="40" width="18" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 其它]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="770" y="40" width="22" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="770" y="40" width="22" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[ 小計]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="770" y="90" width="22" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[CỘNG ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="792" y="0" width="29" height="145"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="792" y="0" width="15" height="145"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[SỐ TIỀN THỰC NHẬN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="807" y="0" width="14" height="145"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="Left">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[實領]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="664" y="0" width="128" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="664" y="0" width="128" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[KHẤU TRỪ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="664" y="20" width="128" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[扣除]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="622" y="40" width="16" height="105"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="622" y="40" width="16" height="50"/>
+				<textElement verticalAlignment="Middle" rotation="Left">
+					<font fontName="HanWangMingMedium" size="6"/>
+				</textElement>
+				<text><![CDATA[托兒津貼]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="622" y="90" width="16" height="55"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="Left">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[TC GỬI TRẺ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18">
+			<rectangle>
+				<reportElement x="0" y="0" width="21" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="21" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="21" y="0" width="38" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="21" y="0" width="36" height="9"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EMPSN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="9" width="36" height="9"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["("+$F{BAC}+")"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="57" y="0" width="54" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="57" y="0" width="54" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EMPNA}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="110" y="0" width="42" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="152" y="0" width="20" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="152" y="0" width="20" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BSALY}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="172" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="172" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{DUCLS}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="188" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="188" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{NUCLS}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="204" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="204" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{REST_PAY}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="220" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="220" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{REST}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="236" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="236" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{REST_SICK}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="252" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="252" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{NWHOUR}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="268" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="268" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ADDCLS1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="284" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="284" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{NADDCLS}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="300" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="300" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ADDHOL}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="316" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="316" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ADDHOLN}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="332" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="332" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{TYADDCLS}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="350" y="0" width="22" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="350" y="0" width="22" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{DUCLS_S}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="372" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="372" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{REST_PAY_S}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="390" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="390" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ADDCLS1_S}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="408" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="408" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{NADDCLS_S}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="426" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="426" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ADDHOL_S}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="442" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="442" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{ADDHOLN_S}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="458" y="0" width="22" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="458" y="0" width="22" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BSALY_N}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="480" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="480" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BONUS1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="498" y="0" width="24" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="498" y="0" width="24" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BONUS2}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="522" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="522" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BONUS3}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="540" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="540" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BONUS6}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="556" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="556" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BONUS_ACN}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="572" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="572" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BONUS4}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="590" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="590" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BONUS7}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="606" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="606" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BONUS5}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="638" y="0" width="26" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="638" y="0" width="26" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{TINCOME}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="664" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="664" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{JOININSU}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="682" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="682" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{YLBX}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="700" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="700" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BORM}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="718" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="718" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{JOINLUM}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="734" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="734" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{PAYTAX}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="752" y="0" width="18" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="752" y="0" width="18" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{KQT}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="770" y="0" width="22" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="770" y="0" width="22" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{TKQ}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="792" y="0" width="29" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="792" y="0" width="29" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{TTS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="111" y="0" width="21" height="9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NOTE}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="622" y="0" width="16" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#" isBlankWhenNull="true">
+				<reportElement x="622" y="0" width="16" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{BONUS10}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="28">
+			<staticText>
+				<reportElement x="1" y="0" width="105" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[MÃ SỐ BIỂU MẪU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="14" width="105" height="14"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[表單編號：CW4-010  (第四版)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="14" width="88" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[單位: 千元 1.000 VND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="14" width="105" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="HanWangMingMedium" size="7"/>
+				</textElement>
+				<text><![CDATA[保存期限：5年]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="686" y="0" width="105" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[THỜI GIAN LƯU: 5 NĂM]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="791" y="13" width="15" height="15"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{PAGE_NUMBER}+"/"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="806" y="13" width="15" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="39">
+			<rectangle>
+				<reportElement x="0" y="0" width="821" height="39"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="350" y="0" width="22" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" pattern="##0.#">
+				<reportElement x="350" y="0" width="22" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{DUCLS_S_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="372" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="372" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{REST_PAY_S_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="390" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="390" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{ADDCLS1_S_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="408" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="408" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{NADDCLS_S_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="426" y="0" width="16" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="426" y="0" width="16" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{ADDHOL_S_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="442" y="0" width="16" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="442" y="0" width="16" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{ADDHOLN_S_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="458" y="0" width="22" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="458" y="0" width="22" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BSALY_N_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="480" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="480" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BONUS1_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="498" y="0" width="24" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="498" y="0" width="24" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BONUS2_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="522" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="522" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BONUS3_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="540" y="0" width="16" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="540" y="0" width="16" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BONUS6_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="556" y="0" width="16" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="556" y="0" width="16" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BONUS_ACN_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="572" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="572" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BONUS4_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="590" y="0" width="16" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="590" y="0" width="16" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BONUS7_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="606" y="0" width="16" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="606" y="0" width="16" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BONUS5_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="638" y="0" width="26" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="638" y="0" width="26" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{TINCOME_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="664" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="664" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{JOININSU_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="682" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="682" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{YLBX_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="700" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="700" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BORM_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="718" y="0" width="16" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="718" y="0" width="16" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{JOINLUM_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="734" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="734" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{PAYTAX_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="752" y="0" width="18" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="752" y="0" width="18" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{KQT_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="770" y="0" width="22" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="770" y="0" width="22" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{TKQ_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="792" y="0" width="29" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#">
+				<reportElement x="792" y="0" width="29" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{TTS_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="19" y="2" width="34" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="55" y="0" width="69" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="HanWangMingMedium" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[總共人數]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="0" width="82" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="HanWangMingMedium" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total( 總額 ):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="20" width="68" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="HanWangMingMedium" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[部門實領總計]]></text>
+			</staticText>
+			<textField pattern="##0.#">
+				<reportElement x="735" y="21" width="84" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{TTS_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="##0.#">
+				<reportElement x="565" y="21" width="74" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{TS1_1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="622" y="0" width="16" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="##0.#" isBlankWhenNull="true">
+				<reportElement x="622" y="0" width="16" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{BONUS10_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_IDKEY_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.IDKEY"/>
+            </properties>
+          </component>
+          <component id="Component_IDKEY_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="IDKEY_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_NAME_RELATIVE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.NAME_RELATIVE"/>
+            </properties>
+          </component>
+          <component id="Component_NAME_RELATIVE_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NAME_RELATIVE_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_BIRTHDAY_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.BIRTHDAY"/>
+            </properties>
+          </component>
+          <component id="Component_BIRTHDAY_DscDateField1"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="BIRTHDAY_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_SEX_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.SEX"/>
+            </properties>
+          </component>
+          <component id="Component_SEX_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="SEX_DscField4"/>
+            </properties>
+          </component>
+          <component id="Component_IDKIND_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.IDKIND"/>
+            </properties>
+          </component>
+          <component id="Component_IDKIND_DscField5"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="IDKIND_DscField5"/>
+            </properties>
+          </component>
+          <component id="Component_CONFIRM_DATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.CONFIRM_DATE"/>
+            </properties>
+          </component>
+          <component id="Component_CONFIRM_DATE_DscDateField2"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="CONFIRM_DATE_DscDateField2"/>
+            </properties>
+          </component>
+          <component id="Component_BEGINDATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.BEGINDATE"/>
+            </properties>
+          </component>
+          <component id="Component_BEGINDATE_DscDateField3"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="BEGINDATE_DscDateField3"/>
+            </properties>
+          </component>
+          <component id="Component_ENDDATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.ENDDATE"/>
+            </properties>
+          </component>
+          <component id="Component_ENDDATE_DscDateField4"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="ENDDATE_DscDateField4"/>
+            </properties>
+          </component>
+          <component id="Component_USER_UPDATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.USER_UPDATE"/>
+            </properties>
+          </component>
+          <component id="Component_USER_UPDATE_DscField6"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="USER_UPDATE_DscField6"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_UPDATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_RELATIVE.DATE_UPDATE"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_UPDATE_DscDateField5"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_UPDATE_DscDateField5"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

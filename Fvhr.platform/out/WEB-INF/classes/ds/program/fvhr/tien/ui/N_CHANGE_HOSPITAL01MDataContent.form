@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_EMPSN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_CHANGE_HOSPITAL.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField1" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField1"/>
+            </properties>
+          <events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doEmloyee"/>
+</event-set>
+</events>
+</component>
+          <component id="Component_DATE_CHANGE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_CHANGE_HOSPITAL.DATE_CHANGE"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_CHANGE_DscDateField1" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_CHANGE_DscDateField1"/>
+            </properties>
+          </component>
+          
+          <component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Nơi DKKCB cũ"/>
+</properties>
+</component>
+<component id="Component_lblHosNameold" type="nextapp.echo2.app.Label"/>
+<component id="Component_IDPRO_NEW_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_CHANGE_HOSPITAL.IDPRO_NEW"/>
+            </properties>
+          </component>
+<component id="Component_IDPRO_NEW_SelectField2" type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="IDPRO_NEW_SelectField2"/>
+            <property name="width" value="100px"/>
+</properties>
+          <events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="changePro_N"/>
+</event-set>
+</events>
+</component>
+<component id="Component_IDHOS_NEW_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_CHANGE_HOSPITAL.IDHOS_NEW"/>
+            </properties>
+          </component>
+<component id="Component_IDHOS_NEW_SelectField1" type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="IDHOS_NEW_SelectField1"/>
+            <property name="width" value="100px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+          <events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doChange_Hos"/>
+</event-set>
+</events>
+</component>
+          
+          
+          <component id="Component_NOTE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_CHANGE_HOSPITAL.NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_DscField5" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField5"/>
+            </properties>
+          </component>
+          <component id="Component_label1" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblNameHos" type="nextapp.echo2.app.Label">
+<properties>
+<property name="foreground" value="#ff0000"/>
+<property name="background" value="#ff0000"/>
+</properties>
+</component>
+<component id="Component_STATUS_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_CHANGE_HOSPITAL.STATUS"/>
+            </properties>
+          </component>
+          <component id="Component_STATUS_DscField6" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="STATUS_DscField6"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

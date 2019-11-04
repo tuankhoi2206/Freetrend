@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle="resource.localization.UICaption" resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_lblFactory" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="%N_DEPARTMENT.NAME_FACT"/>
+</properties>
+</component>
+<component id="Component_sfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="sfFactChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label7" type="nextapp.echo2.app.Label"/>
+<component id="Component_groupFVL" type="dsc.echo2app.component.DscGroupCheckBox" visibility="private">
+<properties>
+<property name="size" value="3"/>
+<property name="enabled" value="false"/>
+</properties>
+<children>
+<component id="Component_chkFv1" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="FV1"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_chkFv2" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="FV2"/>
+</properties>
+</component>
+<component id="Component_chkFv3" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="FV3"/>
+</properties>
+</component>
+<component id="Component_chkFv4" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="FV5"/>
+</properties>
+</component>
+<component id="Component_chkFv5" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="FV6"/>
+</properties>
+</component>
+<component id="Component_chkOther" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="Khác"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_lblLean" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="%N_DEPARTMENT.NAME_GROUP"/>
+</properties>
+</component>
+<component id="Component_sfLean" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="140px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="sfLeanChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_lblDept" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="%N_DEPARTMENT.NAME_DEPT"/>
+</properties>
+</component>
+<component id="Component_sfDept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="180px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+
+</component>
+</children>
+<properties>
+<property name="insets" value="2px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

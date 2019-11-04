@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Kynhanluong" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="month" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="bigSum" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_dept" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select t.stt, t.empsn,t.depsn as id_dept, (select d.name_dept from n_department d where d.id_dept=t.depsn) as depsn, t.possn,(select a.code_tax||' '||to_char(a.dates,'dd/mm/yyyy') from n_emp_taxcode a where a.empsn=t.empsn) as code_tax, t.bac, t.empna, t.bsaly, t.ducls, t.nucls, t.rest_pay, t.rest, t.rest_sick, t.other, t.nwhour,
+t.addcls1, t.naddcls, t.addhol, t.addholn, t.tyaddcls, t.ducls_s, t.nucls_s, t.rest_pay_s, t.addcls1_s, t.naddcls_s,
+t.addhol_s, t.addholn_s, t.bsaly_n, t.bonus1, t.bonus1_hol, t.bonus2, t.bonus3, t.note_rest,
+t.bonus6, t.bonus_acn, t.bonus4, t.bonus7, t.bonus5, t.bonus9, t.tincome,t.joininsu, t.bh_tnghiep, t.ylbx, t.borm, t.joinlum,
+t.paytax, t.kqt, t.tkq, t.ts1 as ts1, t.ts as tts
+,t.tbasic, t.bonus10
+from att201308 t where t.empsn in ('13031271','05110396')]]>
+	</queryString>
+	<field name="STT" class="java.math.BigDecimal"/>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="DEPSN" class="java.lang.String"/>
+	<field name="POSSN" class="java.lang.String"/>
+	<field name="CODE_TAX" class="java.lang.String"/>
+	<field name="BAC" class="java.math.BigDecimal"/>
+	<field name="EMPNA" class="java.lang.String"/>
+	<field name="BSALY" class="java.math.BigDecimal"/>
+	<field name="DUCLS" class="java.math.BigDecimal"/>
+	<field name="NUCLS" class="java.math.BigDecimal"/>
+	<field name="REST_PAY" class="java.math.BigDecimal"/>
+	<field name="REST" class="java.math.BigDecimal"/>
+	<field name="REST_SICK" class="java.math.BigDecimal"/>
+	<field name="OTHER" class="java.math.BigDecimal"/>
+	<field name="NWHOUR" class="java.math.BigDecimal"/>
+	<field name="ADDCLS1" class="java.math.BigDecimal"/>
+	<field name="NADDCLS" class="java.math.BigDecimal"/>
+	<field name="ADDHOL" class="java.math.BigDecimal"/>
+	<field name="ADDHOLN" class="java.math.BigDecimal"/>
+	<field name="TYADDCLS" class="java.math.BigDecimal"/>
+	<field name="DUCLS_S" class="java.math.BigDecimal"/>
+	<field name="NUCLS_S" class="java.math.BigDecimal"/>
+	<field name="REST_PAY_S" class="java.math.BigDecimal"/>
+	<field name="ADDCLS1_S" class="java.math.BigDecimal"/>
+	<field name="NADDCLS_S" class="java.math.BigDecimal"/>
+	<field name="ADDHOL_S" class="java.math.BigDecimal"/>
+	<field name="ADDHOLN_S" class="java.math.BigDecimal"/>
+	<field name="BSALY_N" class="java.math.BigDecimal"/>
+	<field name="BONUS1" class="java.math.BigDecimal"/>
+	<field name="BONUS1_HOL" class="java.math.BigDecimal"/>
+	<field name="BONUS2" class="java.math.BigDecimal"/>
+	<field name="BONUS3" class="java.math.BigDecimal"/>
+	<field name="NOTE_REST" class="java.lang.String"/>
+	<field name="BONUS6" class="java.math.BigDecimal"/>
+	<field name="BONUS_ACN" class="java.math.BigDecimal"/>
+	<field name="BONUS4" class="java.math.BigDecimal"/>
+	<field name="BONUS7" class="java.math.BigDecimal"/>
+	<field name="BONUS5" class="java.math.BigDecimal"/>
+	<field name="BONUS9" class="java.math.BigDecimal"/>
+	<field name="TINCOME" class="java.math.BigDecimal"/>
+	<field name="JOININSU" class="java.math.BigDecimal"/>
+	<field name="BH_TNGHIEP" class="java.math.BigDecimal"/>
+	<field name="YLBX" class="java.math.BigDecimal"/>
+	<field name="BORM" class="java.math.BigDecimal"/>
+	<field name="JOINLUM" class="java.math.BigDecimal"/>
+	<field name="PAYTAX" class="java.math.BigDecimal"/>
+	<field name="KQT" class="java.math.BigDecimal"/>
+	<field name="TKQ" class="java.math.BigDecimal"/>
+	<field name="TS1" class="java.math.BigDecimal"/>
+	<field name="TTS" class="java.math.BigDecimal"/>
+	<field name="TBASIC" class="java.math.BigDecimal"/>
+	<field name="BONUS10" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="141" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="23" width="56" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ĐƠN VỊ:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="18" width="71" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[org.apache.commons.lang.StringUtils.substringBefore($F{DEPSN},".")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="38" width="231" height="18"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[org.apache.commons.lang.StringUtils.substringAfter($F{DEPSN},".").replace("."," ")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="38" width="50" height="20"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[部門]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="23" width="72" height="20"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[列印日期]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="449" y="24" width="60" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="139" y="96" width="177" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KÝ NHẬN LƯƠNG THÁNG ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="93" width="88" height="22"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{month}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="53" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-1" y="0" width="34" height="52"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="-1" y="6" width="38" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STT]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="33" y="0" width="52" height="52"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="85" y="0" width="56" height="52"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="387" y="0" width="68" height="52"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="455" y="0" width="100" height="52"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="35" y="8" width="50" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SỐ THẺ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="7" width="55" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LƯƠNG]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="141" y="0" width="136" height="52"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="161" y="7" width="80" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HỌ VÀ TÊN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="8" width="68" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KÝ NHẬN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="9" width="117" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HỌ VÀ TÊN (Ghi tay)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="277" y="0" width="44" height="52"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="279" y="7" width="36" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TỔ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="31" width="20" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[序號]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="30" width="49" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[工號]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="30" width="40" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[薪資]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="29" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="30" width="36" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[組]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="28" width="59" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[簽收]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="28" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[姓和名(手簽)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="321" y="0" width="68" height="52"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="321" y="6" width="68" height="27"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NGÀY NHẬP XƯỞNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="30" width="59" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[進廠日期]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-1" y="-2" width="34" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Transparent" x="8" y="9" width="25" height="14" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="33" y="-2" width="53" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="85" y="-2" width="56" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="141" y="-2" width="136" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement x="33" y="6" width="59" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EMPSN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="5" width="55" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{TTS}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="387" y="-2" width="68" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="277" y="-2" width="44" height="29"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="142" y="1" width="133" height="16"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EMPNA}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="455" y="-2" width="100" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="321" y="-2" width="68" height="29"/>
+			</rectangle>
+			<textField>
+				<reportElement x="280" y="3" width="35" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{id_dept}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<summary>
+		<band height="153">
+			<staticText>
+				<reportElement x="5" y="20" width="137" height="20"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[表單編號:  CW4-021]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="22" width="100" height="20"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[保存期限: 3年]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="83" y="-2" width="73" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$P{bigSum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="QDNghiViec" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="323"/>
+	<parameter name="empsn" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select Q.empsn,Q.off_date,Q.real_off_date,R.name_qr,Q.note
+,a.fname||' '||a.lname as fname,a.lname,a.empcn,a.position
+,b.name_fact||' '||b.name_group as f_group,b.name_dept_name
+,substr(to_char(q.off_date,'dd/mm/yyyy'),1,2) as n_xin
+,substr(to_char(q.off_date,'dd/mm/yyyy'),4,2) as t_xin,
+substr(to_char(q.off_date,'dd/mm/yyyy'),7,4) as na_xin
+,substr(to_char(q.real_off_date,'dd/mm/yyyy'),1,2) as n_nghi,
+substr(to_char(q.real_off_date,'dd/mm/yyyy'),4,2) as t_nghi
+,substr(to_char(q.real_off_date,'dd/mm/yyyy'),7,4) as na_nghi
+,nvl(q.qdnv,1) as qdnv,q.so_qdnv
+,substr(to_char(q.date_hen,'dd/mm/yyyy'),1,2) as n_hen,
+substr(to_char(q.date_hen,'dd/mm/yyyy'),4,2) as t_hen
+,substr(to_char(q.date_hen,'dd/mm/yyyy'),7,4) as na_hen
+,substr(to_char(sysdate,'dd/mm/yyyy'),1,2) as n_ky,
+substr(to_char(sysdate,'dd/mm/yyyy'),4,2) as t_ky
+,substr(to_char(sysdate,'dd/mm/yyyy'),7,4) as na_ky
+from N_Emp_Quit Q,N_Quit_Reason R,n_employee a,n_department b
+where R.id_quit_reason=Q.id_quit_reason and q.empsn=a.empsn and q.depsn=b.id_dept
+and q.empsn in ($P{empsn})]]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="OFF_DATE" class="java.sql.Timestamp"/>
+	<field name="REAL_OFF_DATE" class="java.sql.Timestamp"/>
+	<field name="NAME_QR" class="java.lang.String"/>
+	<field name="NOTE" class="java.lang.String"/>
+	<field name="FNAME" class="java.lang.String"/>
+	<field name="LNAME" class="java.lang.String"/>
+	<field name="EMPCN" class="java.lang.String"/>
+	<field name="POSITION" class="java.lang.String"/>
+	<field name="F_GROUP" class="java.lang.String"/>
+	<field name="NAME_DEPT_NAME" class="java.lang.String"/>
+	<field name="N_XIN" class="java.lang.String"/>
+	<field name="T_XIN" class="java.lang.String"/>
+	<field name="NA_XIN" class="java.lang.String"/>
+	<field name="N_NGHI" class="java.lang.String"/>
+	<field name="T_NGHI" class="java.lang.String"/>
+	<field name="NA_NGHI" class="java.lang.String"/>
+	<field name="QDNV" class="java.math.BigDecimal"/>
+	<field name="SO_QDNV" class="java.lang.String"/>
+	<field name="N_HEN" class="java.lang.String"/>
+	<field name="T_HEN" class="java.lang.String"/>
+	<field name="NA_HEN" class="java.lang.String"/>
+	<field name="N_KY" class="java.lang.String"/>
+	<field name="T_KY" class="java.lang.String"/>
+	<field name="NA_KY" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="15" width="154" height="32"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Khu Chế Xuất LINH TRUNG
+Công Ty TNHH FREETREND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="47" width="30" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12"/>
+				</textElement>
+				<text><![CDATA[編號]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="47" width="124" height="18"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Số:--------------------/QĐ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="15" width="209" height="32"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam
+Độc Lập - Tự Do - Hạnh Phúc]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="75" y="45" width="88" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{SO_QDNV}!=null?$F{SO_QDNV}:"")]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="163" y="10" width="255" height="32"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUYẾT ĐỊNH NGHỈ VIỆC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="42" width="118" height="28"/>
+				<textElement textAlignment="Center">
+					<font fontName="MS Song" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[離職決定書]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="488" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="10" width="510" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[- Căn cứ chương IV của Bộ Luật Lao Động về Hợp Đồng Lao Động:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="27" width="238" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[根據《勞動法》有關勞動合同之第IV章；]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="45" width="510" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[- Căn cứ đơn xin nghỉ việc ngày      tháng      năm              của anh (chị) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="62" width="510" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ 根據                     先生〈小姐〉之     年   月   日之離職申請單；]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="93" width="510" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Ban Giám Đốc Công Ty TNHH FREETREND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="110" width="238" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[賜昌公司經理部]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="148" width="172" height="32"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUYẾT ĐỊNH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="180" width="106" height="28"/>
+				<textElement textAlignment="Center">
+					<font fontName="MS Song" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[決定]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="242" width="510" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[第1條：姓名                            工號                 IC卡：          ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="225" width="510" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Điều 1: Anh (Chị)                              	           số thẻ:                               số thẻ IC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="261" width="488" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Chức vụ :                      thuộc Xưởng :                      đơn vị :                                     nghỉ việc kể từ ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="278" width="488" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[職務               廠別                   單位                    離職自]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="313" width="488" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[年      月          日         ,理由:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="296" width="488" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ngày        tháng              năm                 , lý do : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="331" width="510" height="37"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Điều 2: Anh (Chị)                             đến nhận lãnh tiền lương và thanh toán các khoản khác (nếu có) vào lúc 14 giờ 00 phút , ngày          tháng            năm              tại Phòng Nhân Sự.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="368" width="510" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[第2條：員工         於       年    月   日   點   分到      領取薪資及結算各項福利。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="423" width="510" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[第3條：員工  、人事課及相關單位有責任執行本決定。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="386" width="510" height="37"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Điều 3: Anh (Chị)                            , Phòng Nhân Sự và các đơn vị liên quan có trách nhiệm thi hành Quyết Định này.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="441" width="510" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Điều 4: Quyết định này có hiệu lực kể từ ngày ký.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="458" width="510" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[第4條：本決定自核准之日起生效.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="45" width="62" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{N_XIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="45" width="62" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{T_XIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="272" y="45" width="62" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NA_XIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="45" width="142" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="225" width="142" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="225" width="82" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPSN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="225" width="80" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPCN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="261" width="83" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="261" width="80" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{F_GROUP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="335" y="261" width="104" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAME_DEPT_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="296" width="62" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{N_NGHI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="272" y="296" width="142" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAME_QR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="296" width="62" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NA_NGHI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="296" width="62" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{T_NGHI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="331" width="76" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="267" y="345" width="62" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{NA_HEN}!=null?$F{NA_HEN}:"")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="345" width="62" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{N_HEN}!=null?$F{N_HEN}:"")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="205" y="345" width="62" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{T_HEN}!=null?$F{T_HEN}:"")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="386" width="76" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LNAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="162" splitType="Stretch">
+			<staticText>
+				<reportElement x="324" y="28" width="209" height="18"/>
+				<textElement>
+					<font fontName="MS Song" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ 年       月        日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="11" width="209" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Ngày           tháng           năm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="46" width="165" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[P. Tổng Giám Đốc Chấp Hành]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="63" width="148" height="18"/>
+				<textElement textAlignment="Center">
+					<font fontName="MS Song" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[執行副總]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="135" width="125" height="17"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CHIU FU YUNG]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="355" y="11" width="35" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{N_KY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="11" width="50" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NA_KY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="11" width="35" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{T_KY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

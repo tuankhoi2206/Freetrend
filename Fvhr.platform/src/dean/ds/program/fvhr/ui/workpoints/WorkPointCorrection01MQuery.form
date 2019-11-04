@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          
+          
+        
+
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_txtEmpsn" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="maximumLength" value="8"/>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Từ ngày"/>
+</properties>
+</component>
+<component id="Component_dfDate" type="dsc.echo2app.component.DscDateField" visibility="private"/>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đến ngày"/>
+</properties>
+</component>
+<component id="Component_dfToDate" type="dsc.echo2app.component.DscDateField" visibility="private"/>
+</children>
+        <properties>
+          <property name="size" value="2"/>
+          
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

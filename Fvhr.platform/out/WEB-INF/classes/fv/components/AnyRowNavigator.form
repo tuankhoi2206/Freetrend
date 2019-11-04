@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnFirst" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/resultset_first.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/resultset_first_d.png"/>
+</property>
+<property name="actionCommand" value="first"/>
+</properties>
+</component>
+<component id="Component_btnPrevious" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/resultset_previous.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/resultset_previous_d.png"/>
+</property>
+<property name="actionCommand" value="previous"/>
+</properties>
+</component>
+<component id="Component_txtCurrentRecord" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="35px"/>
+<property name="text" value="10000"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+<property name="actionCommand" value="recnumber"/>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</component>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="/"/>
+</properties>
+</component>
+<component id="Component_lblTotalRecord" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="10000"/>
+</properties>
+</component>
+<component id="Component_btnNext" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/resultset_next.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/resultset_next_d.png"/>
+</property>
+<property name="actionCommand" value="next"/>
+</properties>
+</component>
+<component id="Component_btnLast" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/resultset_last.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/resultset_last_d.png"/>
+</property>
+<property name="actionCommand" value="last"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="styleName" value="Default.Toolbar"/>
+<property name="cellSpacing" value="1px"/>
+</properties>
+</component>
+</form>

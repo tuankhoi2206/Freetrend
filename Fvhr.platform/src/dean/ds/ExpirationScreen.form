@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="font">
+<font bold="true" size="20pt"/>
+</property>
+<property name="foreground" value="#ff0000"/>
+<property name="text" value="抱歉，伺服器過期，請連絡您的資訊管理人員(MIS)"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

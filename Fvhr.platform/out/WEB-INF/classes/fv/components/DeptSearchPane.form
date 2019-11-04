@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_column1" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_lblFact" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Xưởng: "/>
+</properties>
+</component>
+<component id="Component_sfXuong" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+</properties>
+</component>
+<component id="Component_lblNhom" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Nhóm: "/>
+</properties>
+</component>
+<component id="Component_sfNhom" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+</properties>
+</component>
+<component id="Component_lblTenDonVi" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tên đơn vị: "/>
+</properties>
+</component>
+<component id="Component_sfTenDonVi" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+</properties>
+</component>
+<component id="Component_lblMaDonVi" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Mã đơn vị: "/>
+</properties>
+</component>
+<component id="Component_sfMaDonVi" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+</properties>
+</component>
+
+
+
+
+
+
+</children>
+<properties>
+<property index="0" name="columnWidth" value="100px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

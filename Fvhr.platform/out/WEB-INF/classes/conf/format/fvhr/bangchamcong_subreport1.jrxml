@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bangchamcong_subreport1" language="groovy" columnCount="2" pageWidth="550" pageHeight="250" columnWidth="274" columnSpacing="2" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="2.9282000000000217"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="emp" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dateStr" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="col_break" class="java.lang.Number"/>
+	<queryString>
+		<![CDATA[select * from n_data_daily t where t.empsn=$P{emp} and to_char(t.dates,'mm/yyyy')=$P{dateStr}]]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="DATES" class="java.sql.Timestamp"/>
+	<field name="T_IN" class="java.lang.String"/>
+	<field name="T_MID" class="java.lang.String"/>
+	<field name="T_OUT" class="java.lang.String"/>
+	<field name="T_OVER" class="java.lang.String"/>
+	<field name="ID_SHIFT" class="java.lang.String"/>
+	<field name="DUCLS" class="java.math.BigDecimal"/>
+	<field name="NUCLS" class="java.math.BigDecimal"/>
+	<field name="OTD" class="java.math.BigDecimal"/>
+	<field name="OTN" class="java.math.BigDecimal"/>
+	<field name="OTS" class="java.math.BigDecimal"/>
+	<field name="LATE" class="java.math.BigDecimal"/>
+	<field name="SIGN_TIME" class="java.math.BigDecimal"/>
+	<field name="ACNM" class="java.math.BigDecimal"/>
+	<field name="REST_RS" class="java.lang.String"/>
+	<field name="REST_QTT" class="java.math.BigDecimal"/>
+	<field name="CHECK_DATA" class="java.lang.String"/>
+	<field name="NWHOUR" class="java.math.BigDecimal"/>
+	<field name="NOTE" class="java.lang.String"/>
+	<field name="LOCKED" class="java.lang.String"/>
+	<field name="UPRINT" class="java.lang.String"/>
+	<field name="MULTIPLY_WD" class="java.math.BigDecimal"/>
+	<field name="OTH" class="java.math.BigDecimal"/>
+	<field name="REAL_OT" class="java.math.BigDecimal"/>
+	<field name="REG_OT" class="java.math.BigDecimal"/>
+	<group name="empsn">
+		<groupExpression><![CDATA[$F{EMPSN}]]></groupExpression>
+		<groupFooter>
+			<band height="24">
+				<staticText>
+					<reportElement mode="Transparent" x="5" y="0" width="269" height="24"/>
+					<textElement>
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[Ghi chú: (*) Ngày chủ nhật tính công như ngày bình thường,
+(**) ngày bình thường tính như chủ nhật, (***) làm việc ngày lễ.]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<columnHeader>
+		<band height="14">
+			<frame>
+				<reportElement x="0" y="0" width="274" height="14"/>
+				<rectangle>
+					<reportElement x="0" y="0" width="25" height="14"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="0" width="25" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[STT]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="25" y="0" width="33" height="14"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="25" y="0" width="33" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[SÁNG]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="58" y="0" width="33" height="14"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="58" y="0" width="33" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[TRƯA]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="91" y="0" width="33" height="14"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="91" y="0" width="33" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[CHIỀU]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="124" y="0" width="33" height="14"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="124" y="0" width="33" height="14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[TỐI]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="157" y="0" width="117" height="14"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="162" y="0" width="112" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<text><![CDATA[GHI CHÚ]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14">
+			<frame>
+				<reportElement mode="Transparent" x="0" y="0" width="274" height="14" isRemoveLineWhenBlank="true"/>
+				<rectangle>
+					<reportElement x="0" y="0" width="25" height="14" isRemoveLineWhenBlank="true"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement mode="Transparent" x="0" y="0" width="25" height="14" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="25" y="0" width="33" height="14" isRemoveLineWhenBlank="true"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="25" y="0" width="33" height="14" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{T_IN}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="58" y="0" width="33" height="14" isRemoveLineWhenBlank="true"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="58" y="0" width="33" height="14" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{T_MID}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="91" y="0" width="33" height="14" isRemoveLineWhenBlank="true"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="0" width="33" height="14" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{T_OUT}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="124" y="0" width="33" height="14" isRemoveLineWhenBlank="true"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement x="124" y="0" width="33" height="14" isRemoveLineWhenBlank="true"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{T_OVER}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement x="157" y="0" width="117" height="14" isRemoveLineWhenBlank="true"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement stretchType="RelativeToTallestObject" x="157" y="0" width="117" height="14" isRemoveLineWhenBlank="true"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{NOTE}]]></textFieldExpression>
+				</textField>
+				<break type="Column">
+					<reportElement x="0" y="13" width="100" height="1">
+						<printWhenExpression><![CDATA[$V{REPORT_COUNT}==$P{col_break}]]></printWhenExpression>
+					</reportElement>
+				</break>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

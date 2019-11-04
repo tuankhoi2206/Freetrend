@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_DATES_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="DATES&#x9;&#x9;"/>
+            </properties>
+          </component>
+          <component id="Component_DATES_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="DATES_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_EMPCN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="EMPCN&#x9;&#x9;&#x9;"/>
+            </properties>
+          </component>
+          <component id="Component_EMPCN_Label1"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="id" value="EMPCN_Label1"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_Label2"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_Label2"/>
+            </properties>
+          </component>
+          <component id="Component_TIME_IN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="TIME_IN"/>
+            </properties>
+          </component>
+          <component id="Component_TIME_IN_DscField5"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TIME_IN_DscField5"/>
+            </properties>
+          </component>
+          <component id="Component_TIME_OUT_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value=""/>
+            </properties>
+          </component>
+          <component id="Component_TIME_OUT_DscField6"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TIME_OUT_DscField6"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

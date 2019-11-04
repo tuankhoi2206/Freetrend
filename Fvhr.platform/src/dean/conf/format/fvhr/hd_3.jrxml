@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="hd_3" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="884"/>
+	<queryString>
+		<![CDATA[Select e.empsn,d.name_dept,e.fname||' '||e.lname Fname, c.id,c.limit,b.date_s, b.expire ,b.poss,d.name_dept_name,decode(length(salary),7,substr(salary,0,1)||'.'||substr(salary,2,3)||'.'||substr(salary,4,3),
+substr(salary,0,2)||'.'||substr(salary,3,3)||'.'||substr(salary,6,3)
+) as salary,
+decode(length(e.birthday),10,SUBSTR(e.BIRTHDAY,1,2),'' ) as NGAY_SINH,
+decode(length(e.birthday),10,SUBSTR(e.BIRTHDAY,4,2),'' ) as THANG_SINH,
+decode(length(e.birthday),10,SUBSTR(e.BIRTHDAY,7,4),e.birthday ) as NAM_SINH,
+SUBSTR(e.BIRTHDAY,7,4) AS NAM_SINH,e.BIRTHPLACE,e.PERMANENT_ADDRESS,e.ID_NO,e.id_place ,e.ngaycap_id as NGAY_CAP,
+ SUBSTR(TO_CHAR(B.DATE_S,'DD/MM/YYYY'),1,2) AS NGAY_KY  ,
+  SUBSTR(TO_CHAR(B.DATE_S,'DD/MM/YYYY'),4,2) AS THANG_KY  , SUBSTR(TO_CHAR(B.DATE_S,'DD/MM/YYYY'),7,4) AS NAM_KY  ,
+  SUBSTR(TO_CHAR(B.Expire,'DD/MM/YYYY'),1,2) AS NGAY_HH  , SUBSTR(TO_CHAR(B.Expire,'DD/MM/YYYY'),4,2) AS THANG_HH  ,
+  SUBSTR(TO_CHAR(B.Expire,'DD/MM/YYYY'),7,4) AS NAM_HH  , SUBSTR(TO_CHAR(e.date_hired,'DD/MM/YYYY'),1,2) AS NGAY_NX  ,
+  SUBSTR(TO_CHAR(e.date_hired,'DD/MM/YYYY'),4,2) AS THANG_NX  , SUBSTR(TO_CHAR(e.date_hired,'DD/MM/YYYY'),7,4) AS NAM_NX  ,
+  e.date_hired, e.education,b.times,d.name_group,b.id_labour From n_employee e,n_department d,  n_labour b, n_labourkind c
+  where d.name_fact='FVN' and name_group='QL' and e.depsn=d.id_dept and e.empsn=b.empsn and b.limit=c.id   and B.TIMES>1 and B.TIMES<=3
+  and b.date_s=to_date('01/08/2013','dd/mm/yyyy')]]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="NAME_DEPT" class="java.lang.String"/>
+	<field name="FNAME" class="java.lang.String"/>
+	<field name="ID" class="java.lang.String"/>
+	<field name="LIMIT" class="java.lang.String"/>
+	<field name="DATE_S" class="java.sql.Timestamp"/>
+	<field name="EXPIRE" class="java.sql.Timestamp"/>
+	<field name="POSS" class="java.lang.String"/>
+	<field name="NAME_DEPT_NAME" class="java.lang.String"/>
+	<field name="SALARY" class="java.lang.String"/>
+	<field name="NGAY_SINH" class="java.lang.String"/>
+	<field name="THANG_SINH" class="java.lang.String"/>
+	<field name="NAM_SINH" class="java.lang.String"/>
+	<field name="BIRTHPLACE" class="java.lang.String"/>
+	<field name="PERMANENT_ADDRESS" class="java.lang.String"/>
+	<field name="ID_NO" class="java.lang.String"/>
+	<field name="ID_PLACE" class="java.lang.String"/>
+	<field name="NGAY_CAP" class="java.sql.Timestamp"/>
+	<field name="NGAY_KY" class="java.lang.String"/>
+	<field name="THANG_KY" class="java.lang.String"/>
+	<field name="NAM_KY" class="java.lang.String"/>
+	<field name="NGAY_HH" class="java.lang.String"/>
+	<field name="THANG_HH" class="java.lang.String"/>
+	<field name="NAM_HH" class="java.lang.String"/>
+	<field name="NGAY_NX" class="java.lang.String"/>
+	<field name="THANG_NX" class="java.lang.String"/>
+	<field name="NAM_NX" class="java.lang.String"/>
+	<field name="DATE_HIRED" class="java.sql.Timestamp"/>
+	<field name="EDUCATION" class="java.lang.String"/>
+	<field name="TIMES" class="java.math.BigDecimal"/>
+	<field name="NAME_GROUP" class="java.lang.String"/>
+	<field name="ID_LABOUR" class="java.lang.String"/>
+	<filterExpression><![CDATA[$F{SALARY}.toString()]]></filterExpression>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="10" width="91" height="18"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2. Nghĩa vụ :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="28" width="167" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[義務：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="43" width="425" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Hoàn thành những công việc đã cam kết trong hợp đồng lao động .]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="59" width="167" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[完成合同所規定之工作。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="73" width="518" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Chấp hành lệnh điều hành sản xuất - kinh doanh, nội quy kỉ luật lao động, an toàn lao động]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="90" width="290" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[執行雇主所安排之生產、經營命令，勞動內規，安全內貴等。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="105" width="518" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Bồi thường vi phạm và vật chất]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="124" width="290" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ 受違反物質責任賠償。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="143" width="362" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Điều 4 : Nghĩa vụ và quyền hạn của người sử dụng lao động ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="159" width="175" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[第四條：雇主之義務及權限]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="174" width="91" height="18"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1. Nghĩa vụ :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="192" width="167" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[義務：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="207" width="518" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Bảo đảm việc làm và thực hiện đầy đủ những điều cam kết trong hợp đồng lao động]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="225" width="290" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[確保充分實施各合同條款。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="240" width="564" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Thanh toán đầy đủ, đúng thời hạn các chế độ và quyền lợi cho người lao động theo hợp đồng lao động,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="261" width="564" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[thỏa ước lao động tập thể(nếu có).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="279" width="290" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[按勞動合同、集體勞動協議〈如有〉之規定為雇員給付各項福利。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="296" width="91" height="18"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2. Quyền hạn :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="314" width="167" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[權限：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="329" width="564" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Điều hành người lao động hoàn thành công việc theo hợp đồng (bố trí,điều chuyển,tạm ngừng việc,...)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="345" width="266" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[指導雇員完成合同所規定之工作〈安排、調動、暫停工作等〉]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="360" width="564" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Tạm hoãn, chấm dứt hợp đồng lao động, kỷ luật người lao động theo quy định của pháp luật, thỏa ước]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="376" width="564" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[lao động tập thể (nếu có) và nội quy lao động của doanh nghiệp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="393" width="336" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[按照法律規定、集體勞動協議〈如有〉及勞動內規暫環、終止勞動合同。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="423" width="169" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Điều 5 : Điều khoản thi hành ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="214" y="444" width="175" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[第五條：執行條款]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="471" width="537" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Những vấn đề lao động không ghi trong hợp đồng lao động này thì áp dụng qui định của thỏa ước]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="487" width="537" height="21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[tập thể,trường hợp chưa có thỏa ước tập thể thì áp dụng qui định của pháp luật lao động]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="503" width="464" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[本勞動合同未提到之勞動事項則按照集體勞動協議處理，如未有集體勞動協議則按照勞動法處理。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="521" width="537" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Hợp đồng lao động được lập thành 02 bảng có giá trị ngang nhau mỗi bên giữ một bản và có hiệu lực]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="533" width="349" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[. Khi hai bên kí kết phụ lục hợp đồng lao động thì nội dung của]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="548" width="537" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[phụ lục hợp đồng lao động cũng có giá trị như các nội dung của bản hợp đồng lao động này.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="564" width="496" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[本合同一式做02份相同價值，雇主及雇員各保留一份。本合同自    年   月   日生效。如雙方簽定合同附件， 附]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="579" width="264" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[件內容與正式合同之內容有相同價值。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="616" width="180" height="16"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[   Hợp đồng này làm tại ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="616" width="176" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÔNG TY TNHH FREEVIEW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="615" width="35" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ngày   01   tháng   07  năm   2013]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="632" width="180" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[本合同簽定於]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="632" width="17" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="632" width="17" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[月]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="632" width="17" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[年。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="661" width="180" height="16"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Người lao động]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="677" width="180" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[雇員]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="692" width="180" height="16"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(Ký tên)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="767" width="75" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[〈簽字、著名〉 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="661" width="136" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Người sử dụng lao động]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="677" width="75" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[雇主]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="692" width="102" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(Ký tên, đóng dấu)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="751" width="136" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CHIU FU YUNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="767" width="103" height="15"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[〈簽字、著名、蓋章〉]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="616" width="29" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NGAY_KY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="396" y="616" width="35" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[tháng    07  năm   2013]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="433" y="616" width="19" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{THANG_KY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="452" y="616" width="35" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[năm]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="481" y="615" width="47" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NAM_KY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="533" width="43" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[từ ngày]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="66" y="533" width="20" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NGAY_KY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="91" y="533" width="43" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[tháng]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="125" y="533" width="20" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{THANG_KY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="147" y="533" width="43" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[năm]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="175" y="533" width="39" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NAM_KY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="538" y="0" width="17" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="747" width="226" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{FNAME})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QryWin>
+	<SQL>
+		<BaseCondition></BaseCondition>
+		<OrderBy></OrderBy>
+		<SQLStatement>SELECT A.* FROM (SELECT PB_USERID AS USER_ID, PB_PASS AS USER_PASSWORD FROM DSPB02) A</SQLStatement>
+	</SQL>
+	<Fields>
+		<Field Name="USER_ID" Caption="" Type="S" /> 
+		<Field Name="USER_PASSWORD" Caption="" Type="S" />
+	</Fields>
+</QryWin>

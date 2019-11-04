@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="indsdv" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty">
+	<property name="ireport.zoom" value="1.6105100000000017"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="dept" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<field name="DEPT_NAME" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BẢNG XÁC NHẬN DỮ LIỆU QUÉT THẺ KHÁC THƯỜNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="555" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HanWangMingMedium" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[異常打卡紀錄確認表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="43" width="34" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Đơn vị : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="43" width="28" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ngày : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="46" y="43" width="248" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{dept}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="63" width="34" height="20"/>
+				<textElement>
+					<font fontName="HanWangMingMedium"/>
+				</textElement>
+				<text><![CDATA[單位]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="63" width="34" height="20"/>
+				<textElement>
+					<font fontName="HanWangMingMedium"/>
+				</textElement>
+				<text><![CDATA[日期]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="479" y="43" width="76" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="30" height="61"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[STT]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="30" y="0" width="176" height="61"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="30" y="0" width="176" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ĐƠN VỊ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="206" y="0" width="176" height="61"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="382" y="0" width="98" height="30"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="480" y="0" width="75" height="61"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="206" y="30" width="88" height="31"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="294" y="30" width="88" height="31"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="206" y="0" width="176" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[GIAO XƯỞNG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="15" width="176" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[交廠]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="30" width="88" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NGÀY / GIỜ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="45" width="88" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[日期/時間]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="45" width="88" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[簽收]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="30" width="88" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[KÝ NHẬN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="30" width="176" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[單位]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="30" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[序號]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="382" y="30" width="98" height="31"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="382" y="0" width="98" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[TRẢ LẠI NHÂN SỰ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="15" width="98" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[還給人事]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="30" width="98" height="15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[KÝ NHẬN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="45" width="98" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[簽收]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="30" width="75" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HanWangMingMedium" isBold="false"/>
+				</textElement>
+				<text><![CDATA[備註欄]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="75" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="false"/>
+				</textElement>
+				<text><![CDATA[GHI CHÚ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="30" height="14"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="30" y="0" width="176" height="14"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="206" y="0" width="88" height="14"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="294" y="0" width="88" height="14"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="382" y="0" width="98" height="14"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="480" y="0" width="75" height="14"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="30" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="176" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DEPT_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="3" width="531" height="30"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Ghi chú : Sau khi nhận được "Bảng Xác Nhận Dữ Liệu Quét Thẻ Khác Thường", các đơn vị phải tiến hành kiểm tra và xác nhận, chậm nhất là 1 ngày sau khi ký nhận phải nộp lại cho Nhân sự .]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

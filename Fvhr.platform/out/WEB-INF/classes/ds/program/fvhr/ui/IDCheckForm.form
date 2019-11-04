@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<properties>
+<property name="styleName" value="Default.Window"/>
+<property name="title" value="Kiểm tra CMND"/>
+<property name="defaultCloseOperation" value="nextapp.echo2.app.WindowPane.DISPOSE_ON_CLOSE"/>
+<property name="modal" value="true"/>
+</properties>
+<children>
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+
+<property name="separatorPosition" value="85px"/>
+</properties>
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đơn vị"/>
+</properties>
+</component>
+<component id="Component_cboDept" type="echopointng.ComboBox" visibility="private">
+<properties>
+<property name="popUpAlwaysOnTop" value="true"/>
+</properties>
+</component>
+<component id="Component_label5" type="nextapp.echo2.app.Label"/>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Ngày nhập xưởng"/>
+</properties>
+</component>
+<component id="Component_dfDate" type="dsc.echo2app.component.DscDateField" visibility="private"/>
+<component id="Component_label3" type="nextapp.echo2.app.Label"/>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="CMND:"/>
+</properties>
+</component>
+<component id="Component_txtId" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+
+<property name="maximumLength" value="9"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doCheck"/>
+</event-set>
+</events>
+</component>
+<component id="Component_btnCheck" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Kiểm tra"/>
+<property name="border">
+<border color="#004080" size="1px" style="solid"/>
+</property>
+<property name="foreground" value="#004080"/>
+<property name="background" value="#c0c0c0"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="insets" value="2px"/>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedForeground" value="#800040"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doCheck"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="size" value="3"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="insets" value="5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="1px"/>
+</properties>
+</component>
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane" visibility="private"/>
+</children>
+</component>
+</children>
+</component>
+</form>

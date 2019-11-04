@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_EMP_BORM.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_STATUS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_EMP_BORM.STATUS"/>
+            </properties>
+          </component>
+          <component id="Component_STATUS_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="STATUS_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_UP_DATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_EMP_BORM.UP_DATE"/>
+            </properties>
+          </component>
+          <component id="Component_UP_DATE_DscDateField1"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="UP_DATE_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_UP_USER_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_EMP_BORM.UP_USER"/>
+            </properties>
+          </component>
+          <component id="Component_UP_USER_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="UP_USER_DscField3"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

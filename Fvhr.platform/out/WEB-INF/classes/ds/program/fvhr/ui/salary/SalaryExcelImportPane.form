@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<properties>
+<property name="styleName" value="Default.Window"/>
+
+<property name="modal" value="true"/>
+<property name="title" value="Cập nhật dữ liệu lương từ excel"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/btnExcel.gif"/>
+</property>
+</properties>
+<children>
+<component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Chọn file excel"/>
+</properties>
+</component>
+<component id="Component_fs" type="fv.components.FileUploadSelect" visibility="private">
+<properties>
+
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/excel_upload_icon.png"/>
+</property>
+<property name="iconHeight" value="24px"/>
+<property name="iconWidth" value="24px"/>
+<property name="uploadFileSize" value="20971520"/>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Tính lương tháng"/>
+</properties>
+</component>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_sfMonth" type="nextapp.echo2.app.SelectField" visibility="private"/>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Năm"/>
+</properties>
+</component>
+<component id="Component_sfYear" type="nextapp.echo2.app.SelectField" visibility="private"/>
+</children>
+<properties>
+<property name="cellSpacing" value="1px"/>
+</properties>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="cellSpacing" value="3px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+<children>
+<component id="Component_rad1" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Tính lương 1 mức"/>
+<property name="selected" value="true"/>
+<property name="buttonGroup" value="ml"/>
+</properties>
+</component>
+<component id="Component_rad2" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Tính lương 2 mức"/>
+<property name="buttonGroup" value="ml"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_label4" type="nextapp.echo2.app.Label"/>
+<component id="Component_btnExecute" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+
+<property name="height" value="26px"/>
+<property name="width" value="87px"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="pressedEnabled" value="true"/>
+<property name="backgroundImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/batdau.gif"/>
+</image>
+</fill-image>
+</property>
+<property name="pressedBackgroundImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/batdau_press.gif"/>
+</image>
+</fill-image>
+</property>
+<property name="rolloverBackgroundImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/batdau_hover.gif"/>
+</image>
+</fill-image>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="execute"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="insets" value="3px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

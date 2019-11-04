@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<children>
+<component id="Component_mainSplitPane" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="resizable" value="true"/>
+</properties>
+<children>
+
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_row4" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ IC"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 0px 20px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtIC" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="maximumLength" value="10"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row5" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Trạng Thái"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 0px 12px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_sfStatus" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="4"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+<component id="Component_btnNew" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="New"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnNew.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnNewDisable.png"/>
+</property>
+<property name="rolloverEnabled" value="true"/>
+<property name="pressedEnabled" value="true"/>
+<property name="insets" value="5px"/>
+<property name="pressedBackground" value="#ffe1f0"/>
+<property name="rolloverBackground" value="#d2e9ff"/>
+</properties>
+
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doNew"/>
+</event-set>
+</events>
+</component>
+<component id="Component_btnEdit" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Edit"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnEdit.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnEditDisable.png"/>
+</property>
+<property name="insets" value="5px"/>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBackground" value="#ffe6f2"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverBackground" value="#d9f2ff"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doEdit"/>
+</event-set>
+</events>
+</component>
+<component id="Component_btnDelete" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Delete"/>
+
+
+<property name="insets" value="5px"/>
+<property name="pressedBackground" value="#ffddee"/>
+<property name="pressedEnabled" value="true"/>
+<property name="rolloverBackground" value="#cce6ff"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnCancel.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnCancelDisable.png"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doDelete"/>
+</event-set>
+</events>
+</component>
+
+</children>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<children>
+
+<component id="Component_btnAccept" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Accept"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnAccept.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnAcceptDisable.png"/>
+</property>
+<property name="insets" value="5px"/>
+<property name="pressedBackground" value="#ffd7eb"/>
+<property name="rolloverBackground" value="#d5eaff"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="pressedEnabled" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doAccept"/>
+</event-set>
+</events>
+</component>
+<component id="Component_btnCancel" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Cancel"/>
+
+
+<property name="insets" value="5px"/>
+<property name="pressedBackground" value="#ffd5ea"/>
+<property name="pressedEnabled" value="true"/>
+<property name="rolloverBackground" value="#bbddff"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnDelete.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnDeleteDisable.png"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doCancel"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="size" value="1"/>
+<property name="insets" value="10px 10px 10px 10px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="title" value="Quản lý thẻ IC"/>
+</properties>
+</component>
+</form>

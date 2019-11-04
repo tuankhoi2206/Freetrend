@@ -1,0 +1,2231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="training" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="782" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.1000000000000039"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH0034']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset2">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH0033']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset3">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH_NOS']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset4">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH_JIT']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset5">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MHJIT1']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset6">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='NQCTY1']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset7">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH0013']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset8">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH0014']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset9">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH0016']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset10">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH0017']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset11">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH0018']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset12">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH0015']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset13">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='MH0019']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset14">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark
+from n_training_details t where t.empsn=$P{empsn} and t.training_type='1 LAÀN' and t.subject_id='TPM001']]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="ds2_3">
+		<parameter name="empsn" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select t.bdate, t.edate, t.rank, t.mark from n_training_details t
+where t.empsn=$P{empsn} and t.training_type='CAÄP NHAÄT'
+and t.subject_id='MH0035' order by bdate]]>
+		</queryString>
+		<field name="BDATE" class="java.sql.Timestamp"/>
+		<field name="EDATE" class="java.sql.Timestamp"/>
+		<field name="RANK" class="java.lang.String"/>
+		<field name="MARK" class="java.math.BigDecimal"/>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\dsc_dev\\workspace\\Fvhr.platform\\src\\dean\\conf\\format\\fvhr\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select e.fname, e.lname, e.date_hired, e.empsn, e.position, d.name_dept as depsn
+ from n_employee e, n_department d
+ where e.depsn=d.id_dept
+ and e.empsn='10101311']]>
+	</queryString>
+	<field name="FNAME" class="java.lang.String"/>
+	<field name="LNAME" class="java.lang.String"/>
+	<field name="DATE_HIRED" class="java.util.Date"/>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="POSITION" class="java.lang.String"/>
+	<field name="DEPSN" class="java.lang.String"/>
+	<variable name="beforeDate" class="java.lang.Object">
+		<variableExpression><![CDATA[fv.util.DateUtils.beforeCurrent($F{DATE_HIRED},"month",20)]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="219" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="782" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DỮ LIỆU HUẤN LUYỆN CỦA CÔNG NHÂN VIÊN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="34" width="782" height="72"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="266" y="34" width="1" height="72"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="166" y="53" width="100" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Chức vụ hiện tại : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="69" width="100" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Mã số ID : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="85" width="100" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Bộ phận : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="273" y="37" width="126" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{FNAME}.trim() + " " + $F{LNAME}.trim())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="53" width="126" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{POSITION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="69" width="126" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EMPSN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="85" width="126" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{DEPSN})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="553" y="37" width="229" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Tổng thời gian làm việc lũy kế]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="553" y="65" width="229" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{beforeDate}[1] + " năm " + $V{beforeDate}[0] + " tháng"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="552" y="34" width="230" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="552" y="56" width="230" height="50"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="166" y="37" width="100" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Họ và tên : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="106" width="782" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUÁ TRÌNH CÔNG TÁC]]></text>
+			</staticText>
+			<break>
+				<reportElement positionType="Float" x="0" y="217" width="100" height="1"/>
+			</break>
+			<subreport>
+				<reportElement x="0" y="138" width="782" height="21"/>
+				<subreportParameter name="empsn">
+					<subreportParameterExpression><![CDATA[$F{EMPSN}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "training_working.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="159" width="782" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NHỮNG BẰNG CẤP VÀ KĨ NĂNG ĐẠT ĐƯỢC]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="191" width="782" height="21"/>
+				<subreportParameter name="empsn">
+					<subreportParameterExpression><![CDATA[$F{EMPSN}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "training_edu.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="532">
+			<staticText>
+				<reportElement x="0" y="0" width="782" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1. HUẤN LUYỆN 1 LẦN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="32" width="266" height="28"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="32" width="266" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hạng mục]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="266" y="32" width="140" height="28"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="266" y="32" width="140" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thời gian HL]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="406" y="32" width="96" height="28"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="406" y="32" width="96" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Xếp loại]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="502" y="32" width="74" height="28"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="502" y="32" width="74" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Điểm]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="576" y="32" width="206" height="28"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="576" y="32" width="206" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ghi chú]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="60" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="60" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[             CR]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="82" width="116" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="82" width="116" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESH]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="102" width="116" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="102" width="116" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="116" y="82" width="150" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="116" y="82" width="150" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Huấn luyện định hướng]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="82" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset1">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="82" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="82" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="82" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="82" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<componentElement>
+				<reportElement x="266" y="102" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset2">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="102" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="102" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="102" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="102" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="122" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="122" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[             Nos]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="144" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="144" width="266" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kiến thức NOS]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="144" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset3">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement x="576" y="144" width="206" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   NOS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="144" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="144" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="144" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="144" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="164" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="164" width="266" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lớp Nos chuyên biệt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="576" y="164" width="206" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   NOS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="164" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="164" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="164" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="164" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="184" width="116" height="60"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="184" width="116" height="60"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JIT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="576" y="184" width="206" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   TOÀN PHẦN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="184" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="184" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="184" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="184" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="116" y="184" width="150" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="116" y="204" width="150" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<componentElement>
+				<reportElement x="266" y="204" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset4">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement x="576" y="204" width="206" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   BẢNG KHĐTCNĐKN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="204" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="204" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="204" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="204" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="116" y="224" width="150" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<componentElement>
+				<reportElement x="266" y="224" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset5">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement x="576" y="224" width="206" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   PP4B & BẢNG PTCTCV]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="224" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="224" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="224" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="224" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="244" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="244" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[             HR]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="266" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="266" width="266" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hướng dẫn nội quy công ty]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="266" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset6">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="266" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="266" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="266" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="266" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="286" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="286" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[             MQA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="308" width="116" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="308" width="116" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CSS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="116" y="308" width="150" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="116" y="308" width="150" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sạch, Chắc, Thẳng]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="308" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset7">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="308" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="308" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="308" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="308" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="328" width="116" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="328" width="116" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BNP & MDP]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="116" y="328" width="150" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="116" y="328" width="150" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quản lý kim gãy &
+kim loại sắc nhọn]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="328" width="310" height="40"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset8">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="40">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="40"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="40"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="40"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="40"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement x="576" y="328" width="206" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cho nhân viên MA &
+nhân viên MQA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="328" width="140" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="328" width="96" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="328" width="74" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="328" width="206" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="368" width="116" height="100"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="368" width="116" height="100"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kiến thức
+chuyên môn của
+MA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="116" y="368" width="150" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="116" y="368" width="150" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hóa công]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="368" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset9">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="368" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="368" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="368" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="368" width="206" height="100"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="576" y="368" width="206" height="100"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cho nhân viên MA mới]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="116" y="388" width="150" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="116" y="388" width="150" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sản xuất]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="388" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset10">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="388" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="388" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="388" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="116" y="408" width="150" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="116" y="408" width="150" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Khuôn]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="408" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset11">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="408" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="408" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="408" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="116" y="428" width="150" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="116" y="428" width="150" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DI & HL training, BNP&MDP, P&L Japanese order, NOS & ISQ philosophy, BOM, PFC, PBFC]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="428" width="310" height="40"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset12">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="40">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="40"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="40"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="40"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="40"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="428" width="140" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="428" width="96" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="428" width="74" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="470" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="470" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[              Hiện trường]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="492" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="492" width="266" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thao tác an toàn & màu sắc cử lạng]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="492" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset13">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="492" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="492" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="492" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="576" y="492" width="206" height="40"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="512" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="512" width="266" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tiêu chuẩn chất lượng NIKE]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="266" y="512" width="310" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset14">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+							<reportElement x="70" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="140" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="236" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement mode="Transparent" x="266" y="512" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="406" y="512" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="502" y="512" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="576" y="492" width="206" height="40"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Công nhân mới]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="531" width="100" height="1"/>
+			</break>
+		</band>
+		<band height="416">
+			<staticText>
+				<reportElement x="0" y="0" width="782" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2. HUẤN LUYỆN CẬP NHẬT]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="32" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="32" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[              CR]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="94" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="116" y="94" width="150" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Máy cắt]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="266" y="94" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="406" y="94" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="502" y="94" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="576" y="94" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="576" y="94" width="206" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Huấn luyện hàng năm]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="114" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="116" y="114" width="150" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Máy lăn keo]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="266" y="114" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="406" y="114" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="502" y="114" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="576" y="114" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="576" y="114" width="206" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Huấn luyện hàng năm]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="134" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="116" y="134" width="150" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Máy ép đế trung]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="266" y="134" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="406" y="134" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="502" y="134" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="576" y="134" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="576" y="134" width="206" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Huấn luyện hàng năm]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="154" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="116" y="154" width="150" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Máy ép tổng lực]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="266" y="154" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="406" y="154" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="502" y="154" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="576" y="154" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="576" y="154" width="206" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Huấn luyện hàng năm]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="174" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="116" y="174" width="150" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Máy ép bằng]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="266" y="174" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="406" y="174" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="502" y="174" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="576" y="174" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="576" y="174" width="206" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Huấn luyện hàng năm]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="194" width="266" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="194" width="266" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESH - Chính sách]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="266" y="194" width="140" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="406" y="194" width="96" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="502" y="194" width="74" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="576" y="194" width="206" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="576" y="194" width="206" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Huấn luyện hàng năm]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="214" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="214" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[              P & L]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" x="0" y="236" width="782" height="20"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="ds2_3">
+						<datasetParameter name="empsn">
+							<datasetParameterExpression><![CDATA[$F{EMPSN}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="20">
+						<textField pattern="dd/MM/yyyy">
+							<reportElement x="266" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BDATE}]]></textFieldExpression>
+						</textField>
+						<textField pattern="dd/MM/yyyy">
+							<reportElement x="336" y="0" width="70" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{EDATE}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="406" y="0" width="96" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{RANK})]]></textFieldExpression>
+						</textField>
+						<textField pattern="##.#" isBlankWhenNull="true">
+							<reportElement x="502" y="0" width="74" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman"/>
+							</textElement>
+							<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{MARK}]]></textFieldExpression>
+						</textField>
+						<rectangle>
+							<reportElement mode="Transparent" x="266" y="0" width="140" height="20"/>
+							<graphicElement>
+								<pen lineWidth="0.5"/>
+							</graphicElement>
+						</rectangle>
+						<rectangle>
+							<reportElement mode="Transparent" x="406" y="0" width="96" height="20"/>
+							<graphicElement>
+								<pen lineWidth="0.5"/>
+							</graphicElement>
+						</rectangle>
+						<rectangle>
+							<reportElement mode="Transparent" x="502" y="0" width="74" height="20"/>
+							<graphicElement>
+								<pen lineWidth="0.5"/>
+							</graphicElement>
+						</rectangle>
+						<rectangle>
+							<reportElement mode="Transparent" x="576" y="0" width="206" height="20"/>
+							<graphicElement>
+								<pen lineWidth="0.5"/>
+							</graphicElement>
+						</rectangle>
+						<staticText>
+							<reportElement x="576" y="0" width="206" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman" isBold="true"/>
+							</textElement>
+							<text><![CDATA[1 tháng 1 lần]]></text>
+						</staticText>
+						<staticText>
+							<reportElement x="0" y="0" width="266" height="20"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="Times New Roman" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Cập nhật mới/thay đổi về P & L]]></text>
+						</staticText>
+						<rectangle>
+							<reportElement mode="Transparent" x="0" y="0" width="266" height="20"/>
+							<graphicElement>
+								<pen lineWidth="0.5"/>
+							</graphicElement>
+						</rectangle>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="256" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="256" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[              NOS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="278" width="782" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="296" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="296" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[              HR]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="318" width="782" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="336" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="336" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[              MQA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="358" width="782" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="398" width="782" height="18"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="0" y="376" width="782" height="22"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="376" width="782" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[              Production]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="236" width="782" height="20"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<subreport>
+				<reportElement x="0" y="54" width="782" height="20"/>
+				<subreportParameter name="empsn">
+					<subreportParameterExpression><![CDATA[$F{EMPSN}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "training_1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="74" width="782" height="20"/>
+				<subreportParameter name="empsn">
+					<subreportParameterExpression><![CDATA[$F{EMPSN}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "training_2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<children>
+<component id="Component_girdMain" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="1"/>
+</properties>
+</layout-data>
+</property>
+<property name="size" value="1"/>
+
+<property name="insets" value="0px 0px 20px 0px"/>
+</properties>
+<children>
+<component id="Component_row7" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ đeo: "/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 0px 35px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txt_Empsn" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="width" value="150px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="0px 0px 0px 10px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 0px 0px 10px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+
+<property name="rowSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="0px 0px 0px 10px"/>
+</properties>
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ IC: "/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+
+<property name="insets" value="0px 0px 45px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txt_IC" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="width" value="150px"/>
+</properties>
+</component>
+
+</children>
+</component>
+
+<component id="Component_row8" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Ngày bắt đầu:"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 0px 20px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_df_Begin" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="width" value="150px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="0px 0px 0px 10px"/>
+</properties>
+</component>
+<component id="Component_row9" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label5" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Ngày kết thúc: "/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 0px 15px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_df_End" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="width" value="150px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="0px 0px 0px 10px"/>
+</properties>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Trạng thái: "/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+
+<property name="insets" value="0px 0px 40px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_sf_status" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="0px 0px 0px 10px"/>
+</properties>
+</component>
+</children>
+</component>
+
+
+
+<component id="Component_grid3" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_row11" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnSearch" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnSearch1.png"/>
+</property>
+
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnSearch1Disable.png"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSearch"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="insets" value="0px 0px 0px 10px"/>
+</properties>
+</component>
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+
+<component id="Component_btnRefresh" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+
+
+
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnReset.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnResetDisable.png"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doRefresh"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="1"/>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="0px 0px 0px 10px"/>
+</properties>
+</component>
+<component id="Component_row10" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnNew" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnNew.png"/>
+</property>
+
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnNewDisable.png"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doNew"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="insets" value="0px 0px 0px 10px"/>
+</properties>
+</component>
+<component id="Component_row6" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnEdit" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnEdit.png"/>
+</property>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 0px 0px 10px"/>
+</properties>
+</layout-data>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnEditDisable.png"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doEdit"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="insets" value="0px 0px 0px 5px"/>
+</properties>
+</component>
+
+<component id="Component_row12" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnDelete" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnDelete.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnDeleteDisable.png"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doDelete"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="size" value="1"/>
+<property name="insets" value="0px 0px 20px 0px"/>
+</properties>
+</component>
+<component id="Component_grid4" type="nextapp.echo2.app.Grid">
+<children>
+
+<component id="Component_row5" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnAccept" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 0px 20px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnAccept.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnAcceptDisable.png"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doAccept"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="insets" value="0px 0px 0px 10px"/>
+</properties>
+</component>
+<component id="Component_row4" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnCancel" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnCancel.png"/>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/vu/btnCancelDisable.png"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doCancel"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="size" value="1"/>
+</properties>
+</component>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label6" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="*Ghi chú"/>
+</properties>
+</component>
+<component id="Component_lblNote1" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="1. Thẻ IC được tính theo Ngày Bắt Đầu gần đây nhất"/>
+</properties>
+</component>
+<component id="Component_lblNote2" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="2. Số thẻ IC cần sử dụng phải là số thẻ đang còn hoạt động"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="border">
+<border color="#000000" size="1px" style="solid"/>
+</property>
+<property name="font">
+<font italic="true" size="10pt">
+<typeface name="sans-serif"/>
+</font>
+</property>
+<property name="size" value="1"/>
+</properties>
+</component>
+</children>
+<properties>
+
+<property name="insets" value="10px 10px 0px 0px"/>
+
+<property name="size" value="4"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="title" value="Chi tiết thẻ IC"/>
+<property name="font">
+<font size="10pt">
+<typeface name="sans-serif"/>
+</font>
+</property>
+<property name="titleFont">
+<font bold="true" size="13pt">
+<typeface name="monospace"/>
+</font>
+</property>
+<property name="defaultCloseOperation" value="nextapp.echo2.app.WindowPane.DISPOSE_ON_CLOSE"/>
+<property name="modal" value="true"/>
+<property name="background" value="#f0f8ff"/>
+<property name="resizable" value="false"/>
+</properties>
+</component>
+</form>

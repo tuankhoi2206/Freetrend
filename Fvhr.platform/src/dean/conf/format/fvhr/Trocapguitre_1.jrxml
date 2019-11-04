@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Trocapguitre_1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="10" isIgnorePagination="true">
+	<property name="ireport.zoom" value="1.0000000000000007"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select e.empsn,d.name_dept,d.name_fact,( E.FNAME ||'  '||E.LNAME) FULLNAME,t.name_relative,t.begindate,t.birthday,t.CONFIRM_DATE
+ from n_emp_relative t, n_employee e, n_department d
+where e.empsn=t.empsn and e.depsn=d.id_dept]]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="NAME_DEPT" class="java.lang.String"/>
+	<field name="NAME_FACT" class="java.lang.String"/>
+	<field name="FULLNAME" class="java.lang.String"/>
+	<field name="NAME_RELATIVE" class="java.lang.String"/>
+	<field name="BEGINDATE" class="java.sql.Timestamp"/>
+	<field name="BIRTHDAY" class="java.sql.Timestamp"/>
+	<field name="CONFIRM_DATE" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="23">
+			<staticText>
+				<reportElement x="52" y="8" width="40" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Phụ lục 2]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="75">
+			<staticText>
+				<reportElement x="135" y="51" width="285" height="24"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BẢNG THỐNG KÊ XIN TRỢ CẤP GỬI TRẺ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="106" splitType="Stretch">
+			<staticText>
+				<reportElement x="283" y="65" width="49" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Xưởng :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="387" y="65" width="64" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tháng xin:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="2" y="81" width="35" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="37" y="81" width="50" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="87" y="81" width="138" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="225" y="81" width="145" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="370" y="81" width="130" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="500" y="81" width="63" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="87" width="41" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="88" width="42" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Số Thẻ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="87" width="56" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Đơn vị]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="87" width="73" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Họ tên]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="388" y="87" width="73" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Họ tên trẻ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="503" y="87" width="59" height="16"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ngày sinh]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="331" y="65" width="55" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{NAME_FACT})]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="451" y="65" width="70" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{BEGINDATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<rectangle>
+				<reportElement x="2" y="-2" width="35" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="87" y="3" width="76" height="17"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{NAME_DEPT})]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="225" y="-2" width="145" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="239" y="1" width="131" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{FULLNAME})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="5" y="2" width="25" height="14" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="37" y="-2" width="50" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="37" y="1" width="50" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EMPSN}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="87" y="-2" width="138" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="370" y="-2" width="130" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="500" y="-2" width="63" height="23"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="370" y="3" width="123" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{NAME_RELATIVE})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="87" y="2" width="138" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[fv.util.Vni2Uni.convertToUnicode($F{NAME_DEPT})]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="504" y="4" width="59" height="17"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{CONFIRM_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="812" splitType="Stretch">
+			<staticText>
+				<reportElement x="41" y="13" width="106" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kế toán xưởng ký nhận]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="203" y="13" width="106" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chủ quản ký duyệt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="13" width="106" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Người lập biểu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="794" width="49" height="18"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[Ngày in : ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="494" y="794" width="61" height="18"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

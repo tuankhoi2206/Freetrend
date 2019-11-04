@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          
+          
+          <component id="Component_EMPSN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_LOST_DATA_DETAIL.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_EMPSN_DscField2" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField2"/>
+            <property name="width" value="80px"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_TEXT"/>
+<property name="maximumLength" value="8"/>
+</properties>
+          <events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="findEmployee"/>
+</event-set>
+</events>
+</component>
+<component id="Component_lblInfo" type="nextapp.echo2.app.Label" visibility="private"/>
+</children>
+</component>
+          <component id="Component_DATE_LOST_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_LOST_DATA_DETAIL.DATE_LOST"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_LOST_DscDateField1" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_LOST_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_REASONS_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_LOST_DATA_DETAIL.REASONS"/>
+            </properties>
+          </component>
+          
+          <component id="Component_sfReason" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="200px"/>
+</properties>
+</component>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Ca làm việc"/>
+</properties>
+</component>
+<component id="Component_sfShift" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="200px"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="shiftHint"/>
+</event-set>
+</events>
+</component>
+<component id="Component_SIGN_TIME_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_LOST_DATA_DETAIL.SIGN_TIME"/>
+            </properties>
+          </component>
+          <component id="Component_SIGN_TIME_DscField4" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="SIGN_TIME_DscField4"/>
+            <property name="width" value="60px"/>
+</properties>
+          </component>
+          
+          <component id="Component_chkIn" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Giờ vào"/>
+<property name="selected" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="showHideInTime"/>
+</event-set>
+</events>
+</component>
+<component id="Component_TIN_DscField5" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TIN_DscField5"/>
+            <property name="maximumLength" value="4"/>
+<property name="width" value="60px"/>
+<property name="disabledBackground" value="#808080"/>
+</properties>
+          </component>
+          
+          
+          <component id="Component_chkOut" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Giờ ra"/>
+<property name="selected" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="showHideOutTime"/>
+</event-set>
+</events>
+</component>
+          <component id="Component_TOUT_DscField7" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TOUT_DscField7"/>
+            <property name="maximumLength" value="4"/>
+<property name="width" value="60px"/>
+<property name="disabledBackground" value="#808080"/>
+</properties>
+          </component>
+          
+          
+          <component id="Component_TTEMP_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_LOST_DATA_DETAIL.TTEMP"/>
+            </properties>
+          </component>
+          <component id="Component_TTEMP_DscField9" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TTEMP_DscField9"/>
+            <property name="enabled" value="false"/>
+<property name="width" value="60px"/>
+</properties>
+          </component>
+        </children>
+        <properties>
+          
+          
+        <property name="size" value="2"/>
+</properties>
+      </component>
+    </children>
+  </component>
+</form>

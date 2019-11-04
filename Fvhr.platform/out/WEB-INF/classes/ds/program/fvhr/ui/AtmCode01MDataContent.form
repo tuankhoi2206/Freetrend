@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_ATM_CODE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_CODE.ATM_CODE"/>
+            </properties>
+          </component>
+          <component id="Component_ATM_CODE_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ATM_CODE_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_UPDATED_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_CODE.DATE_UPDATED"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_UPDATED_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_UPDATED_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_DEPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_CODE.DEPSN"/>
+            </properties>
+          </component>
+          <component id="Component_DEPSN_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="DEPSN_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_NODE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_CODE.NODE"/>
+            </properties>
+          </component>
+          <component id="Component_NODE_TextArea1"
+            type="nextapp.echo2.app.TextArea" visibility="private">
+            <properties>
+              <property name="id" value="NODE_TextArea1"/>
+            </properties>
+          </component>
+          <component id="Component_USER_UPDATED_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_CODE.USER_UPDATED"/>
+            </properties>
+          </component>
+          <component id="Component_USER_UPDATED_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="USER_UPDATED_DscField4"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

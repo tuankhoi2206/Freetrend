@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.2100000000000015"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="199"/>
+	<subDataset name="dataset1"/>
+	<subDataset name="dataset2"/>
+	<queryString>
+		<![CDATA[select t.*, e.fname || ' ' || e.lname as fullname, e.date_hired, e.shift,
+e.position, d.name_dept, e.empcn from n_get_data t, n_employee e, n_department d
+where t.empsn=e.empsn and e.depsn=d.id_dept
+and t.empsn in ('10101311','10101312','10081509','05110396') and t.months='08' and t.years='2011']]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="MONTHS" class="java.lang.String"/>
+	<field name="YEARS" class="java.lang.String"/>
+	<field name="DUCLS" class="java.math.BigDecimal"/>
+	<field name="NDUCLS" class="java.math.BigDecimal"/>
+	<field name="ADDHOL" class="java.math.BigDecimal"/>
+	<field name="ADDCLS1" class="java.math.BigDecimal"/>
+	<field name="NADDCLS" class="java.math.BigDecimal"/>
+	<field name="LATE" class="java.math.BigDecimal"/>
+	<field name="SIGN" class="java.math.BigDecimal"/>
+	<field name="ACN" class="java.math.BigDecimal"/>
+	<field name="ACNM" class="java.math.BigDecimal"/>
+	<field name="REST" class="java.math.BigDecimal"/>
+	<field name="REST_PAY" class="java.math.BigDecimal"/>
+	<field name="REST_SICK" class="java.math.BigDecimal"/>
+	<field name="OTHER" class="java.math.BigDecimal"/>
+	<field name="NWHOUR" class="java.math.BigDecimal"/>
+	<field name="ADDHOLN" class="java.math.BigDecimal"/>
+	<field name="LMATER" class="java.math.BigDecimal"/>
+	<field name="LOCKED" class="java.math.BigDecimal"/>
+	<field name="DEPSN" class="java.lang.String"/>
+	<field name="UP_DATE" class="java.sql.Timestamp"/>
+	<field name="UP_USER" class="java.lang.String"/>
+	<field name="FULLNAME" class="java.lang.String"/>
+	<field name="DATE_HIRED" class="java.sql.Timestamp"/>
+	<field name="SHIFT" class="java.lang.String"/>
+	<field name="POSITION" class="java.lang.String"/>
+	<field name="NAME_DEPT" class="java.lang.String"/>
+	<field name="EMPCN" class="java.lang.String"/>
+	<group name="Empsn">
+		<groupExpression><![CDATA[$F{EMPSN}]]></groupExpression>
+		<groupHeader>
+			<band height="50"/>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="276" height="35"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset1">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="35" width="276"/>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="279" y="0" width="276" height="35"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset1">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="35" width="276"/>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

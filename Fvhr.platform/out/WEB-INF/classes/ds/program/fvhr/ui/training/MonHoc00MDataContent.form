@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_MA_MON_HOC_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_LIST.MA_MON_HOC"/>
+            </properties>
+          </component>
+          <component id="Component_MA_MON_HOC_DscField1" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="MA_MON_HOC_DscField1"/>
+            <property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_TEXT"/>
+<property name="maximumLength" value="6"/>
+</properties>
+          </component>
+          <component id="Component_TEN_MON_HOC_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_LIST.TEN_MON_HOC"/>
+            </properties>
+          </component>
+          <component id="Component_TEN_MON_HOC_DscField2" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TEN_MON_HOC_DscField2"/>
+            <property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_TEXT"/>
+<property name="width" value="350px"/>
+<property name="maximumLength" value="100"/>
+</properties>
+          </component>
+          
+          
+          <component id="Component_NOTE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_TRAINING_LIST.NOTE"/>
+            </properties>
+          </component>
+          
+          
+          
+        <component id="Component_txtNote" type="nextapp.echo2.app.TextArea" visibility="private">
+<properties>
+<property name="width" value="350px"/>
+</properties>
+</component>
+</children>
+        <properties>
+          
+          
+        <property name="size" value="2"/>
+</properties>
+      </component>
+    </children>
+  </component>
+</form>

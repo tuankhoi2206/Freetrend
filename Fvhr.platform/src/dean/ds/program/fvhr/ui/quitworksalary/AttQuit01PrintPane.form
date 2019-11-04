@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_column1" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_btnPrintAll" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="In tất cả"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="border">
+<border color="#0080c0" size="3px" style="double"/>
+</property>
+<property name="insets" value="3px"/>
+<property name="width" value="140px"/>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBackground" value="#ff8000"/>
+<property name="rolloverBackground" value="#004080"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverForeground" value="#ff0000"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doPrintAll"/>
+</event-set>
+</events>
+</component>
+<component id="Component_btnPrintATM" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="border">
+<border color="#0080c0" size="3px" style="double"/>
+</property>
+<property name="insets" value="3px"/>
+<property name="width" value="140px"/>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBackground" value="#ff8000"/>
+<property name="rolloverBackground" value="#004080"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverForeground" value="#ff0000"/>
+<property name="text" value="In ATM"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doPrintATM"/>
+</event-set>
+</events>
+</component>
+<component id="Component_btnPrint0ATM" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="border">
+<border color="#0080c0" size="3px" style="double"/>
+</property>
+<property name="insets" value="3px"/>
+<property name="width" value="140px"/>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBackground" value="#ff8000"/>
+<property name="rolloverBackground" value="#004080"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverForeground" value="#ff0000"/>
+<property name="text" value="In không ATM"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doPrint0ATM"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="5px"/>
+<property name="insets" value="0px 10px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

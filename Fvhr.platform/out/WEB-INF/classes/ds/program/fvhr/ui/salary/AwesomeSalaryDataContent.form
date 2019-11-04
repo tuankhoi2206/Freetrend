@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_groupBox1" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Thông tin nhân viên"/>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="701px"/>
+</properties>
+<children>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_lblHoTen" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Họ tên"/>
+</properties>
+</component>
+<component id="Component_txtHoTen" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+
+<property name="foreground" value="#008000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="border">
+<border color="#800040" size="1px" style="solid"/>
+</property>
+<property name="enabled" value="false"/>
+<property name="disabledBackground" value="#e4e4e4"/>
+<property name="width" value="240px"/>
+</properties>
+</component>
+<component id="Component_lblSoThe" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_txtSoThe" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+
+<property name="width" value="100px"/>
+<property name="background" value="#b7ffff"/>
+<property name="border">
+<border color="#800040" size="1px" style="solid"/>
+</property>
+<property name="foreground" value="#0000ff"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblLuongThuViec" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+
+
+<property name="text" value="Lương thử việc"/>
+</properties>
+</component>
+<component id="Component_txtLuongThuViec" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+
+
+<property name="width" value="100px"/>
+
+<property name="enabled" value="false"/>
+<property name="disabledBackground" value="#e4e4e4"/>
+<property name="foreground" value="#808080"/>
+</properties>
+</component>
+
+<component id="Component_lblDonVi" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="Đơn vị"/>
+</properties>
+</component>
+<component id="Component_txtDonVi" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+
+<property name="disabledBackground" value="#e4e4e4"/>
+<property name="enabled" value="false"/>
+<property name="foreground" value="#000000"/>
+<property name="width" value="240px"/>
+</properties>
+</component>
+<component id="Component_lblChucVu" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Chức vụ"/>
+</properties>
+</component>
+<component id="Component_txtChucVu" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="disabledBackground" value="#e4e4e4"/>
+<property name="enabled" value="false"/>
+<property name="foreground" value="#000000"/>
+</properties>
+</component>
+
+
+
+
+<component id="Component_lblLKTC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="Lũy kế tc"/>
+</properties>
+</component>
+<component id="Component_txtLKTC" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="disabledBackground" value="#e4e4e4"/>
+<property name="enabled" value="false"/>
+<property name="foreground" value="#000000"/>
+</properties>
+</component>
+<component id="Component_lblGhiChu" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+
+<property name="text" value="Ghi chú"/>
+</properties>
+</component>
+<component id="Component_txtGhiChu" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+
+
+<property name="disabledBackground" value="#e4e4e4"/>
+
+<property name="foreground" value="#000000"/>
+<property name="width" value="240px"/>
+</properties>
+</component>
+<component id="Component_lblLCB" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="Lương CB"/>
+<property name="foreground" value="#0080ff"/>
+</properties>
+</component>
+<component id="Component_txtLCB" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+
+<property name="width" value="100px"/>
+
+<property name="foreground" value="#800040"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="disabledBackground" value="#e4e4e4"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblLHD" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="Lương HD"/>
+<property name="foreground" value="#0080ff"/>
+</properties>
+</component>
+<component id="Component_txtLHD" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+
+
+<property name="width" value="100px"/>
+<property name="foreground" value="#800040"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="disabledBackground" value="#e4e4e4"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+
+
+</children>
+<properties>
+
+<property name="size" value="6"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_groupBox2" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Biểu thời gian"/>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="3"/>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="180px"/>
+
+<property name="height" value="413px"/>
+</properties>
+<children>
+<component id="Component_grid3" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_lblSoNgayLam" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Số ngày làm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtSoNgayLam" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblSoDemLam" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Số đêm làm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtSoDemLam" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblTangCaNgay" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tăng ca ngày"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTangCaNgay" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblTangCaCN" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tăng ca CN"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTangCaCN" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblTangCaLe" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tăng ca lễ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTangCaLe" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblSoDemTC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Số đêm tc(1-1.5h)"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtSoDemTC" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+<property name="styleName" value="Default.ReadonlyField"/>
+</properties>
+</component>
+<component id="Component_lblKyTen" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Ký tên"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtKyTen" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblTreSom" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Trễ/sớm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTreSom" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#008040"/>
+<property name="text" value="Phép-------------------"/>
+</properties>
+</component>
+<component id="Component_lblCoPhep" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Có phép"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtCoPhep" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblCoLuong" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Có lương"/>
+</properties>
+</component>
+<component id="Component_txtCoLuong" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblPhepBenh" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Phép bệnh"/>
+</properties>
+</component>
+<component id="Component_txtPhepBenh" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblKhangCong" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Kháng công"/>
+</properties>
+</component>
+<component id="Component_txtKhangCong" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblDuongSuc" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Dưỡng sức"/>
+</properties>
+</component>
+<component id="Component_txtDuongSuc" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="enabled" value="false"/>
+<property name="foreground" value="#000000"/>
+</properties>
+</component>
+<component id="Component_lblNghiSan" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Nghỉ sản"/>
+</properties>
+</component>
+<component id="Component_txtNghiSan" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="40px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+<component id="Component_column1" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_groupBox3" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Khác"/>
+
+
+
+<property name="height" value="175px"/>
+</properties>
+<children>
+<component id="Component_grid4" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_lblTienThuong" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tiền thưởng"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTienThuong" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+
+</properties>
+</component>
+<component id="Component_txtTienThuongTT" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="background" value="#fffed7"/>
+
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+
+
+<property name="enabled" value="false"/>
+<property name="foreground" value="#800080"/>
+</properties>
+</component>
+<component id="Component_lblBuBH" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Bù bảo hiểm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtBuBH" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblPCCV" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="PC chức vụ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtPCCV" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+
+
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_txtPCCVTT" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="background" value="#fffed7"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+
+<property name="foreground" value="#800080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblChuyenCan" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Chuyên cần"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtChuyenCan" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblPCCViec" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="PC công việc"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtPCCViec" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+
+</properties>
+</component>
+<component id="Component_txtPCCViecTT" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="background" value="#fffed7"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+
+<property name="foreground" value="#800080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblPCTienCom" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="PC tiền cơm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtPCTienCom" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblPCSinhHoat" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="PC sinh hoạt"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtPCSinhHoat" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label5" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="+="/>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtPCSinhHoatTT" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="background" value="#fffed7"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#800080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblChuyenCanTC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Chuyên cần TC"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtChuyenCanTC" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblPC8H" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="PC làm 8H"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtPC8H" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblCLPCTC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Chênh lệch PCTC"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtCLPCTC" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblBuLuong" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Bù lương"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtBuLuong" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label6" type="nextapp.echo2.app.Label"/>
+<component id="Component_label7" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblNguoiLeThuoc" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Người lệ thuộc"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtNguoiLeThuoc" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblBHODTS" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="BHODTS"/>
+</properties>
+</component>
+<component id="Component_txtBHODTS" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="enabled" value="false"/>
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="size" value="6"/>
+
+
+
+
+
+
+<property index="0" name="columnWidth" value="90px"/>
+<property index="1" name="columnWidth" value="90px"/>
+<property index="2" name="columnWidth" value="15px"/>
+<property index="3" name="columnWidth" value="90px"/>
+<property index="4" name="columnWidth" value="120px"/>
+<property index="5" name="columnWidth" value="90px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_groupBox4" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Khấu trừ"/>
+
+
+
+<property name="height" value="115px"/>
+</properties>
+<children>
+<component id="Component_grid5" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_lblBHXH" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="BHXH"/>
+</properties>
+</component>
+<component id="Component_txtBHXH" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="enabled" value="false"/>
+<property name="foreground" value="#000000"/>
+<property name="styleName" value="Default.ReadonlyField"/>
+</properties>
+</component>
+<component id="Component_label8" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_txtBHXHTT" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="background" value="#fffed7"/>
+
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+
+<property name="foreground" value="#800080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lbTamUng" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Tạm ứng"/>
+</properties>
+</component>
+<component id="Component_txtTamUng" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblBHTN" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="BHTN"/>
+</properties>
+</component>
+<component id="Component_txtBHTN" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#000000"/>
+<property name="enabled" value="false"/>
+<property name="styleName" value="Default.ReadonlyField"/>
+</properties>
+</component>
+<component id="Component_label9" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_txtBHTNTT" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="background" value="#fffed7"/>
+
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+
+<property name="foreground" value="#800080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lbKhauTruKhac" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Khấu trừ khác"/>
+</properties>
+</component>
+<component id="Component_txtKhauTruKhac" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_lblBHYT" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="BHYT"/>
+</properties>
+</component>
+<component id="Component_txtBHYT" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label10" type="nextapp.echo2.app.Label"/>
+<component id="Component_label11" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblThueTN" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Thuế TN"/>
+</properties>
+</component>
+<component id="Component_txtThueTN" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="enabled" value="false"/>
+<property name="foreground" value="#000000"/>
+</properties>
+</component>
+<component id="Component_lblDoanPhi" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Đoàn phí"/>
+</properties>
+</component>
+<component id="Component_txtDoanPhi" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="foreground" value="#004080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="size" value="6"/>
+
+
+
+
+
+
+<property index="0" name="columnWidth" value="90px"/>
+<property index="1" name="columnWidth" value="90px"/>
+<property index="2" name="columnWidth" value="15px"/>
+<property index="3" name="columnWidth" value="90px"/>
+<property index="4" name="columnWidth" value="120px"/>
+<property index="5" name="columnWidth" value="90px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_groupBox5" type="echopointng.GroupBox">
+<children>
+<component id="Component_grid6" type="nextapp.echo2.app.Grid">
+<properties>
+<property name="size" value="6"/>
+</properties>
+<children>
+<component id="Component_label12" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblTongLCB" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tổng lương cơ bản"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_label13" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblTienTC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tiền tăng ca"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_label14" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblTongPC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tổng phụ cấp"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_label15" type="nextapp.echo2.app.Label"/>
+<component id="Component_txtTongLCB" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="120px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#ff0000"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label16" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="+"/>
+</properties>
+</component>
+<component id="Component_txtTienTC" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="120px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#ff0000"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label17" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="+"/>
+</properties>
+</component>
+<component id="Component_txtTongPC" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="120px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#ff0000"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label18" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblTong" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_label19" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblKhauTru" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Khấu trừ"/>
+</properties>
+</component>
+<component id="Component_label20" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblThucNhan" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Thực nhận"/>
+</properties>
+</component>
+<component id="Component_label21" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="="/>
+</properties>
+</component>
+<component id="Component_txtTong" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="120px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#ff0000"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label22" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="-"/>
+</properties>
+</component>
+<component id="Component_txtKhauTru" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="120px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#ff0000"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label23" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="="/>
+</properties>
+</component>
+<component id="Component_txtThucNhan" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="width" value="120px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#ff0000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+
+
+<property name="insets" value="0px 5px"/>
+<property name="height" value="90px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+
+</properties>
+</component>
+</children>
+<properties>
+
+<property name="background" value="#d6d5c0"/>
+</properties>
+</component>
+</form>

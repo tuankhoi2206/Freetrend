@@ -1,0 +1,9 @@
+nghi viec, nghi san, tang moi khong tru tien
+
+xet lai nhung thang no o lan 2
+lan 1 cho no nhung thang dieu chinh
+lan 2 xet lai ko dc thi moi xet tiep luong cu
+
+thang tru bao hiem
+tăng mới giá trị thẻ vẫn còn giá trị
+chưa tính đăng ký nghỉ sản trong tháng

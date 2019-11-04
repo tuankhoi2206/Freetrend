@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane">
+<children>
+<component id="Component_pageNavigation" type="dsc.echo2app.component.DscPageNavigation" visibility="private">
+<properties>
+<property name="styleName" value="Default.Toolbar"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_dataTable" type="dsc.echo2app.component.table.DscDataObjectSetTable" visibility="private">
+<properties>
+<property name="styleName" value="Table.DscPageableSortableTable"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doDataSelectedChange"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="separatorPosition" value="25px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

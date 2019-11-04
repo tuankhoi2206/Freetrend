@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_column1" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_rbtnEmpsn" type="dsc.echo2app.component.DscValuedRadioButton" visibility="private">
+<properties>
+<property name="text" value="N_EMPLOYEE.EMPSN"/>
+<property name="buttonGroup" value="bg"/>
+<property name="selected" value="true"/>
+<property name="rolloverEnabled" value="true"/>
+
+
+
+<property name="foreground" value="#0080c0"/>
+<property name="rolloverForeground" value="#80ffff"/>
+</properties>
+</component>
+<component id="Component_row1" type="nextapp.echo2.app.Row"/>
+<component id="Component_lblEmpsn" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMPLOYEE.EMPSN"/>
+</properties>
+</component>
+<component id="Component_txtEmpsn" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="166px"/>
+<property name="background" value="#cffcfc"/>
+<property name="disabledBackground" value="#efefef"/>
+<property name="id" value="txtEmpsn"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+<property name="maximumLength" value="8"/>
+</properties>
+</component>
+<component id="Component_rbtnFact" type="dsc.echo2app.component.DscValuedRadioButton" visibility="private">
+<properties>
+
+<property name="buttonGroup" value="bg"/>
+<property name="rolloverEnabled" value="true"/>
+
+<property name="text" value="N_DEPARTMENT.NAME_FACT"/>
+
+
+<property name="foreground" value="#0080c0"/>
+<property name="rolloverForeground" value="#80ffff"/>
+</properties>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row"/>
+<component id="Component_lblFact" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_DEPARTMENT.NAME_FACT"/>
+</properties>
+</component>
+<component id="Component_slfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="170px"/>
+<property name="background" value="#b5fbfb"/>
+<property name="disabledBackground" value="#efefef"/>
+<property name="enabled" value="false"/>
+<property name="id" value="slfFact"/>
+</properties>
+</component>
+<component id="Component_lblGroup" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_DEPARTMENT.NAME_GROUP"/>
+</properties>
+</component>
+<component id="Component_slfGroup" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="170px"/>
+<property name="background" value="#b5fbfb"/>
+<property name="enabled" value="false"/>
+<property name="disabledBackground" value="#efefef"/>
+<property name="id" value="slfGroup"/>
+</properties>
+</component>
+<component id="Component_lblDept" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_DEPARTMENT.NAME_DEPT_NAME"/>
+</properties>
+</component>
+<component id="Component_slfDept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="170px"/>
+<property name="background" value="#b5fbfb"/>
+<property name="enabled" value="false"/>
+<property name="disabledBackground" value="#efefef"/>
+<property name="id" value="slfDept"/>
+</properties>
+</component>
+<component id="Component_lblBegin" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="N_EMP_RELATIVE.BEGINDATE"/>
+</properties>
+</component>
+<component id="Component_dtfBegin" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+
+<property name="enabled" value="false"/>
+<property name="width" value="167px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="0px 5px"/>
+<property index="0" name="columnWidth" value="150px"/>
+<property index="1" name="columnWidth" value="200px"/>
+</properties>
+</component>
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<properties>
+<property name="size" value="3"/>
+
+<property name="height" value="30px"/>
+<property index="0" name="columnWidth" value="110px"/>
+<property index="1" name="columnWidth" value="110px"/>
+<property index="2" name="columnWidth" value="110px"/>
+</properties>
+<children>
+<component id="Component_btnExportPDF" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Xuất thống kê"/>
+<property name="foreground" value="#ffffff"/>
+<property name="width" value="110px"/>
+<property name="insets" value="0px 6px"/>
+
+
+<property name="rolloverEnabled" value="true"/>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+
+
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="background" value="#43afc2"/>
+</properties>
+</component>
+
+
+<component id="Component_btnExportExcel" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+
+<property name="foreground" value="#ffffff"/>
+<property name="width" value="110px"/>
+<property name="insets" value="0px 6px"/>
+
+
+<property name="rolloverEnabled" value="true"/>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+
+
+<property name="text" value="Xuất Excel"/>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="background" value="#43afc2"/>
+</properties>
+</component>
+<component id="Component_btnCancel" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+
+<property name="foreground" value="#ffffff"/>
+<property name="width" value="110px"/>
+<property name="insets" value="0px 6px"/>
+
+
+<property name="rolloverEnabled" value="true"/>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+
+
+<property name="text" value="Cancel"/>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="background" value="#43afc2"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="10px 10px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

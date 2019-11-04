@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+  <fontFamilies>  	
+    <fontFamily name="Arial"> 		
+      <normal>dsc/echo2app/resource/font/ARIAL.TTF</normal> 		
+      <italic>dsc/echo2app/resource/font/ARIALI.TTF</italic> 		
+      <bold>dsc/echo2app/resource/font/ARIALBD.TTF</bold> 		
+      <boldItalic>dsc/echo2app/resource/font/ARIALBI.TTF</boldItalic> 		
+      <pdfEncoding>Identity-H</pdfEncoding> 		      
+      <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily> 
+    <fontFamily name="HanWangMingMedium">
+	  <normal>dsc/echo2app/resource/font/wt002.ttf</normal>
+	  <pdfEncoding>Identity-H</pdfEncoding>
+	  <pdfEmbedded>true</pdfEmbedded>
+	</fontFamily> 
+	<fontFamily name="Times New Roman">
+       <normal>dsc/echo2app/resource/font/TIMES.TTF</normal>
+       <bold>dsc/echo2app/resource/font/TIMESBD.TTF</bold>
+       <italic>dsc/echo2app/resource/font/TIMESI.TTF</italic>
+       <boldItalic>dsc/echo2app/resource/font/TIMESBI.TTF</boldItalic>
+       <pdfEncoding>Identity-H</pdfEncoding>
+       <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+  </fontFamilies>

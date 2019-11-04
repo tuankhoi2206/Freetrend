@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+
+<!--
+
+EchoStudio generated build.xml file v1.0.3
+
+Required properties
+
+*** The following should be specified in the EchoStudio.properties file ***
+project.name  Name of Project
+war.name      Name of WAR file (.war extension will be appended)
+
+*** The following should be specified either on ant command line or as environment variables ***
+echo.jar.path        Path to Echo.jar        (or as an environment variable, "ECHO_JAR_PATH")
+echoserver.jar.path  Path to EchoServer.jar  (or as an environment variable, "ECHO_SERVER_JAR_PATH")
+servlet.jar.path     Path to servlet.jar     (or as an environment variable, "SERVLET_JAR_PATH")
+
+-->
+
+<project name="${project.name}" default="war" basedir=".">
+
+    <!-- Base properties file -->
+    <property file="EchoStudio.properties"/>
+
+    <property name="debug"                             value="yes"/>
+
+    <property environment="env"/>
+    
+    <property name="echo2.app.jar.path"                 value="${lib.dir}/Echo2_App-2.1-rc3.jar"/>
+    <property name="echo2.webcontainer.jar.path"        value="${lib.dir}/Echo2_WebContainer-2.1-rc3.jar"/>
+    <property name="echo2.webrender.jar.path"           value="${lib.dir}/Echo2_WebRender-2.1-rc3.jar"/>
+    <property name="servlet.jar.path"                  value="${dev_lib.dir}"/>
+    <property name="war.name"                          value=""/>
+    <property name="war.file"                          value="${war.name}.war"/>
+    
+    <path id="app.classpath">
+        <pathelement path="${echo2.app.jar.path}"/>
+        <pathelement path="${echo2.webcontainer.jar.path}"/>
+        <pathelement path="${echo2.webrender.jar.path}"/>
+        <pathelement path="${servlet.jar.path}"/>
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="${dev_lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <!--  Directories -->
+    
+    <property name="src.app.dir"                       value="${src.dir}/${app.dir}"/>
+    <property name="src.deploy.dir"                    value="${src.dir}/${deploy.dir}"/>
+    <property name="src.htdocs.dir"                    value="${src.dir}/${htdocs.dir}"/>
+    <property name="src.servlet.dir"                   value="${src.dir}/${servlet.dir}"/>
+    
+    <property name="build.dir"                         value="build"/>
+    <property name="build.servlet.dir"                 value="${build.dir}/servlet"/>
+    <property name="build.class.dir"                   value="${build.dir}/java"/>
+    <property name="build.war.dir"                     value="${build.dir}/war"/>
+
+    <property name="war.output.dir"                    value="war"/>
+
+    <!-- Initialization Tasks -->
+    <target name="init">
+        <tstamp/>
+        <mkdir dir="${build.dir}"/>
+    </target>
+    
+    <!-- Clean -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${war.output.dir}"/>
+    </target>
+    
+	<patternset id="metadata">
+        <include name="META-INF/**"/>
+	</patternset>
+	
+    <patternset id="properties_files">
+        <include name="**/*.properties"/>
+    </patternset>
+    
+    <patternset id="resource_files">
+        <include name="**/*.stylesheet"/>
+        <include name="**/*.txt"/>
+		<include name="**/*.js"/>
+		<include name="**/*.TTF"/>
+		<include name="**/*.ttf"/>
+    </patternset>
+
+    <patternset id="image_files">
+        <include name="**/*gif"/>
+        <include name="**/*jpg"/>
+        <include name="**/*png"/>
+		<include name="**/*ico"/>
+    </patternset>
+	
+	<patternset id="config_files">
+		<include name="**/*xml"/>
+		<include name="**/*dtd"/>
+	</patternset>
+	
+	<patternset id="template_files">
+		<include name="**/*xls"/>
+		<include name="**/*XLS"/>
+		<include name="**/*jasper"/>
+	</patternset>
+		
+    <!-- Compile application classes -->
+    <target name="compile.app" depends="init" description="Compile application classes">
+        <mkdir dir="${build.class.dir}"/>
+        <javac srcdir="${src.app.dir}" destdir="${build.class.dir}"
+                debug="${debug}" 
+        		deprecation="yes" 	
+        		encoding="UTF-8" 
+        		includeantruntime="false">
+        	
+            <classpath refid="app.classpath"/>        	
+        </javac>
+        <copy todir="${build.class.dir}">
+            <fileset dir="${src.app.dir}">
+                <patternset refid="properties_files"/>
+                <patternset refid="image_files"/>
+                <patternset refid="resource_files"/>
+                <patternset refid="metadata"/>
+				<patternset refid="config_files"/>
+				<patternset refid="template_files"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <!-- Compile servlet  -->
+    <target name="compile.servlet" depends="compile.app" description="Compile servlet">
+        <mkdir dir="${build.servlet.dir}"/>
+        <javac srcdir="${servlet.dir}" destdir="${build.servlet.dir}"
+                debug="${debug}" deprecation="no" 	encoding="UTF-8">
+            <classpath refid="app.classpath"/>
+            <classpath>
+                <pathelement location="${build.class.dir}"/>
+                <pathelement location="${}"/>
+            </classpath>
+        </javac>
+        <copy todir="${build.servlet.dir}">
+            <fileset dir="${servlet.dir}">
+                <patternset refid="properties_files"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <!-- Create WAR archive -->
+    <target name="war" depends="clean,compile.servlet" description="Create WAR archive">
+        <mkdir dir="${build.war.dir}"/>
+        <mkdir dir="${build.war.dir}/WEB-INF"/>
+        <mkdir dir="${build.war.dir}/WEB-INF/classes"/>
+        <mkdir dir="${build.war.dir}/WEB-INF/lib"/>
+        <copy todir="${build.war.dir}/WEB-INF/lib" file="${echo2.app.jar.path}"/>
+        <copy todir="${build.war.dir}/WEB-INF/lib" file="${echo2.webcontainer.jar.path}"/>
+        <copy todir="${build.war.dir}/WEB-INF/lib" file="${echo2.webrender.jar.path}"/>
+        <copy todir="${build.war.dir}/WEB-INF/lib">
+            <fileset dir="${lib.dir}"/>
+        </copy>
+        <copy todir="${build.war.dir}/WEB-INF" file="${src.deploy.dir}/web.xml"/>
+        <copy todir="${build.war.dir}/WEB-INF/classes">
+            <fileset dir="${build.class.dir}"/>
+        </copy>
+        <copy todir="${build.war.dir}/WEB-INF/classes">
+            <fileset dir="${build.servlet.dir}"/>
+        </copy>
+        <copy todir="${build.war.dir}">
+            <fileset dir="${src.htdocs.dir}"/>
+        </copy>
+        <mkdir dir="${war.output.dir}"/>
+        <jar jarfile="${war.output.dir}/${war.file}" basedir="${build.war.dir}"/>
+    </target>
+	
+	
+	
+	<!--<target name="tomcat-stop" depends="war" >
+		
+		<java dir="${tomcat.home}/bin/" jar="${tomcat.home}/bin/bootstrap.jar" fork="true">
+				<arg line="stop"/>
+		</java>
+		<echo message="Stop Tomcat server success !!!"/>
+		
+		<delete file="${tomcat.home}/webapps/${war.file}"/>
+		<echo message="delete ${war.file} complete file!!!" />
+		<delete dir="${tomcat.home}/webapps/${war.name}"/>
+		<echo message="delete ${war.name} directory complete !!!"/>
+		
+		
+		<copy todir="${tomcat.home}/webapps">
+			<fileset dir="${war.output.dir}"/>
+		</copy>
+		<echo message="copy file war complete !!!"/>
+	</target>
+	
+	<target name="start-tomcat"  depends="tomcat-stop">  
+	        <java dir="${tomcat.home}/bin/" jar="${tomcat.home}/bin/bootstrap.jar" fork="true">  
+	            <arg value="start"/>     
+	        </java>
+		
+		<echo message="Start Tomcat server success !!!"/>
+	 </target>   -->
+    
+</project>

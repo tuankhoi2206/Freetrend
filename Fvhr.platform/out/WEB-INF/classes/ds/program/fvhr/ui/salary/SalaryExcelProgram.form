@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="separatorPosition" value="140px"/>
+<property name="separatorVerticalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitVertBar.png"/>
+</image>
+</fill-image>
+</property>
+<property name="resizable" value="true"/>
+</properties>
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Tháng"/>
+</properties>
+</component>
+<component id="Component_sfMonth" type="nextapp.echo2.app.SelectField" visibility="private"/>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Năm"/>
+</properties>
+</component>
+<component id="Component_sfYear" type="nextapp.echo2.app.SelectField" visibility="private"/>
+</children>
+<properties>
+<property name="cellSpacing" value="3px"/>
+</properties>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Xưởng"/>
+</properties>
+</component>
+<component id="Component_sfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="factChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Mã đơn vị"/>
+</properties>
+</component>
+<component id="Component_cboDept" type="echopointng.ComboBox" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="deptChanged"/>
+</event-set>
+</events>
+<properties>
+<property name="actionOnSelection" value="true"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="3px"/>
+</properties>
+</component>
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label5" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Mã ATM"/>
+</properties>
+</component>
+<component id="Component_cboATM" type="echopointng.ComboBox" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="atmChanged"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="3px"/>
+</properties>
+</component>
+<component id="Component_groupBox1" type="echopointng.GroupBox">
+<children>
+<component id="Component_row4" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_rad1" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="FVLS_TB020"/>
+<property name="buttonGroup" value="gg"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="optSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_rad2" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="FVL_KDAO_TB019_BEP"/>
+<property name="buttonGroup" value="gg"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="optSelected"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="3px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="3px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="size" value="1"/>
+<property name="insets" value="3px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="insets" value="5px"/>
+<property name="background" value="#d9d9ff"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

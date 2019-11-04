@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="resizable" value="true"/>
+
+
+<property name="separatorVerticalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitVertBar.png"/>
+</image>
+</fill-image>
+</property>
+
+<property name="separatorPosition" value="225px"/>
+</properties>
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+
+<component id="Component_radWeek" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Tuần báo cáo"/>
+<property name="buttonGroup" value="date_group"/>
+<property name="actionCommand" value="w1"/>
+<property name="selected" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="optWeekTimeChanged"/>
+</event-set>
+</events>
+</component>
+
+<component id="Component_cboWeek" type="echopointng.ComboBox" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="180px"/>
+<property name="background" value="#ffffff"/>
+<property name="actionOnSelection" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="calendarSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_groupBox1" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Lựa chọn báo cáo"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="7"/>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_radDayOT" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Kiểm tra tăng ca theo ngày"/>
+<property name="buttonGroup" value="opt"/>
+<property name="selected" value="true"/>
+<property name="actionCommand" value="op1"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="optSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radWeekOT" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Kiểm tra tăng ca theo tuần"/>
+<property name="buttonGroup" value="opt"/>
+<property name="actionCommand" value="op2"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="optSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radDayToDayOT" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="TS tăng ca từ ngày đến ngày"/>
+<property name="buttonGroup" value="opt"/>
+<property name="actionCommand" value="op3"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="optSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radVSOT" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="CNV con nhỏ / bầu 7 tháng VS"/>
+<property name="buttonGroup" value="opt"/>
+<property name="actionCommand" value="op4"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="optSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radLate15" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Sớm/ Trễ 15 phút theo ngày"/>
+<property name="actionCommand" value="op4"/>
+<property name="buttonGroup" value="opt"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="optSelected"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="size" value="1"/>
+<property name="insets" value="0px 14px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+
+<property name="columnSpan" value="4"/>
+</properties>
+</layout-data>
+</property>
+<property name="cellSpacing" value="3px"/>
+</properties>
+<children>
+<component id="Component_radDate" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Thời gian từ"/>
+<property name="buttonGroup" value="date_group"/>
+<property name="actionCommand" value="w2"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="optWeekTimeChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_dfFromDate" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="đến"/>
+</properties>
+</component>
+<component id="Component_dfToDate" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Thông số"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="24px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtParam" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="180px"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_NUMERIC"/>
+<property name="maximumLength" value="4"/>
+<property name="text" value="1"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_chkWorkingTime" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Giờ làm việc"/>
+<property name="enabled" value="false"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radEmpsn" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Số thẻ"/>
+<property name="buttonGroup" value="dept_opt"/>
+<property name="selected" value="true"/>
+<property name="actionCommand" value="emp"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="empSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_txtEmpsn" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+
+
+<property name="width" value="180px"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_TEXT"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="maximumLength" value="8"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+
+</component>
+<component id="Component_radDept" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Xưởng"/>
+<property name="buttonGroup" value="dept_opt"/>
+<property name="actionCommand" value="fac"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="empSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_sfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+
+
+<property name="enabled" value="false"/>
+<property name="width" value="180px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="sfFactChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_groupFVL" type="dsc.echo2app.component.DscGroupCheckBox" visibility="private">
+<properties>
+
+<property name="enabled" value="false"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="3"/>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="size" value="2"/>
+<property name="insets" value="0px 5px"/>
+<property name="background" value="#c0c0c0"/>
+</properties>
+<children>
+<component id="Component_chkFv1" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="FV1"/>
+
+</properties>
+</component>
+<component id="Component_chkFv2" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+
+<property name="text" value="FV2"/>
+</properties>
+</component>
+<component id="Component_chkFv3" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+
+<property name="text" value="FV3"/>
+</properties>
+</component>
+<component id="Component_chkFv4" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+
+<property name="text" value="FV5"/>
+</properties>
+</component>
+<component id="Component_chkFv5" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+
+<property name="text" value="FV6"/>
+</properties>
+</component>
+<component id="Component_chkOther" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+
+<property name="text" value="Khác"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_label6" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Lean"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="24px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_sfLean" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+
+
+<property name="enabled" value="false"/>
+<property name="width" value="180px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="sfLeanChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label8" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đơn vị"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="24px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_sfDept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="180px"/>
+
+<property name="enabled" value="false"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+
+</component>
+</children>
+<properties>
+<property name="insets" value="3px"/>
+<property name="size" value="4"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="background" value="#87bad6"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_EMPNA_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.EMPNA"/>
+            </properties>
+          </component>
+          <component id="Component_EMPNA_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPNA_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_DEPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.DEPSN"/>
+            </properties>
+          </component>
+          <component id="Component_DEPSN_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="DEPSN_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_ADDCLS1_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.ADDCLS1"/>
+            </properties>
+          </component>
+          <component id="Component_ADDCLS1_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ADDCLS1_DscField4"/>
+            </properties>
+          </component>
+          <component id="Component_ADDCLS1_S_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.ADDCLS1_S"/>
+            </properties>
+          </component>
+          <component id="Component_ADDCLS1_S_DscField5"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ADDCLS1_S_DscField5"/>
+            </properties>
+          </component>
+          <component id="Component_ADDCLS2_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.ADDCLS2"/>
+            </properties>
+          </component>
+          <component id="Component_ADDCLS2_DscField6"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ADDCLS2_DscField6"/>
+            </properties>
+          </component>
+          <component id="Component_ADDCLS2_S_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.ADDCLS2_S"/>
+            </properties>
+          </component>
+          <component id="Component_ADDCLS2_S_DscField7"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ADDCLS2_S_DscField7"/>
+            </properties>
+          </component>
+          <component id="Component_ADDHOL_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.ADDHOL"/>
+            </properties>
+          </component>
+          <component id="Component_ADDHOL_DscField8"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ADDHOL_DscField8"/>
+            </properties>
+          </component>
+          <component id="Component_ADDHOLN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.ADDHOLN"/>
+            </properties>
+          </component>
+          <component id="Component_ADDHOLN_DscField9"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ADDHOLN_DscField9"/>
+            </properties>
+          </component>
+          <component id="Component_ADDHOLN_S_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.ADDHOLN_S"/>
+            </properties>
+          </component>
+          <component id="Component_ADDHOLN_S_DscField10"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ADDHOLN_S_DscField10"/>
+            </properties>
+          </component>
+          <component id="Component_ADDHOL_S_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.ADDHOL_S"/>
+            </properties>
+          </component>
+          <component id="Component_ADDHOL_S_DscField11"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ADDHOL_S_DscField11"/>
+            </properties>
+          </component>
+          <component id="Component_BAC_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BAC"/>
+            </properties>
+          </component>
+          <component id="Component_BAC_DscField12"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BAC_DscField12"/>
+            </properties>
+          </component>
+          <component id="Component_BH_TNGHIEP_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BH_TNGHIEP"/>
+            </properties>
+          </component>
+          <component id="Component_BH_TNGHIEP_DscField13"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BH_TNGHIEP_DscField13"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS1_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS1"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS1_DscField14"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS1_DscField14"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS1_HOL_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS1_HOL"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS1_HOL_DscField15"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS1_HOL_DscField15"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS2_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS2"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS2_DscField16"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS2_DscField16"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS2_GOC_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS2_GOC"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS2_GOC_DscField17"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS2_GOC_DscField17"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS3_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS3"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS3_DscField18"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS3_DscField18"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS4_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS4"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS4_DscField19"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS4_DscField19"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS5_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS5"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS5_DscField20"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS5_DscField20"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS6_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS6"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS6_DscField21"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS6_DscField21"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS7_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS7"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS7_DscField22"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS7_DscField22"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS9_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS9"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS9_DscField23"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS9_DscField23"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS_ACN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BONUS_ACN"/>
+            </properties>
+          </component>
+          <component id="Component_BONUS_ACN_DscField24"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BONUS_ACN_DscField24"/>
+            </properties>
+          </component>
+          <component id="Component_BORM_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BORM"/>
+            </properties>
+          </component>
+          <component id="Component_BORM_DscField25"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BORM_DscField25"/>
+            </properties>
+          </component>
+          <component id="Component_BSALY_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BSALY"/>
+            </properties>
+          </component>
+          <component id="Component_BSALY_DscField26"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BSALY_DscField26"/>
+            </properties>
+          </component>
+          <component id="Component_BSALY1_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BSALY1"/>
+            </properties>
+          </component>
+          <component id="Component_BSALY1_DscField27"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BSALY1_DscField27"/>
+            </properties>
+          </component>
+          <component id="Component_BSALY2_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BSALY2"/>
+            </properties>
+          </component>
+          <component id="Component_BSALY2_DscField28"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BSALY2_DscField28"/>
+            </properties>
+          </component>
+          <component id="Component_BSALY_N_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.BSALY_N"/>
+            </properties>
+          </component>
+          <component id="Component_BSALY_N_DscField29"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BSALY_N_DscField29"/>
+            </properties>
+          </component>
+          <component id="Component_CLASS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.CLASS"/>
+            </properties>
+          </component>
+          <component id="Component_CLASS_DscField30"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="CLASS_DscField30"/>
+            </properties>
+          </component>
+          <component id="Component_CODE_TAX_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.CODE_TAX"/>
+            </properties>
+          </component>
+          <component id="Component_CODE_TAX_DscField31"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="CODE_TAX_DscField31"/>
+            </properties>
+          </component>
+          <component id="Component_COMBSALY_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.COMBSALY"/>
+            </properties>
+          </component>
+          <component id="Component_COMBSALY_DscField32"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="COMBSALY_DscField32"/>
+            </properties>
+          </component>
+          <component id="Component_DEPSN_BHYT_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.DEPSN_BHYT"/>
+            </properties>
+          </component>
+          <component id="Component_DEPSN_BHYT_DscField33"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="DEPSN_BHYT_DscField33"/>
+            </properties>
+          </component>
+          <component id="Component_DUCLS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.DUCLS"/>
+            </properties>
+          </component>
+          <component id="Component_DUCLS_DscField34"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="DUCLS_DscField34"/>
+            </properties>
+          </component>
+          <component id="Component_DUCLS_S_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.DUCLS_S"/>
+            </properties>
+          </component>
+          <component id="Component_DUCLS_S_DscField35"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="DUCLS_S_DscField35"/>
+            </properties>
+          </component>
+          <component id="Component_HIRED_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.HIRED"/>
+            </properties>
+          </component>
+          <component id="Component_HIRED_DscDateField1"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="HIRED_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_JOININSU_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.JOININSU"/>
+            </properties>
+          </component>
+          <component id="Component_JOININSU_DscField36"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="JOININSU_DscField36"/>
+            </properties>
+          </component>
+          <component id="Component_JOINLUM_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.JOINLUM"/>
+            </properties>
+          </component>
+          <component id="Component_JOINLUM_DscField37"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="JOINLUM_DscField37"/>
+            </properties>
+          </component>
+          <component id="Component_KQT_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.KQT"/>
+            </properties>
+          </component>
+          <component id="Component_KQT_DscField38"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="KQT_DscField38"/>
+            </properties>
+          </component>
+          <component id="Component_LATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.LATE"/>
+            </properties>
+          </component>
+          <component id="Component_LATE_DscField39"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="LATE_DscField39"/>
+            </properties>
+          </component>
+          <component id="Component_NADDCLS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.NADDCLS"/>
+            </properties>
+          </component>
+          <component id="Component_NADDCLS_DscField40"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NADDCLS_DscField40"/>
+            </properties>
+          </component>
+          <component id="Component_NADDCLS_S_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.NADDCLS_S"/>
+            </properties>
+          </component>
+          <component id="Component_NADDCLS_S_DscField41"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NADDCLS_S_DscField41"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_DscField42"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField42"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_REST_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.NOTE_REST"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_REST_DscField43"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_REST_DscField43"/>
+            </properties>
+          </component>
+          <component id="Component_NUCLS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.NUCLS"/>
+            </properties>
+          </component>
+          <component id="Component_NUCLS_DscField44"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NUCLS_DscField44"/>
+            </properties>
+          </component>
+          <component id="Component_NUCLS_S_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.NUCLS_S"/>
+            </properties>
+          </component>
+          <component id="Component_NUCLS_S_DscField45"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NUCLS_S_DscField45"/>
+            </properties>
+          </component>
+          <component id="Component_NWHOUR_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.NWHOUR"/>
+            </properties>
+          </component>
+          <component id="Component_NWHOUR_DscField46"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NWHOUR_DscField46"/>
+            </properties>
+          </component>
+          <component id="Component_OFFD_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.OFFD"/>
+            </properties>
+          </component>
+          <component id="Component_OFFD_DscDateField2"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="OFFD_DscDateField2"/>
+            </properties>
+          </component>
+          <component id="Component_OTHER_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.OTHER"/>
+            </properties>
+          </component>
+          <component id="Component_OTHER_DscField47"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="OTHER_DscField47"/>
+            </properties>
+          </component>
+          <component id="Component_PAYTAX_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.PAYTAX"/>
+            </properties>
+          </component>
+          <component id="Component_PAYTAX_DscField48"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PAYTAX_DscField48"/>
+            </properties>
+          </component>
+          <component id="Component_PAYTAX1_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.PAYTAX1"/>
+            </properties>
+          </component>
+          <component id="Component_PAYTAX1_DscField49"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PAYTAX1_DscField49"/>
+            </properties>
+          </component>
+          <component id="Component_PHEP_NS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.PHEP_NS"/>
+            </properties>
+          </component>
+          <component id="Component_PHEP_NS_DscField50"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PHEP_NS_DscField50"/>
+            </properties>
+          </component>
+          <component id="Component_POSSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.POSSN"/>
+            </properties>
+          </component>
+          <component id="Component_POSSN_DscField51"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="POSSN_DscField51"/>
+            </properties>
+          </component>
+          <component id="Component_QT_PAYTAX1_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.QT_PAYTAX1"/>
+            </properties>
+          </component>
+          <component id="Component_QT_PAYTAX1_DscField52"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="QT_PAYTAX1_DscField52"/>
+            </properties>
+          </component>
+          <component id="Component_REST_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.REST"/>
+            </properties>
+          </component>
+          <component id="Component_REST_DscField53"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="REST_DscField53"/>
+            </properties>
+          </component>
+          <component id="Component_REST_PAY_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.REST_PAY"/>
+            </properties>
+          </component>
+          <component id="Component_REST_PAY_DscField54"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="REST_PAY_DscField54"/>
+            </properties>
+          </component>
+          <component id="Component_REST_PAY_S_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.REST_PAY_S"/>
+            </properties>
+          </component>
+          <component id="Component_REST_PAY_S_DscField55"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="REST_PAY_S_DscField55"/>
+            </properties>
+          </component>
+          <component id="Component_REST_SICK_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.REST_SICK"/>
+            </properties>
+          </component>
+          <component id="Component_REST_SICK_DscField56"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="REST_SICK_DscField56"/>
+            </properties>
+          </component>
+          <component id="Component_SIGN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.SIGN"/>
+            </properties>
+          </component>
+          <component id="Component_SIGN_DscField57"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="SIGN_DscField57"/>
+            </properties>
+          </component>
+          <component id="Component_STT_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.STT"/>
+            </properties>
+          </component>
+          <component id="Component_STT_DscField58"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="STT_DscField58"/>
+            </properties>
+          </component>
+          <component id="Component_TADDCLS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TADDCLS"/>
+            </properties>
+          </component>
+          <component id="Component_TADDCLS_DscField59"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TADDCLS_DscField59"/>
+            </properties>
+          </component>
+          <component id="Component_TADDCLS2_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TADDCLS2"/>
+            </properties>
+          </component>
+          <component id="Component_TADDCLS2_DscField60"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TADDCLS2_DscField60"/>
+            </properties>
+          </component>
+          <component id="Component_TADDS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TADDS"/>
+            </properties>
+          </component>
+          <component id="Component_TADDS_DscField61"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TADDS_DscField61"/>
+            </properties>
+          </component>
+          <component id="Component_TADDS_NOTAX_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TADDS_NOTAX"/>
+            </properties>
+          </component>
+          <component id="Component_TADDS_NOTAX_DscField62"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TADDS_NOTAX_DscField62"/>
+            </properties>
+          </component>
+          <component id="Component_TBASIC_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TBASIC"/>
+            </properties>
+          </component>
+          <component id="Component_TBASIC_DscField63"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TBASIC_DscField63"/>
+            </properties>
+          </component>
+          <component id="Component_TBONUS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TBONUS"/>
+            </properties>
+          </component>
+          <component id="Component_TBONUS_DscField64"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TBONUS_DscField64"/>
+            </properties>
+          </component>
+          <component id="Component_TDAY_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TDAY"/>
+            </properties>
+          </component>
+          <component id="Component_TDAY_DscField65"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TDAY_DscField65"/>
+            </properties>
+          </component>
+          <component id="Component_TINCOME_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TINCOME"/>
+            </properties>
+          </component>
+          <component id="Component_TINCOME_DscField66"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TINCOME_DscField66"/>
+            </properties>
+          </component>
+          <component id="Component_TKQ_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TKQ"/>
+            </properties>
+          </component>
+          <component id="Component_TKQ_DscField67"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TKQ_DscField67"/>
+            </properties>
+          </component>
+          <component id="Component_TS1_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TS1"/>
+            </properties>
+          </component>
+          <component id="Component_TS1_DscField68"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TS1_DscField68"/>
+            </properties>
+          </component>
+          <component id="Component_TSAL_PAYTAX_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TSAL_PAYTAX"/>
+            </properties>
+          </component>
+          <component id="Component_TSAL_PAYTAX_DscField69"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TSAL_PAYTAX_DscField69"/>
+            </properties>
+          </component>
+          <component id="Component_TTS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TS"/>
+            </properties>
+          </component>
+          <component id="Component_TTS_DscField70"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TTS_DscField70"/>
+            </properties>
+          </component>
+          <component id="Component_TYADDCLS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TYADDCLS"/>
+            </properties>
+          </component>
+          <component id="Component_TYADDCLS_DscField71"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TYADDCLS_DscField71"/>
+            </properties>
+          </component>
+          <component id="Component_TY_PAYTAX1_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.TY_PAYTAX1"/>
+            </properties>
+          </component>
+          <component id="Component_TY_PAYTAX1_DscField72"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TY_PAYTAX1_DscField72"/>
+            </properties>
+          </component>
+          <component id="Component_YLBX_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="ATT.YLBX"/>
+            </properties>
+          </component>
+          <component id="Component_YLBX_DscField73"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="YLBX_DscField73"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

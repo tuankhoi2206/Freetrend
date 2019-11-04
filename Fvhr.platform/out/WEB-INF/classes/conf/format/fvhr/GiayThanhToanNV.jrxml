@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="GiayThanhToanNV" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="585" leftMargin="5" rightMargin="5" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="3ebe5171-3e30-4fdb-9675-a55082649c70">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="e0522865-afb2-4720-a4bd-8b86f16eafae"/>
+	<subDataset name="dataset1" uuid="1ff0ff75-bd0f-4449-92fc-b648f6e43d3e"/>
+	<subDataset name="Table Dataset 2" uuid="d6170124-7e0a-4b28-a0c8-0bc605f134e9"/>
+	<queryString>
+		<![CDATA[Select a.empsn, a.empcn as IC, a.fname ||' '|| a.lname as fname, a.lname, a.date_hired as NNX, a.position as possn ,b.name_fact||' '|| b.name_group as fgroup
+, b.name_dept_name as donvi, c.bsalary, d.qdnv
+,substr(to_char(d.real_off_date,'dd/mm/yyyy'), 1, 2) as n_nghi
+,substr(to_char(d.real_off_date,'dd/mm/yyyy'), 4, 2) as t_nghi
+,substr(to_char(d.real_off_date,'dd/mm/yyyy'), 7, 4) as na_nghi
+, d.id_quit_reason, d.real_off_date
+,Trunc((d.real_off_date - a.date_hired) / 365, 0) as nam1, f.note1
+,Trunc(((d.real_off_date - a.date_hired) - trunc((d.real_off_date - a.date_hired) / 365, 0) * 365) / 30, 0) as thang1
+
+,   Trunc ((d.real_off_date-a.date_hired)/365,0)*12
+   + trunc(trunc ( (d.real_off_date-a.date_hired)/365,0) / 5 ,0)
+   +
+  (
+  (case
+   When d.real_off_date>=to_date('15/'||to_char(d.real_off_date,'mm/yyyy'),'dd/mm/yyyy') then
+   Trunc(((d.real_off_date - a.date_hired)  - trunc((d.real_off_date - a.date_hired) / 365, 0) * 365) / 30,0)+1
+   When d.real_off_date<to_date('15/'||to_char(d.real_off_date,'mm/yyyy'),'dd/mm/yyyy') then
+   Trunc(((d.real_off_date - a.date_hired)  - trunc((d.real_off_date - a.date_hired) / 365, 0) * 365) / 30,0)
+   end)
+   ) as OBTAIN
+
+,    (case
+   When d.real_off_date>=to_date('15/'||to_char(d.real_off_date,'mm/yyyy'),'dd/mm/yyyy') then
+   To_number(to_char(d.real_off_date,'mm'))
+   When d.real_off_date<to_date('15/'||to_char(d.real_off_date,'mm/yyyy'),'dd/mm/yyyy') then
+   To_number(to_char(d.real_off_date,'mm'))-1
+   end) as TS_HTAI
+
+   , nvl((select e.used from n_rest e
+   where e.empsn = a.empsn and e.year = to_char(d.real_off_date,'yyyy')),0) as TS_USED_HTAI
+
+  ,(case
+  When trunc((trunc((d.real_off_date - a.date_hired) / 365, 0) * 365) / 30, 0) >= 6 then
+  (case
+  When (d.real_off_date >= to_date('31/12/2008','dd/mm/yyyy')) then
+  Trunc((to_date('31/12/2008','dd/mm/yyyy') - a.date_hired) / 365, 0) * 0.5
+  When (d.real_off_date <to_date('31/12/2008','dd/mm/yyyy')) then
+  Trunc((d.real_off_date - a.date_hired) / 365, 0) * 0.5
+   end) + 0.25
+  When trunc((trunc((d.real_off_date - a.date_hired) / 365, 0) * 365) / 30,0) < 6 then
+   (case
+  When (d.real_off_date >=to_date('31/12/2008','dd/mm/yyyy')) then
+  Trunc((to_date('31/12/2008','dd/mm/yyyy') - a.date_hired) / 365,0) * 0.5
+  When (d.real_off_date <to_date('31/12/2008','dd/mm/yyyy')) then
+  Trunc((d.real_off_date - a.date_hired) / 365, 0) * 0.5
+   end)
+   end) as trocap1
+
+,(select count(*) from n_rest_detail f
+where f.empsn=a.empsn
+and to_char(date_off,'yyyy')=to_char(d.real_off_date,'yyyy') and rest_type='TON') TON_USED_HTAI
+
+,nvl((select e.stored from n_rest e
+where e.empsn=a.empsn
+and e.year=to_char(d.real_off_date,'yyyy')),0) TON_HTAI
+
+
+  From n_employee a, n_department b, n_basic_salary c, n_emp_quit d, N_Quit_Reason f
+  Where a.depsn = b.id_dept and a.empsn = c.empsn and a.empsn = d.empsn and d.id_quit_reason = f.id_quit_reason
+  and c.keys = 1
+and a.empsn in ('00080510','06120005','00070164','07091263'
+,'08080462','00070164','10091020','10110302','10031126')]]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="IC" class="java.lang.String"/>
+	<field name="FNAME" class="java.lang.String"/>
+	<field name="LNAME" class="java.lang.String"/>
+	<field name="NNX" class="java.sql.Timestamp"/>
+	<field name="POSSN" class="java.lang.String"/>
+	<field name="FGROUP" class="java.lang.String"/>
+	<field name="DONVI" class="java.lang.String"/>
+	<field name="BSALARY" class="java.math.BigDecimal"/>
+	<field name="QDNV" class="java.math.BigDecimal"/>
+	<field name="N_NGHI" class="java.lang.String"/>
+	<field name="T_NGHI" class="java.lang.String"/>
+	<field name="NA_NGHI" class="java.lang.String"/>
+	<field name="ID_QUIT_REASON" class="java.math.BigDecimal"/>
+	<field name="REAL_OFF_DATE" class="java.sql.Timestamp"/>
+	<field name="NAM1" class="java.math.BigDecimal"/>
+	<field name="NOTE1" class="java.lang.String"/>
+	<field name="THANG1" class="java.math.BigDecimal"/>
+	<field name="OBTAIN" class="java.math.BigDecimal"/>
+	<field name="TS_HTAI" class="java.math.BigDecimal"/>
+	<field name="TS_USED_HTAI" class="java.math.BigDecimal"/>
+	<field name="TROCAP1" class="java.math.BigDecimal"/>
+	<field name="TON_USED_HTAI" class="java.math.BigDecimal"/>
+	<field name="TON_HTAI" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="7" width="180" height="28" uuid="3915bc4b-678a-431f-bc35-275b19c883ea"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[KHU CH? XU?T LINH TRUNG CTY TNHH FREETREND]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="35" width="60" height="20" uuid="83ce3e63-a3e3-4f94-9741-0b4485354743"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[S?]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="78" y="35" width="80" height="20" uuid="c447c384-4450-4967-8e25-e45687444bff"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QDNV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="295" y="7" width="250" height="28" uuid="a2929768-5c60-463f-9bdd-85c38a137cbd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[C?NG HÒA XÃ H?I CH? NGH?A VI?T NAM ??C L?P - T? DO - H?NH PHÚC ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="35" width="250" height="20" uuid="ffb55c90-d658-4755-a290-69bb9cb4bb1f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[TPHCM, ngày        tháng        n?m        ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="0" width="333" height="28" uuid="0fb63021-4127-4646-abca-b707703fca68"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="20" isBold="true" isItalic="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[GI?Y THANH TOÁN NGH? VI?C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="28" width="333" height="31" uuid="93b678d9-59da-4a40-a92d-df942f335c00"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="HanWangMingMedium" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[?????]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="600" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="4" width="40" height="16" uuid="b2ed51de-9c5a-4679-990f-ee1c5ae7ce40"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[H? tên]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="4" width="90" height="16" uuid="dd9546fa-a085-4427-a12e-62fe9fc20e2b"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??), (??):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="149" y="4" width="142" height="16" uuid="e8187ff8-dfb5-4135-8c0c-c1b2dfdc1f61"/>
+				<textElement>
+					<font fontName="VNI-Times" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FNAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="291" y="4" width="35" height="16" uuid="18d9f9cc-b634-45f8-8782-27a55b7807b9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[s? th?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="4" width="42" height="16" uuid="4fb9e2df-3c17-4fe8-89f2-dd44eed5c33e"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="367" y="4" width="60" height="16" uuid="5b4c1a7a-3430-4a38-aa8f-4580ca3c84e4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPSN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="464" y="4" width="45" height="16" uuid="08c7c104-e06b-4290-a5be-b447a37e6cb3"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(IC?):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="4" width="45" height="16" uuid="ab25d7e4-36d7-4a68-9715-d115a43f4d73"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[, th? IC]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="515" y="4" width="74" height="16" uuid="1d493823-ecdd-47b6-a012-5a42da5c4ba8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="20" width="88" height="16" uuid="408657ae-d645-4fd8-a7d7-16439f9888c3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Ngày nh?p x??ng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="20" width="55" height="16" uuid="bbdde9bd-d1f8-49d7-8c48-934c419e0bf8"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(???):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="20" width="60" height="16" uuid="0897b71b-7eac-4352-957d-8388e1332735"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NNX}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="215" y="20" width="50" height="16" uuid="f73871d0-53a9-4558-bd93-6a02026a9499"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[, ch?c v?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="20" width="40" height="16" uuid="34b5202f-87cc-4425-9aa1-f6af2c6fa276"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="307" y="20" width="63" height="16" uuid="9b308895-32e0-4a5e-a67e-d4be38b08901"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{POSSN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="343" y="20" width="38" height="16" uuid="1d001e76-657d-4038-92d1-fa04bc66efab"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[, x??ng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="20" width="42" height="16" uuid="43235e84-a26b-44ae-af9f-0d3bc21e25d2"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="20" width="75" height="16" uuid="0aa49a66-c0ac-4a7e-a5ae-55588e21dc66"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FGROUP}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="515" y="20" width="42" height="16" uuid="a98be649-aa42-4af4-ab91-e0ae71c9e382"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="20" width="40" height="16" uuid="0aa7b2ab-322f-4395-85d8-aa2b22673507"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[, ??n v?]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="14" y="35" width="208" height="16" uuid="5742bb81-a5f5-47ea-96d3-36d50a453015"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DONVI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="51" width="87" height="16" uuid="48d43a89-52b1-4e74-a0e7-6603dcc01795"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BSALARY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="51" width="60" height="16" uuid="4818bad4-77f6-49c7-90d0-80e65240ef84"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[M?c l??ng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="51" width="67" height="16" uuid="22b594ba-ea1e-40c7-a4ea-9a9098ca5b76"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(????):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="205" y="65" width="82" height="16" uuid="b04105bb-7970-4d1c-b042-108e8c72af24"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NA_NGHI}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="65" width="80" height="16" uuid="d012f2c4-7ef3-4ebf-9fc9-c382477a53c9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Ngày ngh? vi?c]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="65" width="55" height="16" uuid="4814535b-92c6-4022-9ac7-92c710884f1d"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(???): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="65" width="25" height="16" uuid="60beb464-79df-4eb6-95f4-7cc297b1cef1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[n?m]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="65" width="25" height="16" uuid="09d6d819-7efc-46b7-b6e8-b6027cfb18db"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="65" width="35" height="16" uuid="a30dfe9d-95a4-4b19-b1fd-6d9a545b2eee"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[tháng]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="338" y="65" width="75" height="16" uuid="5a7df63a-6132-4108-a31c-4bd97f520e04"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{T_NGHI}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="317" y="65" width="25" height="16" uuid="5f97163e-7147-4db6-9ce9-90d59507af46"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="65" width="35" height="16" uuid="1fbda21e-20f7-4a7e-af21-e025bed2162b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[ngày]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="65" width="25" height="16" uuid="251c2d4b-ec1f-41bc-8c79-13755f7067e5"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="482" y="65" width="75" height="16" uuid="db51b769-3812-4e3e-8419-35ab83ef1059"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{N_NGHI}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="102" y="111" width="55" height="16" uuid="fa9b1be0-e949-49f6-98e7-c587fd78a7c3"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[???? :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="111" width="80" height="16" uuid="8ed9f938-d473-4c54-a25a-60fa7ad5c345"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Lı do ngh? vi?c]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="127" width="80" height="16" uuid="44855a2f-5be1-4ded-a0c5-adaf41e52c5d"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?????)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="127" width="105" height="16" uuid="b3dad4ca-ba34-485b-81e2-87f220eb5681"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Th? vi?c không ??t ]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="47" y="132" width="8" height="8" uuid="061f86e5-8197-423b-aeda-c8fc66688deb"/>
+			</frame>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="47" y="148" width="8" height="8" uuid="40d02b98-62a5-4eac-908d-7db69322adf7"/>
+			</frame>
+			<staticText>
+				<reportElement x="152" y="143" width="68" height="16" uuid="6414ce82-8c22-4d41-9a04-92d1d37440db"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(????)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="143" width="74" height="16" uuid="91e196d4-d47d-403c-ae8f-bfb05149bd7e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[T? ı b? vi?c]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="159" width="115" height="16" uuid="b89f7265-2967-40e4-bc30-3c2990565c23"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(????????)]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="47" y="164" width="8" height="8" uuid="17a5f8bf-3788-40cb-bc92-5fded7222bb3"/>
+			</frame>
+			<staticText>
+				<reportElement x="59" y="159" width="161" height="16" uuid="d031e65a-9e36-4fc4-a488-1c566e4363fa"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Xin thôi trong th?i gian th? vi?c (]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="175" width="85" height="16" uuid="302169d2-e675-4298-9d77-0ea8d0b5bf0c"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??????)]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="47" y="180" width="8" height="8" uuid="a1240ba5-91b8-4734-b64d-71f98c79ddd2"/>
+			</frame>
+			<staticText>
+				<reportElement x="59" y="175" width="95" height="16" uuid="1f32e1d5-8c2b-404d-8b27-44db35ec33be"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[H?t h?n h?p ??ng ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="191" width="145" height="16" uuid="744d0543-74e4-47b5-9e85-f5b15a46fe92"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(???????????)]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="47" y="195" width="8" height="8" uuid="193722fe-7938-45ac-a1bb-4620a7f69f52"/>
+			</frame>
+			<staticText>
+				<reportElement x="59" y="191" width="220" height="16" uuid="1713eae6-44b7-4474-b61b-f5613f597a04"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Công nhân ??n ph??ng ch?m d?t h?p ??ng ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="207" width="60" height="16" uuid="860d2c38-61c3-4277-bb24-bc3f5fa3fd86"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(????)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="207" width="90" height="16" uuid="95a90d2f-f871-4a49-8748-a054d3cc6f82"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[?úng pháp lu?t ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="223" width="60" height="16" uuid="1f9fe52a-1ec6-4ac4-8852-cf9ee2a7b6be"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(????)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="223" width="90" height="16" uuid="33dab47d-ca49-41fb-b578-ada41f4b982b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Trái pháp lu?t ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="64" y="207" width="15" height="16" uuid="a5e551bb-bcd1-44f1-b477-f75e99f73f28"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{NOTE1} == "1" ? "v" : "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="223" width="15" height="16" uuid="4274288c-4229-4c33-a347-1bfbf6a3af3c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{NOTE1} == "0" ? "v" : "")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="59" y="239" width="204" height="16" uuid="c49ed9a4-5ae8-4447-959c-ce243715f9c6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Công ty ??n ph??ng ch?m d?t h?p ??ng ]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="47" y="244" width="8" height="8" uuid="f98c7da6-1a5f-408f-aef1-fdafc5a7cd2c"/>
+			</frame>
+			<staticText>
+				<reportElement x="280" y="239" width="149" height="16" uuid="c7991d48-ec0c-4828-8599-a37e8a8757cc"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(???????????)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="255" width="200" height="16" uuid="a9ca049d-4579-43dd-b0ba-6f0ac6672153"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[B? sa th?i do vi ph?m n?i qui công ty ]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="47" y="258" width="8" height="8" uuid="b6676959-4dca-4d24-b2de-5c07a28ae11f"/>
+			</frame>
+			<staticText>
+				<reportElement x="279" y="255" width="129" height="16" uuid="e37eb84f-e615-4f69-9819-240242150be6"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?????????)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="271" width="80" height="16" uuid="ef7631f0-73f9-4e87-a5af-6c3fdb4c7370"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?????):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="271" width="110" height="16" uuid="13ee1873-7cf1-463d-9fdb-ffd3c5539f7b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Phép n?m ???c h??ng ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="393" y="271" width="25" height="16" uuid="ff4b5e9e-eb7b-4036-8019-5daefe45e498"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[ngày]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="522" y="271" width="23" height="16" uuid="235528e3-34d7-455f-ad64-6a9dfda77af1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{TS_HTAI}-$F{TS_USED_HTAI})+($F{TON_HTAI}-$F{TON_USED_HTAI})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="271" width="25" height="16" uuid="b16639bb-2851-4cab-882b-e53e72cbe34c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OBTAIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="271" width="25" height="16" uuid="67f0fb1b-9744-4e9a-b9c3-99ffb6fbf7d0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OBTAIN}-($F{TS_HTAI}-$F{TS_USED_HTAI})-($F{TON_HTAI}-$F{TON_USED_HTAI})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="247" y="271" width="25" height="16" uuid="f3c48135-3c15-41b7-bff5-caaf6e6c3a5e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[ngày]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="418" y="271" width="27" height="16" uuid="6d82efe7-e1ed-41f8-973f-42ed925cbfa7"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="271" width="25" height="16" uuid="f483a017-438d-4ae4-8f59-ce6c3c105b3e"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="271" width="36" height="16" uuid="8da510bc-7889-40b0-b23f-0962df553e22"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[?ã ngh?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="271" width="42" height="16" uuid="2c347727-e5ab-4511-a063-230e88fdada6"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="271" width="42" height="16" uuid="ca97b503-4aff-4e56-ae5d-61f90209cb04"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="271" width="35" height="16" uuid="5508adcf-9b3e-4024-ab8e-1c89993d73f7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[còn l?i]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="565" y="271" width="24" height="16" uuid="e1f879ea-e206-4a98-a7fe-7d3189b2f057"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="545" y="271" width="25" height="16" uuid="a388683d-7657-44d0-bd1b-7fe5d101e272"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[ngày]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="81" width="16" height="16" uuid="1cbd4877-7173-4e35-8ba2-60c151dcad9e"/>
+				<imageExpression><![CDATA["D:\\DATA_D_OLD\\HoangAnh\\Image_Icon\\ICO\\star_48.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="40" y="81" width="505" height="16" uuid="29b6958c-7e50-4e46-a175-302c48e2889f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Ngày ngh? vi?c không ph?i là ngày công ty ??ng ı th?c hi?n theo ?úng th?i gian báo tr??c :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="96" width="195" height="16" uuid="1db0bf09-9fc9-488d-aecb-f8379c725410"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[H?L? có xác ??nh th?i h?n : 30 ngày]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="96" width="195" height="16" uuid="513a1e67-3463-4c65-a38e-b032022fbac0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[H?L? không xác ??nh th?i h?n : 45 ngày]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="287" width="92" height="16" uuid="313de25e-14e3-4d90-8a9a-5a7515b9bb36"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Th?i gian làm vi?c]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="287" width="66" height="16" uuid="895cae10-5961-4ab1-a048-37bd01d639c6"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(????): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="287" width="25" height="16" uuid="e079e1d9-55a0-42df-8867-be1ba01bb41d"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="288" width="25" height="16" uuid="a52de0e9-6093-4ca6-a28c-80b74fc45841"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAM1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="210" y="287" width="25" height="16" uuid="3e732339-c627-44d3-8963-875daee42fee"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[n?m]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="287" width="30" height="16" uuid="c60c8cac-256f-4899-8771-756e256860bf"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[tháng]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="287" width="30" height="16" uuid="81a1c601-24cb-448a-a5c7-733153765269"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{THANG1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="315" y="287" width="25" height="16" uuid="12071877-63b3-4e21-b92a-fe982574ccb0"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="537" y="287" width="28" height="16" uuid="1d22bc0c-7e5b-4f2b-9a1e-25aa3c66f097"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[tháng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="287" width="90" height="16" uuid="4a9cdc1d-6463-47a5-8ef9-97e76f069ef0"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??????):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="515" y="287" width="30" height="16" uuid="93e8f107-82eb-46ff-aba0-9c780d077637"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(($F{TROCAP1}>=0)?$F{TROCAP1}:0)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="340" y="287" width="85" height="16" uuid="aa8ed1d3-a674-49e0-8e34-8e832e2ec0ea"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[, tr? c?p thôi vi?c]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="565" y="287" width="25" height="16" uuid="f748fc8a-75b2-4fd2-95ed-1eeb5995baf6"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(?).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="303" width="230" height="16" uuid="4e24c8f7-1878-4335-8a1d-8b181be9ca59"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Các kho?n ti?n công ty c?n tr? cho công nhân]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="303" width="16" height="15" uuid="914ff013-4309-494d-99b4-33d34039cc5b"/>
+				<imageExpression><![CDATA["D:\\DATA_D_OLD\\HoangAnh\\Image_Icon\\ICO\\star_48.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="273" y="303" width="160" height="16" uuid="a5299082-4724-4be0-9f6c-ce27e7887a83"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[ (??????????):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="319" width="72" height="16" uuid="25115cee-9fa4-4715-8419-888659a070ae"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(????):]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="322" width="8" height="8" uuid="9bb5ac16-fca4-4905-9dde-dd28bb982e09"/>
+			</frame>
+			<staticText>
+				<reportElement x="70" y="319" width="65" height="16" uuid="6cf1e008-7957-4681-a72b-7781c3fbc78a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[L??ng tháng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="319" width="129" height="16" uuid="c48f0f1d-2ebd-4b16-a245-66092a21ef3d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[________________ VN?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="335" width="129" height="16" uuid="4a7768a8-574d-4f49-9543-bcf8e98a9408"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[________________ VN?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="335" width="72" height="16" uuid="1a43620e-c8b7-4ce9-b85c-c78fff588d3e"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(????):]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="338" width="8" height="8" uuid="6938bfd8-89f6-472a-968f-3e04d2027875"/>
+			</frame>
+			<staticText>
+				<reportElement x="70" y="335" width="87" height="16" uuid="b9e895ef-9b01-40ac-83af-e0c590e50454"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Tr? c?p thôi vi?c]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="351" width="90" height="16" uuid="d62fe72d-151f-4119-8bb6-5a6c0d519806"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??????):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="351" width="215" height="16" uuid="835be8bf-c8b9-484e-84b8-d67ce6a1c668"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Ti?n l??ng nh?ng ngày phép n?m ch?a ngh?]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="354" width="8" height="8" uuid="41e50631-d3af-43fc-9648-0b0fa454233a"/>
+			</frame>
+			<staticText>
+				<reportElement x="446" y="351" width="129" height="16" uuid="b20e386b-306e-4205-9614-b1c7ea98a76c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[________________ VN?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="367" width="270" height="16" uuid="b2f2b538-faf4-4aab-824e-12627569c4a2"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??) _____________________________________:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="367" width="129" height="16" uuid="32af4fd1-88f9-4509-9d2a-583a7911ae32"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[________________ VN?]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="370" width="8" height="8" uuid="04d4b3c7-ec39-4c0f-a0d9-46d6fe014e4d"/>
+			</frame>
+			<staticText>
+				<reportElement x="70" y="367" width="30" height="16" uuid="860d7f53-b059-4b8f-bdcb-70fae8e54836"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Khác]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="383" width="16" height="15" uuid="261054cc-11ba-42b8-a3ed-a1c86e6187e1"/>
+				<imageExpression><![CDATA["D:\\DATA_D_OLD\\HoangAnh\\Image_Icon\\ICO\\star_48.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="283" y="383" width="160" height="16" uuid="4e72fea2-b752-465f-b2e7-ebc8fe6e4145"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??????????): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="383" width="230" height="16" uuid="b979311b-bd72-438f-a983-e3c13a2288b6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Các kho?n ti?n công nhân c?n tr? cho công ty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="399" width="129" height="16" uuid="cd9dc1c0-da89-42e3-a797-9be3eeca9855"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[________________ VN?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="399" width="188" height="16" uuid="bec8ae99-93ab-4105-a98e-1e0d0b4bd389"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??????????????):]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="402" width="8" height="8" uuid="73ba9b4b-7561-4741-9b48-43b537376fcc"/>
+			</frame>
+			<staticText>
+				<reportElement x="70" y="399" width="162" height="16" uuid="aa2d6d41-9b15-4e7a-b655-db2e74715c7c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[B?i th??ng do ngh? vi?c trái lu?t]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="431" width="129" height="16" uuid="f6b19c29-af19-471e-a46f-defbd00d094b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[________________ VN?]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="418" width="8" height="8" uuid="9ea7cd51-18f9-4fc2-96f9-c4124765748f"/>
+			</frame>
+			<staticText>
+				<reportElement x="280" y="415" width="242" height="16" uuid="327f0516-d227-477f-a7ff-8378bfeeb81f"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[ (??????????????????):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="415" width="209" height="16" uuid="95131734-ddf2-47fb-9317-8cb3200583e6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[B?i th??ng do vi ph?m th?i gian báo tr??c]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="431" width="30" height="16" uuid="d26d4ec7-c9b0-4a45-8c5c-762567f33149"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Khác]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="431" width="270" height="16" uuid="c7485caa-bbb1-42bb-b31c-12a2f681a674"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??) _____________________________________:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="447" width="160" height="16" uuid="0f86d866-2cfc-4650-bd3b-2ed275e18332"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(???????????): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="447" width="230" height="16" uuid="0f380988-910d-4675-b636-ea756591042b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[V?t d?ng công ty ph?i tr? cho công nhân]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="447" width="16" height="15" uuid="19204d12-b63e-447c-b517-67e5439f38f9"/>
+				<imageExpression><![CDATA["D:\\DATA_D_OLD\\HoangAnh\\Image_Icon\\ICO\\star_48.png"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="466" width="8" height="8" uuid="ce297f91-60c4-4a25-8408-2aa855904ee4"/>
+			</frame>
+			<staticText>
+				<reportElement x="147" y="463" width="63" height="16" uuid="17df2b03-e591-4af6-9e5c-6e464a7604be"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(????)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="463" width="65" height="16" uuid="3f764948-0ce5-413e-8f72-ae3b609d2684"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[S? lao ??ng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="479" width="293" height="16" uuid="2538ed4a-34e8-4cfe-9b76-6435fbc58684"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[S? B?o Hi?m Xã H?i (tr? vào ngày___tháng____n?m_____)]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="482" width="8" height="8" uuid="a08ea2f4-8c9c-4595-87f5-f54858def6ba"/>
+			</frame>
+			<staticText>
+				<reportElement x="362" y="479" width="222" height="16" uuid="840fa07e-91ac-4e55-88ee-b5f45baf0ab8"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[????????(?     ?   ?   ?)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="495" width="230" height="16" uuid="3f126230-e23d-46b7-a463-210bdd78bfc1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[V?t d?ng công nhân c?n hoàn tr? cho công ty]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="495" width="16" height="15" uuid="475e8816-b06b-48eb-a439-bf954110167b"/>
+				<imageExpression><![CDATA["D:\\DATA_D_OLD\\HoangAnh\\Image_Icon\\ICO\\star_48.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="283" y="495" width="160" height="16" uuid="1ee9c3be-00b3-4dd0-86e4-0175cf09f705"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(???????????): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="511" width="107" height="16" uuid="14fdeeb8-dd21-4fc6-ad40-3fe29605a59f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Th? nhân viên, th? IC]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="514" width="8" height="8" uuid="e5295f11-53e8-4a79-b658-56ce658e77ea"/>
+			</frame>
+			<staticText>
+				<reportElement x="186" y="511" width="84" height="16" uuid="13ef47aa-c079-469b-a8f2-122b09df4f86"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(???IC?).]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="530" width="8" height="8" uuid="fd487830-c711-4258-afd6-c682888ec5d4"/>
+			</frame>
+			<staticText>
+				<reportElement x="70" y="527" width="107" height="16" uuid="9d5016e7-9024-42bd-af8b-66dbaa13ca79"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[S? tay công nhân viên]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="527" width="84" height="16" uuid="f57d1719-2d52-4336-a9a2-3f10b0716502"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(????).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="543" width="107" height="16" uuid="6083a1ae-f85b-4cbb-a1f8-219e021cd721"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[S? tay HSE]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="546" width="8" height="8" uuid="31cfe6fd-8b70-417e-ac97-bdf0d0941b9c"/>
+			</frame>
+			<staticText>
+				<reportElement x="186" y="543" width="90" height="16" uuid="0c4039a0-53ca-4026-a98c-2749efa224df"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[???????.]]></text>
+			</staticText>
+			<frame>
+				<reportElement style="table" mode="Transparent" x="58" y="562" width="8" height="8" uuid="0ba540d5-f49b-4133-a856-b1496e6a2157"/>
+			</frame>
+			<staticText>
+				<reportElement x="186" y="559" width="84" height="16" uuid="1c6545b0-2e84-431a-ad55-e3cc6294aa0e"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[(??).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="559" width="107" height="16" uuid="48e0bc08-d9b0-481b-8924-cd3405b18ef6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[??ng ph?c]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="575" width="180" height="16" uuid="40ad4311-6b90-435d-9faa-d7017ac78dd2"/>
+				<textElement>
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[ (????????????).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="575" width="318" height="16" uuid="028b617a-346d-44e7-a7f0-84593d2108a9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Các kho?n nói trên ?ã ???c thanh toán xong trong ngày ngh? vi?c]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="85">
+			<staticText>
+				<reportElement x="20" y="0" width="100" height="32" uuid="4fec57d8-1ab1-4a92-909f-a2cba9ab94d3"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[B? ph?n]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="0" width="152" height="32" uuid="4bc35672-1bdb-42e9-9b5e-ed4b77e2af63"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Phòng K? Toán]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="0" width="151" height="32" uuid="a5843545-219a-40b4-8784-2df76f9222d0"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Phòng Nhân S?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="0" width="135" height="32" uuid="d8098fe9-1085-4970-a408-a1efe0551ab3"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Công Nhân]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="15" width="50" height="16" uuid="c9df96b6-1329-4ecb-8149-db7536d47ce9"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[??]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="145" y="15" width="100" height="16" uuid="3e33edfc-449a-49d2-a7a8-c96ee25cd40a"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[???]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="15" width="100" height="16" uuid="c1e1df32-a9b8-405f-b6e2-57be688f0fe5"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[???]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="15" width="100" height="16" uuid="3896c740-9b6d-4334-b33e-9b58eaaeabd9"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[????]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="33" width="100" height="30" uuid="81b17cb4-c7de-405c-8a0f-91d940bb0d6b"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Kı Tên]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="33" width="152" height="30" uuid="f70095a5-064e-49c1-a8eb-5870e5055515"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="33" width="151" height="30" uuid="a5beb3a2-b023-478e-8ca0-b5bf48591021"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="33" width="135" height="30" uuid="69d076c6-b894-4ee5-b1c7-3f7f195a82e9"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="63" width="100" height="20" uuid="78d11662-31dc-4d53-918a-b1b96e0df212"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[    Ngày]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="63" width="152" height="20" uuid="2d00b481-006c-4a6e-9c3c-95a4c9ea32c9"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="63" width="151" height="20" uuid="4f6bab4c-26f8-4d89-954d-36aa3f9f19f7"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="63" width="135" height="20" uuid="43fd1f94-4f63-4989-8f78-408a1104e4a7"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="47" width="50" height="16" uuid="b43fc7c3-3528-4d9b-bcfc-a406ae6476cb"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[??]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="66" width="46" height="16" uuid="94bab456-fa85-4073-9b35-b5a90c182d7f"/>
+				<textElement textAlignment="Center">
+					<font fontName="HanWangMingMedium" size="12"/>
+				</textElement>
+				<text><![CDATA[??]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

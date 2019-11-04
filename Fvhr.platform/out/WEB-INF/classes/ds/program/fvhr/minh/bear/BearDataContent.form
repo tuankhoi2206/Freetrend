@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_column1" type="nextapp.echo2.app.Column">
+<children>
+
+
+<component id="Component_grid4" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 0px 20px 5px"/>
+<property name="alignment">
+<alignment horizontal="center" vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_txtEmpsn" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="200px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 0px 0px 5px"/>
+<property name="alignment">
+<alignment horizontal="center" vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="maximumLength" value="8"/>
+<property name="id" value="txtEmpsn"/>
+</properties>
+</component>
+<component id="Component_label10" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_lblEmpName" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="id" value="lblEmpName"/>
+</properties>
+</component>
+<component id="Component_label12" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblCaLamViec" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="id" value="lblCaLamViec"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="height" value="85px"/>
+</properties>
+</component>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="foreground" value="#ff0000"/>
+<property name="text" value="Thời gian về sớm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px 0px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_label3" type="nextapp.echo2.app.Label"/>
+<component id="Component_row4" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Từ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 5px 5px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtBeginDay" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 5px 5px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="100px"/>
+<property name="maximumLength" value="10"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_TEXT"/>
+<property name="id" value="txtBeginDay"/>
+</properties>
+</component>
+<component id="Component_label5" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 5px 5px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Đến"/>
+</properties>
+</component>
+<component id="Component_txtEndDay" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="maximumLength" value="10"/>
+<property name="id" value="txtEndDay"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label6" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số tháng NS"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px 0px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_slfThangNS" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="170px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="id" value="slfThangNS"/>
+</properties>
+</component>
+<component id="Component_label7" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Ngày nộp GKS"/>
+</properties>
+</component>
+<component id="Component_txtNgayNGKS" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="164px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="maximumLength" value="10"/>
+<property name="id" value="txtNgayNGKS"/>
+</properties>
+</component>
+<component id="Component_label8" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Ngày sinh bé"/>
+</properties>
+</component>
+<component id="Component_txtNgaySinhBe" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="164px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="maximumLength" value="10"/>
+<property name="id" value="txtNgaySinhBe"/>
+</properties>
+</component>
+</children>
+<properties>
+<property index="0" name="columnWidth" value="100px"/>
+</properties>
+</component>
+
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_grbTGBH" type="echopointng.GroupBox" visibility="private">
+<children>
+<component id="Component_rbtnTren6" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="insets" value="0px 5px"/>
+<property name="text" value="Từ 6 tháng"/>
+<property name="buttonGroup" value="bg"/>
+<property name="id" value="rbtnTren6"/>
+</properties>
+</component>
+<component id="Component_rbtnDuoi6" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="insets" value="0px 5px"/>
+<property name="text" value="Dưới 6 tháng"/>
+<property name="buttonGroup" value="bg"/>
+<property name="id" value="rbtnDuoi6"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="title" value="TG tham gia BHXH-TN"/>
+<property name="hidden" value="false"/>
+<property name="width" value="250px"/>
+<property name="visible" value="false"/>
+<property name="id" value="grbTGBH"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_column2" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_label9" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Các ca làm việc"/>
+</properties>
+</component>
+<component id="Component_slfCaLamViec" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="271px"/>
+<property name="id" value="slfCaLamViec"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_grid3" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_btnLuu" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px 1px 0px"/>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="0px 7px"/>
+<property name="width" value="135px"/>
+<property name="text" value="Lưu"/>
+<property name="background" value="#43afc2"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="pressedEnabled" value="true"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="id" value="btnLuu"/>
+</properties>
+</component>
+<component id="Component_btnXoa" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="1px 5px 0px 0px"/>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="0px 7px"/>
+<property name="text" value="Xóa"/>
+<property name="background" value="#43afc2"/>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="rolloverEnabled" value="true"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="id" value="btnXoa"/>
+</properties>
+</component>
+<component id="Component_btnSua" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 2px 1px 5px"/>
+<property name="alignment">
+<alignment horizontal="center" vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="0px 7px"/>
+<property name="text" value="Sửa"/>
+<property name="background" value="#43afc2"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="id" value="btnSua"/>
+</properties>
+</component>
+<component id="Component_btnReSet" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="1px 2px 0px 5px"/>
+<property name="alignment">
+<alignment horizontal="center" vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="0px 7px"/>
+<property name="text" value="ReSet"/>
+<property name="background" value="#43afc2"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="id" value="btnReSet"/>
+</properties>
+</component>
+</children>
+<properties>
+<property index="0" name="columnWidth" value="135px"/>
+<property index="1" name="columnWidth" value="135px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="10px 0px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

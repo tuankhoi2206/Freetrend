@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_defaultProgram1" type="dsc.echo2app.program.DefaultProgram">
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_groupBox1" type="echopointng.GroupBox">
+<children>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_textField1" type="nextapp.echo2.app.TextField" visibility="private">
+<properties>
+<property name="maximumLength" value="8"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSelect"/>
+</event-set>
+</events>
+</component>
+<component id="Component_hoten" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="-"/>
+<property name="foreground" value="#0000ff"/>
+</properties>
+</component>
+<component id="Component_label3" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+</properties>
+</component>
+<component id="Component_tendv" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="foreground" value="#0000ff"/>
+</properties>
+</component>
+<component id="Component_label7" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+</properties>
+</component>
+<component id="Component_madv_old" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="foreground" value="#0000ff"/>
+</properties>
+</component>
+<component id="Component_label8" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="foreground" value="#0000ff"/>
+</properties>
+</component>
+<component id="Component_maql_old" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="foreground" value="#0000ff"/>
+</properties>
+</component>
+<component id="Component_label14" type="nextapp.echo2.app.Label" visibility="private"/>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Ngày Đ.Động"/>
+</properties>
+</component>
+<component id="Component_dscDateField1" type="dsc.echo2app.component.DscDateField" visibility="private"/>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="-"/>
+<property name="foreground" value="#0000ff"/>
+</properties>
+</component>
+<component id="Component_label5" type="nextapp.echo2.app.Label"/>
+
+<component id="Component_c_tt_gt" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Trực tiếp SX"/>
+</properties>
+</component>
+<component id="Component_label6" type="nextapp.echo2.app.Label"/>
+<component id="Component_label13" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="-"/>
+<property name="foreground" value="#0000ff"/>
+</properties>
+</component>
+<component id="Component_label15" type="nextapp.echo2.app.Label"/>
+<component id="Component_cb_dd_dv" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Điều động 1 đơn vị"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="dd_1_dv"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+</children>
+<properties>
+
+<property name="title" value="T.Tin Điều Động"/>
+</properties>
+</component>
+<component id="Component_groupBox2" type="echopointng.GroupBox" visibility="private">
+<children>
+<component id="Component_grid3" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+
+
+
+
+
+
+<component id="Component_label10" type="nextapp.echo2.app.Label"/>
+<component id="Component_label9" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="-"/>
+<property name="foreground" value="#0000ff"/>
+</properties>
+</component>
+<component id="Component_label12" type="nextapp.echo2.app.Label" visibility="private"/>
+<component id="Component_label11" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value=" Chọn Q.Lý"/>
+</properties>
+</component>
+<component id="Component_selectField1" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="check_qlmoi"/>
+</event-set>
+</events>
+</component>
+<component id="Component_ok" type="nextapp.echo2.app.Button" visibility="private">
+
+</component>
+
+</children>
+</component>
+</children>
+<properties>
+
+
+<property name="title" value="Điều động qua đơn vị mới"/>
+</properties>
+</component>
+
+</children>
+<properties>
+<property name="size" value="3"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

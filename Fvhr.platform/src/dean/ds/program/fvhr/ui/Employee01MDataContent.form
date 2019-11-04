@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_EMPSN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.EMPSN"/>
+            </properties>
+          </component>
+<component id="Component_EMPSN_DscField1" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField1"/>
+            <property name="maximumLength" value="8"/>
+</properties>
+          </component>
+<component id="Component_FNAME_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.FNAME"/>
+            </properties>
+          </component>
+<component id="Component_FNAME_DscField3" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="FNAME_DscField3"/>
+            </properties>
+          </component>
+<component id="Component_LNAME_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.LNAME"/>
+            </properties>
+          </component>
+<component id="Component_LNAME_DscField4" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="LNAME_DscField4"/>
+            </properties>
+          </component>
+<component id="Component_BIRTHDAY_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.BIRTHDAY"/>
+            </properties>
+          </component>
+<component id="Component_BIRTHDAY_DscField9" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BIRTHDAY_DscField9"/>
+            </properties>
+          </component>
+<component id="Component_BIRTHPLACE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.BIRTHPLACE"/>
+            </properties>
+          </component>
+<component id="Component_BIRTHPLACE_DscField10" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BIRTHPLACE_DscField10"/>
+            </properties>
+          </component>
+<component id="Component_SEX_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.SEX"/>
+            </properties>
+          </component>
+<component id="Component_SEX_SelectField" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+</properties>
+</component>
+<component id="Component_ID_NO_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.ID_NO"/>
+            </properties>
+          </component>
+<component id="Component_ID_NO_DscField7" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_NO_DscField7"/>
+            <property name="maximumLength" value="9"/>
+</properties>
+          </component>
+<component id="Component_NGAYCAP_ID_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.NGAYCAP_ID"/>
+            </properties>
+          </component>
+<component id="Component_NGAYCAP_ID_DscDateField1" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="NGAYCAP_ID_DscDateField1"/>
+            </properties>
+          </component>
+<component id="Component_ID_PLACE_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.ID_PLACE"/>
+            </properties>
+          </component>
+<component id="Component_ID_PLACE_DscField8" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ID_PLACE_DscField8"/>
+            </properties>
+          </component>
+<component id="Component_CITY_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.CITY"/>
+            </properties>
+          </component>
+<component id="Component_CITY_SelectField1" type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="CITY_SelectField1"/>
+            <property name="width" value="160px"/>
+</properties>
+          </component>
+
+
+<component id="Component_CONTACT_ADDRESS_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.CONTACT_ADDRESS"/>
+            </properties>
+          </component>
+<component id="Component_CONTACT_ADDRESS_DscField12" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="CONTACT_ADDRESS_DscField12"/>
+            <property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="3"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="400px"/>
+</properties>
+          </component>
+<component id="Component_PERMANENT_ADDRESS_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.PERMANENT_ADDRESS"/>
+            </properties>
+          </component>
+<component id="Component_PERMANENT_ADDRESS_DscField13" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PERMANENT_ADDRESS_DscField13"/>
+            <property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="3"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="400px"/>
+</properties>
+          </component>
+<component id="Component_CONTACT_PER_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.CONTACT_PER"/>
+            </properties>
+          </component>
+<component id="Component_CONTACT_PER_DscField15" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="CONTACT_PER_DscField15"/>
+            </properties>
+          </component>
+<component id="Component_CONTACT_TEL_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.CONTACT_TEL"/>
+            </properties>
+          </component>
+<component id="Component_CONTACT_TEL_DscField14" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="CONTACT_TEL_DscField14"/>
+            </properties>
+          </component>
+<component id="Component_ETHNIC_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.ETHNIC"/>
+            </properties>
+          </component>
+
+<component id="Component_sfEthnic" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="150px"/>
+</properties>
+</component>
+<component id="Component_RELIGION_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.RELIGION"/>
+            </properties>
+          </component>
+
+<component id="Component_sfReligion" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="150px"/>
+</properties>
+</component>
+<component id="Component_MATERIAL_STATUS_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.MATERIAL_STATUS"/>
+            </properties>
+          </component>
+<component id="Component_sfMaterialStatus" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="150px"/>
+</properties>
+</component>
+<component id="Component_EDUCATION_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.EDUCATION"/>
+            </properties>
+          </component>
+<component id="Component_sfEducation" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="150px"/>
+</properties>
+</component>
+<component id="Component_TRUCTIEP_SX_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="CN"/>
+</properties>
+          </component>
+
+<component id="Component_ttgtGroup" type="dsc.echo2app.component.DscGroupRadioButton" visibility="private">
+<children/>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+          
+          <component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_EMPCN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.EMPCN"/>
+            </properties>
+          </component>
+<component id="Component_EMPCN_DscField2" type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPCN_DscField2"/>
+            <property name="maximumLength" value="10"/>
+</properties>
+          </component>
+<component id="Component_DATE_HIRED_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.DATE_HIRED"/>
+            </properties>
+          </component>
+<component id="Component_DATE_HIRED_DscDateField2" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_HIRED_DscDateField2"/>
+            </properties>
+          </component>
+<component id="Component_NGAYNX_MOI_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.NGAYNX_MOI"/>
+            </properties>
+          </component>
+
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_NGAYNX_MOI_DscDateField5" type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="NGAYNX_MOI_DscDateField5"/>
+            </properties>
+          </component>
+<component id="Component_chkDD" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Điều động khu"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_DEPSN_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.DEPSN"/>
+            </properties>
+          </component>
+
+
+
+
+
+
+
+<component id="Component_cboDepsn" type="echopointng.ComboBox" visibility="private">
+<properties>
+<property name="width" value="300px"/>
+</properties>
+</component>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Lương cơ bản"/>
+</properties>
+</component>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_txtLuongCoBan" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="maximumLength" value="10"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+<property name="disabledBackground" value="#c8c8c8"/>
+</properties>
+</component>
+<component id="Component_chk85" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Hưởng 85% HD"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_label5" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Phụ cấp nghề"/>
+</properties>
+</component>
+<component id="Component_txtPhuCapNghe" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_POSITION_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="Chức vụ"/>
+</properties>
+          </component>
+<component id="Component_sfChucVu" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="250px"/>
+<property name="disabledBackground" value="#c8c8c8"/>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Phụ cấp chức vụ"/>
+</properties>
+</component>
+<component id="Component_txtPCCV" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_ID_JOB_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              
+            <property name="text" value="Công việc"/>
+</properties>
+          </component>
+
+<component id="Component_cboJob" type="echopointng.ComboBox" visibility="private">
+<properties>
+<property name="autoRecall" value="false"/>
+<property name="width" value="250px"/>
+</properties>
+</component>
+
+
+
+
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Phụ cấp công việc"/>
+</properties>
+</component>
+<component id="Component_txtPCCViec" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c8c8c8"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_SHIFT_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.SHIFT"/>
+            </properties>
+          </component>
+<component id="Component_sfShift" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="250px"/>
+</properties>
+</component>
+<component id="Component_USER_MANAGE_ID_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.USER_MANAGE_ID"/>
+            </properties>
+          </component>
+
+<component id="Component_sfManagerId" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="60px"/>
+</properties>
+</component>
+<component id="Component_WORK_STATUS_CaptionLabel" type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMPLOYEE.WORK_STATUS"/>
+            </properties>
+          </component>
+<component id="Component_cboWorkStatus" type="echopointng.ComboBox" visibility="private">
+<properties>
+<property name="width" value="180px"/>
+</properties>
+</component>
+
+
+
+
+
+
+
+
+
+
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Hướng dẫn nội quy cty"/>
+</properties>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<children>
+
+
+<component id="Component_chkDat" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Đạt"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="chkDatSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_chkKhongDat" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Không đạt"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="chkKoDatSelected"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+          
+          
+          
+          
+          
+          
+
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

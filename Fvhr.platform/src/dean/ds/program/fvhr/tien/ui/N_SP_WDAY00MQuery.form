@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle="resource.localization.UICaption" resource-bundle-id="resourceBundle">
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      
+    <component id="Component_rootLayout2" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_radioButton1" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+
+<property name="font">
+<font bold="true" size="10pt" underline="true"/>
+</property>
+<property name="buttonGroup" value="group_emp"/>
+<property name="actionCommand" value="cmd_emp"/>
+<property name="selected" value="true"/>
+<property name="text" value="%N_EMPLOYEE.EMPSN"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="empGroupSelected"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+<component id="Component_lblEmpsn" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="%N_EMPLOYEE.EMPSN"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="10px 0px 10px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtempsn" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="insets" value="0px 0px 10px 0px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doEmpsn"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_radioButton2" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+
+<property name="font">
+<font bold="true" size="10pt" underline="true"/>
+</property>
+<property name="actionCommand" value="cmd_dept"/>
+<property name="buttonGroup" value="group_emp"/>
+<property name="text" value="%FACTORY"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="empGroupSelected"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+<component id="Component_row4" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="10px 0px 10px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="%N_DEPARTMENT.NAME_FACT"/>
+</properties>
+</component>
+<component id="Component_sfFactory" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="width" value="200px"/>
+
+<property name="insets" value="10px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="loadGroupDept"/>
+</event-set>
+</events>
+</component>
+</children>
+</component>
+<component id="Component_row5" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+
+<property name="insets" value="10px 0px 75px 0px"/>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="%N_DEPARTMENT.NAME_GROUP"/>
+</properties>
+</component>
+<component id="Component_sfGroup_dept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="width" value="200px"/>
+</properties>
+</layout-data>
+</property>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+
+<property name="insets" value="0px 0px 0px 0px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row6" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label3" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+
+<property name="insets" value="10px 0px 65px 0px"/>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="%N_DEPARTMENT.NAME_DEPT_NAME"/>
+</properties>
+</component>
+<component id="Component_sfDept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="width" value="200px"/>
+</properties>
+</layout-data>
+</property>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+
+<property name="insets" value="50px 0px 0px 0px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row7" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+
+<component id="Component_checkBox1" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="%N_SP_WDAY.DATE_SP"/>
+<property name="enabled" value="false"/>
+<property name="insets" value="10px 0px 0px 0px"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="CheckDate"/>
+</event-set>
+</events>
+</component>
+<component id="Component_dscDateField1" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+
+<property name="enabled" value="false"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="10px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="visible" value="true"/>
+</properties>
+</component>
+</children>
+<properties>
+
+</properties>
+</component>
+</children>
+        <properties>
+          
+          <property name="width" value="100%"/>
+        
+
+
+<property name="insets" value="10px 10px 10px 10px"/>
+<property name="size" value="1"/>
+</properties>
+      </component>
+</children>
+  </component>
+</form>

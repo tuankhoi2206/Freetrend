@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_DATE_UPDATED_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_BONUS_SICKANDMATER.DATE_UPDATED"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_UPDATED_DscDateField1"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_UPDATED_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_BONUS_SICKANDMATER.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_MONEY_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_BONUS_SICKANDMATER.MONEY"/>
+            </properties>
+          </component>
+          <component id="Component_MONEY_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="MONEY_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_BONUS_SICKANDMATER.NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_THANG_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_BONUS_SICKANDMATER.THANG"/>
+            </properties>
+          </component>
+          <component id="Component_THANG_DscDateField2"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="THANG_DscDateField2"/>
+            </properties>
+          </component>
+          <component id="Component_USER_UPDATED_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_EMP_BONUS_SICKANDMATER.USER_UPDATED"/>
+            </properties>
+          </component>
+          <component id="Component_USER_UPDATED_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="USER_UPDATED_DscField4"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

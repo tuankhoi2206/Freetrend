@@ -1,0 +1,2007 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+
+
+
+<component id="Component_mainSplitPane" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="separatorPosition" value="34px"/>
+</properties>
+<children>
+<component id="Component_toolbarPane" type="nextapp.echo2.app.ContentPane" visibility="private"/>
+<component id="Component_tabPane" type="nextapp.echo2.extras.app.TabPane" visibility="private">
+<children>
+<component id="Component_luongNghiViecContent" type="nextapp.echo2.app.ContentPane" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.extras.app.layout.TabPaneLayoutData">
+<properties>
+<property name="title" value="Lương nghỉ việc"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+<component id="Component_rootLayout1" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_groupBox1" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Thông tin cơ bản"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+
+<property name="rowSpan" value="3"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="355px"/>
+<property name="height" value="380px"/>
+</properties>
+<children>
+<component id="Component_grid2" type="nextapp.echo2.app.Grid">
+<children>
+
+
+
+
+<component id="Component_lblSoThe" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Số thẻ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtSoThe" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="findEmployee"/>
+</event-set>
+</events>
+</component>
+<component id="Component_lblHoTen" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Họ tên"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtHoTen" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+<property name="width" value="220px"/>
+</properties>
+</component>
+<component id="Component_lblDonVi" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Đơn vị"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtDonVi" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+<property name="width" value="220px"/>
+</properties>
+</component>
+<component id="Component_lblChucVu" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Chức vụ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtChucVu" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+</properties>
+</component>
+
+
+
+
+<component id="Component_lblNNX" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Ngày NX"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+
+<component id="Component_dfNNX" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+</properties>
+</component>
+<component id="Component_lblDonViKT" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Mã ĐVKT"/>
+</properties>
+</component>
+<component id="Component_txtDonViKT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+</properties>
+</component>
+<component id="Component_lblLCB" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Lương CB"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtLCB" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblLHD" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Lương HĐ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtLHD" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+
+
+<component id="Component_lblLCBBQ" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Lương CB_BQ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtLCBBQ" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_NUMERIC"/>
+</properties>
+</component>
+<component id="Component_lblPCCVBQ" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Phụ cấp CV_BQ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtPCCVBQ" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblLuongThangTruoc" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Lương tháng trước"/>
+</properties>
+</component>
+<component id="Component_txtLuongThangTruoc" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblGhiChu" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="text" value="Ghi chú"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtGhiChu" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+<property name="width" value="220px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="1px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_groupBox7" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Thông tin nghỉ việc"/>
+</properties>
+<children>
+<component id="Component_grid9" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label42" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Tính lương tháng"/>
+</properties>
+</component>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_sfMonth" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c8c8c8"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="findEmployee"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label43" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Năm"/>
+</properties>
+</component>
+<component id="Component_sfYear" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c8c8c8"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_lblDotTV" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Đợt thôi việc"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_dfDotTV" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="foreground" value="#004080"/>
+</properties>
+</component>
+<component id="Component_lblLoai" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="Loại"/>
+</properties>
+</component>
+<component id="Component_sfLoai" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="155px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="1px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_groupBox2" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Trợ cấp nghỉ việc"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+<component id="Component_grid3" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_lblSTTC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Số tháng hưởng trợ cấp"/>
+</properties>
+</component>
+<component id="Component_txtSTTC" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="50px"/>
+<property name="foreground" value="#008080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_NUMERIC"/>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_txtTTSTTC" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#800040"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="width" value="100px"/>
+</properties>
+</component>
+<component id="Component_lblSNPN" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Phép năm còn lại"/>
+</properties>
+</component>
+<component id="Component_txtSNPN" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="50px"/>
+<property name="foreground" value="#008080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_NUMERIC"/>
+</properties>
+</component>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_txtTTSNPN" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#800040"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="width" value="100px"/>
+</properties>
+</component>
+<component id="Component_lblSTDB" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Số tháng đền bù"/>
+</properties>
+</component>
+<component id="Component_txtSTDB" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="50px"/>
+<property name="foreground" value="#008080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_NUMERIC"/>
+</properties>
+</component>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_txtTTSTDB" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#800040"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="width" value="100px"/>
+</properties>
+</component>
+<component id="Component_lblNTTH" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Nghỉ trước thời hạn"/>
+</properties>
+</component>
+<component id="Component_txtNTTH" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="50px"/>
+<property name="foreground" value="#008080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_NUMERIC"/>
+</properties>
+</component>
+<component id="Component_label5" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_txtTTNTTH" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="foreground" value="#800040"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="width" value="100px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="size" value="4"/>
+<property name="insets" value="1px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_groupBox3" type="echopointng.GroupBox">
+<children>
+<component id="Component_grid4" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblTongLCB" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tổng Lương CB"/>
+</properties>
+</component>
+<component id="Component_label6" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblTienTangCa" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tiền tăng ca"/>
+</properties>
+</component>
+<component id="Component_label7" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblTongPC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tổng phụ cấp"/>
+</properties>
+</component>
+<component id="Component_label8" type="nextapp.echo2.app.Label"/>
+<component id="Component_txtTongLCB" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="foreground" value="#800040"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</component>
+<component id="Component_label9" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="+"/>
+</properties>
+</component>
+<component id="Component_txtTienTC" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="foreground" value="#800040"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</component>
+<component id="Component_label10" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="+"/>
+</properties>
+</component>
+<component id="Component_txtTongPC" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="foreground" value="#800040"/>
+</properties>
+</component>
+<component id="Component_label11" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblTong" type="nextapp.echo2.app.Label" visibility="private"/>
+<component id="Component_label12" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblKhauTru" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tổng khấu trừ"/>
+</properties>
+</component>
+<component id="Component_label13" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblLuongThangHT" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Lương tháng HT"/>
+</properties>
+</component>
+<component id="Component_label14" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="="/>
+</properties>
+</component>
+<component id="Component_txtTong" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="foreground" value="#800040"/>
+</properties>
+</component>
+<component id="Component_label15" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="-"/>
+</properties>
+</component>
+<component id="Component_txtTongKhauTru" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="foreground" value="#800040"/>
+</properties>
+</component>
+<component id="Component_label16" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="="/>
+</properties>
+</component>
+<component id="Component_txtLuongThangHT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="foreground" value="#800040"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+<component id="Component_label17" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblTongTroCap" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tổng trợ cấp"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_label18" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblThucNhan" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Thực nhận"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="3"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_label20" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="+"/>
+</properties>
+</component>
+<component id="Component_txtTongTroCap" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="foreground" value="#800040"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</component>
+<component id="Component_label21" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="="/>
+</properties>
+</component>
+<component id="Component_txtThucNhan" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="3"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="215px"/>
+<property name="foreground" value="#ff0000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="size" value="6"/>
+<property name="insets" value="1px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="2px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_chiTietThoiGianContent" type="nextapp.echo2.app.ContentPane" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.extras.app.layout.TabPaneLayoutData">
+<properties>
+<property name="title" value="Chi tiết thời gian làm việc"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+<component id="Component_rootLayout2" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_groupBox4" type="echopointng.GroupBox">
+<children>
+<component id="Component_grid6" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_lblSoNgayLam" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Số ngày làm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtSoNgayLam" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+
+<component id="Component_label22" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Tăng ca ngoài"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="rowSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="textAlignment">
+<alignment horizontal="center"/>
+</property>
+<property name="lineWrap" value="true"/>
+</properties>
+</component>
+<component id="Component_lblSoDemLam" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Số đêm làm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtSoDemLam" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+
+<component id="Component_lblTangCaNgay" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tăng ca ngày"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTangCaNgay" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_txtTangCaNgayNgoai" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#0000a0"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_NUMERIC"/>
+</properties>
+</component>
+<component id="Component_lblTangCaDem" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tăng ca đêm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTangCaDem" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_txtTangCaDemNgoai" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#0000a0"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_NUMERIC"/>
+</properties>
+</component>
+<component id="Component_lblTangCaCN" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tăng ca CN"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTangCaCN" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_txtTangCaCNNgoai" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#0000a0"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_NUMERIC"/>
+</properties>
+</component>
+<component id="Component_lblTangCaLe" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tăng ca lễ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTangCaLe" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_txtTangCaLeNgoai" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#0000a0"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_NUMERIC"/>
+</properties>
+</component>
+<component id="Component_lblSoDemTangCa" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Số đêm tc"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtSoDemTC" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_txtSoDemTCNgoai" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#0000a0"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_NUMERIC"/>
+</properties>
+</component>
+<component id="Component_lblKyTen" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Ký tên"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtKyTen" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_label24" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblTreSom" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Trể/sớm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTreSom" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+
+<component id="Component_btnBuLuong" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="toolTipText" value="Loại bỏ ngày công &amp; phép"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/btnDelete.gif"/>
+</property>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="disabledIcon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/btnDeleteD.gif"/>
+</property>
+<property name="width" value="16px"/>
+<property name="height" value="16px"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="removeWPData"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label19" type="nextapp.echo2.app.Label">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="3"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="--------Phép---------"/>
+<property name="foreground" value="#004000"/>
+</properties>
+</component>
+<component id="Component_lblCoPhep" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Có phép"/>
+</properties>
+</component>
+<component id="Component_txtCoPhep" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_label26" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblCoLuong" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Có lương"/>
+</properties>
+</component>
+<component id="Component_txtCoLuong" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_label27" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblPhepBenh" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Phép bệnh"/>
+</properties>
+</component>
+<component id="Component_txtPhepBenh" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_label28" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblKhangCong" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Có phép"/>
+</properties>
+</component>
+<component id="Component_txtKhangCong" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_label29" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblDuongSuc" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Dưỡng sức"/>
+</properties>
+</component>
+<component id="Component_txtDuongSuc" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_label30" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblNghiSan" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Nghỉ sản"/>
+</properties>
+</component>
+<component id="Component_txtNghiSan" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="30px"/>
+<property name="foreground" value="#000080"/>
+</properties>
+</component>
+<component id="Component_label31" type="nextapp.echo2.app.Label"/>
+</children>
+<properties>
+<property name="size" value="3"/>
+<property index="2" name="columnWidth" value="60px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="title" value="Biểu thời gian"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+<property name="rowSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="188px"/>
+</properties>
+</component>
+<component id="Component_groupBox5" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Thưởng / Phụ cấp"/>
+
+<property name="width" value="555px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="top"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="height" value="210px"/>
+</properties>
+<children>
+<component id="Component_grid7" type="nextapp.echo2.app.Grid">
+<properties>
+<property name="size" value="6"/>
+
+</properties>
+<children>
+<component id="Component_lblTienThuong" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Tiền thưởng"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtTienThuong" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_label33" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_txtTienThuongTT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#800040"/>
+</properties>
+</component>
+<component id="Component_lblChuyenCan" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Chuyên cần"/>
+</properties>
+</component>
+<component id="Component_txtChuyenCan" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblPCCV1" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="PC chức vụ"/>
+</properties>
+</component>
+<component id="Component_txtPCCVu" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_label34" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_txtPCCVuTT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#800040"/>
+</properties>
+</component>
+<component id="Component_lblPCTC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="PC tiền cơm"/>
+</properties>
+</component>
+<component id="Component_txtPCTC" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_TEXT"/>
+</properties>
+</component>
+<component id="Component_lblPCCViec" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="PC công việc"/>
+</properties>
+</component>
+<component id="Component_txtPCCViec" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_label35" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_txtPCCViecTT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#800040"/>
+</properties>
+</component>
+
+
+<component id="Component_lblChuyenCanTC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Chuyên cần TC"/>
+</properties>
+</component>
+<component id="Component_txtChuyenCanTC" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+</properties>
+</component>
+<component id="Component_lblPCSH" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="PC sinh hoạt"/>
+</properties>
+</component>
+<component id="Component_txtPCSH" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_label36" type="nextapp.echo2.app.Label">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="+~"/>
+</properties>
+</component>
+<component id="Component_txtPCSHTT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#800040"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="rowSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+
+
+<component id="Component_lblCLPCTC" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Chênh lệch PCTC"/>
+</properties>
+</component>
+<component id="Component_txtCLPCTC" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblPC8H" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="PC làm 8H"/>
+</properties>
+</component>
+<component id="Component_txtPC8H" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblBuBH" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="Bù BH 19%"/>
+</properties>
+</component>
+<component id="Component_txtBuBH" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblBuLuong" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Bù lương"/>
+</properties>
+</component>
+<component id="Component_txtBuLuong" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+
+
+<component id="Component_label23" type="nextapp.echo2.app.Label"/>
+<component id="Component_label32" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblSoNguoiPhuThuoc" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="Người phụ thuộc"/>
+</properties>
+</component>
+<component id="Component_txtNguoiPhuThuoc" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblBuBHNuaThangDau" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="Bù BH 1/2 (1)"/>
+</properties>
+</component>
+<component id="Component_txtBuBHNuaThangDau" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_label37" type="nextapp.echo2.app.Label"/>
+<component id="Component_label38" type="nextapp.echo2.app.Label"/>
+<component id="Component_lblBuBHNuaThangSau" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+
+<property name="text" value="Bù BH 1/2 (2)"/>
+</properties>
+</component>
+<component id="Component_txtBuBHNuaThangSau" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+<component id="Component_groupBox6" type="echopointng.GroupBox">
+<properties>
+<property name="title" value="Khấu trừ"/>
+<property name="width" value="555px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment vertical="bottom"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="height" value="100%"/>
+</properties>
+<children>
+<component id="Component_grid8" type="nextapp.echo2.app.Grid">
+<properties>
+
+
+<property name="size" value="6"/>
+</properties>
+<children>
+<component id="Component_lblBHXH" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="BHXH"/>
+</properties>
+</component>
+<component id="Component_txtBHXH" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_label39" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtBHXHTT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+<property name="foreground" value="#800080"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+<component id="Component_lblTamUng" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Tạm ứng"/>
+</properties>
+</component>
+<component id="Component_txtTamUng" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_POSITIVE_INTEGER"/>
+</properties>
+</component>
+
+
+<component id="Component_lblBHYT" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="BHYT"/>
+</properties>
+</component>
+
+<component id="Component_txtBHYT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_label40" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtBHYTTT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+<property name="foreground" value="#800080"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+<component id="Component_lblDoanPhi" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Đoàn phí"/>
+</properties>
+</component>
+<component id="Component_txtDoanPhi" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblBHTN" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="BHTN"/>
+</properties>
+</component>
+
+
+
+<component id="Component_txtBHTN" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_label41" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="~"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_txtBHTNTT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+<property name="foreground" value="#800080"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+
+<component id="Component_lblSTNV" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="STNV"/>
+</properties>
+</component>
+<component id="Component_txtSTNV" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblBuBHYT" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="Bù BHYT"/>
+</properties>
+</component>
+<component id="Component_txtBuBHYT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblThuBHYT" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="Thu BHYT"/>
+</properties>
+</component>
+<component id="Component_txtThuBHYT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblThueTN" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="text" value="Thuế thu nhập"/>
+</properties>
+</component>
+<component id="Component_txtThueTN" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+<component id="Component_lblBuThuBHYT" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="Bù thu BHYT"/>
+</properties>
+</component>
+<component id="Component_txtBuThuBHYT" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+
+
+
+
+
+<component id="Component_lblKhauTruKhac" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+<property name="text" value="KT Khác"/>
+</properties>
+</component>
+<component id="Component_txtKhauTruKhac" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="80px"/>
+<property name="foreground" value="#004080"/>
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_INTEGER"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="insets" value="2px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="tabHeight" value="25px"/>
+
+
+
+
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

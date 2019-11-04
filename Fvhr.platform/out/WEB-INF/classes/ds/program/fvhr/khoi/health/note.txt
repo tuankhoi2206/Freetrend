@@ -1,0 +1,36 @@
+tính tổng tiền
+
+đang nghỉ sản
+
+nghỉ sản ra
+
+tổng tiền bảo hiểm phải trả trong tháng
+
+hiệu chỉnh lương
+
+
+xét những trường nhân sự nhập tay
+nhân viên nghỉ sản
+lần 1 không đủ tiền trừ nợ lần 2 đủ trừ
+
+	1. đang nghỉ sản( nghỉ sản tăng sớm) không ảnh hưởng vì lấy ngày kết thúc nghỉ sản tại mỗi lần chạy
+	
+		xet so thang dang ky nghi san
+		nếu nghỉ sản dưới 6 tháng trừ nhu hh
+	
+2. nghỉ sản trong tháng.
+
+
+nghỉ việc tăng lại
+lan 1 du tru
+lan 2 khong du tru
+dieu chinh luong khong dieu chinh duoc quay ve muc luong thang cu
+
+so nguoi tang tu lan 1 tru so nguoi giam ma tang tu lan 1.
+
+lần 1 nhập nghỉ việc lần 2 sửa lại 
+lần 1 nhập nghỉ việc 
+
+lan 2
+empl khac hien trang
+khac tien luong

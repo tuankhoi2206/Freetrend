@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_splitPane" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="resizable" value="true"/>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="separatorVerticalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitVertBar.png"/>
+</image>
+</fill-image>
+</property>
+</properties>
+<children>
+<component id="Component_conditionSplitPane" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="resizable" value="true"/>
+<property name="separatorPosition" value="350px"/>
+<property name="separatorHorizontalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitHerzBar.png"/>
+</image>
+</fill-image>
+</property>
+</properties>
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Factory"/>
+</properties>
+</component>
+<component id="Component_sfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="factChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Group"/>
+</properties>
+</component>
+<component id="Component_sfLean" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="leanChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Department"/>
+</properties>
+</component>
+<component id="Component_sfDept" type="nextapp.echo2.app.SelectField" visibility="private"/>
+</children>
+<properties>
+<property name="insets" value="3px"/>
+</properties>
+</component>
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="separatorPosition" value="25px"/>
+</properties>
+<children>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_radDayOTReport" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Báo cáo ngày"/>
+<property name="buttonGroup" value="opt"/>
+<property name="foreground" value="#80ffff"/>
+<property name="selected" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="showDayOTBr"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radWeekOTReport" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Báo cáo tuần"/>
+<property name="buttonGroup" value="opt"/>
+<property name="foreground" value="#80ffff"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="showWeekOTBr"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radYearOTReport" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Báo cáo năm"/>
+<property name="buttonGroup" value="opt"/>
+<property name="foreground" value="#80ffff"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="showYearOTBr"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="overflow" value="nextapp.echo2.app.layout.SplitPaneLayoutData.OVERFLOW_HIDDEN"/>
+<property name="insets" value="3px"/>
+<property name="background" value="#8080c0"/>
+</properties>
+</layout-data>
+</property>
+<property name="cellSpacing" value="3px"/>
+</properties>
+</component>
+<component id="Component_paramRow" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_lblDate" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Date/Week"/>
+</properties>
+</component>
+<component id="Component_lblDate1" type="nextapp.echo2.app.Label" visibility="private"/>
+<component id="Component_lblSpace" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="~"/>
+</properties>
+</component>
+<component id="Component_lblDate2" type="nextapp.echo2.app.Label" visibility="private"/>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="insets" value="24px"/>
+</properties>
+</layout-data>
+</property>
+<property name="cellSpacing" value="5px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

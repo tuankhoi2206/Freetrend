@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_PNL_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="DSHR71.PNL"/>
+            </properties>
+          </component>
+          <component id="Component_PNL_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PNL_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_VDATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="DSHR71.VDATE"/>
+            </properties>
+          </component>
+          <component id="Component_VDATE_DscDateField1"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="VDATE_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_JJ_HOUR_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="DSHR71.J_HOUR"/>
+            </properties>
+          </component>
+          <component id="Component_JJ_HOUR_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="JJ_HOUR_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_JJ_JADD_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="DSHR71.J_JADD"/>
+            </properties>
+          </component>
+          <component id="Component_JJ_JADD_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="JJ_JADD_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_JJ_WADD_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="DSHR71.J_WADD"/>
+            </properties>
+          </component>
+          <component id="Component_JJ_WADD_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="JJ_WADD_DscField4"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

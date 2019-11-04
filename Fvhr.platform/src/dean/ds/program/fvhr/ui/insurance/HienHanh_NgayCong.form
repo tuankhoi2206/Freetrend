@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_column1" type="nextapp.echo2.app.Column" visibility="private">
+<children>
+<component id="Component_row1" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Thời Gian "/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+
+<property name="insets" value="20px 5px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+
+<component id="Component_dscDFThoiGian" type="dsc.echo2app.component.DscDateField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+
+<property name="insets" value="40px 5px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+
+<component id="Component_row3" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_label3" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Xưởng "/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="20px 5px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_sfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="width" value="100px"/>
+<property name="insets" value="59px 5px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row4" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_label4" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Nhóm "/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="20px 5px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_sfLean" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="width" value="200px"/>
+<property name="insets" value="64px 5px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="60px 5px 0px 0px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row5" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_label5" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Nhóm Đơn Vị "/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="20px 5px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_sfGroupDept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="width" value="200px"/>
+<property name="insets" value="17px 5px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+<component id="Component_label2" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Mã Đơn Vị "/>
+<property name="textPosition">
+<alignment horizontal="left" vertical="bottom"/>
+</property>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="20px 5px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_sfIdDept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="35px 5px 0px 0px"/>
+<property name="width" value="100px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row7" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_cbNghiViec" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+
+<property name="insets" value="120px 5px 0px 0px"/>
+<property name="text" value="NV Nghỉ Việc"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+
+
+<component id="Component_column2" type="nextapp.echo2.app.Column" visibility="private">
+<children>
+<component id="Component_label6" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="Thông Tin Lựa Chọn"/>
+</properties>
+</component>
+<component id="Component_rDuCong" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Danh sách đủ công"/>
+<property name="selected" value="true"/>
+<property name="buttonGroup" value="gg"/>
+</properties>
+</component>
+<component id="Component_rKoDuCong" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Danh sách không đủ công"/>
+<property name="buttonGroup" value="gg"/>
+</properties>
+</component>
+<component id="Component_rKoPhanBietNgayCong" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Không phân biệt ngày công"/>
+<property name="buttonGroup" value="gg"/>
+</properties>
+</component>
+<component id="Component_rThangTruBH" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Danh sách trừ bảo hiểm trong tháng"/>
+<property name="buttonGroup" value="gg"/>
+</properties>
+</component>
+<component id="Component_rNghiSan" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Danh sách nghỉ sản trong tháng"/>
+<property name="buttonGroup" value="gg"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="50px 5px 0px 0px"/>
+</properties>
+</component>
+<component id="Component_row6" type="nextapp.echo2.app.Row" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="20px 20px 20px 0px"/>
+</properties>
+<children>
+
+<component id="Component_bttExcel" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="font">
+<font bold="true" size="12pt"/>
+</property>
+<property name="text" value="Xuất Excel"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="50px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="insets" value="80px 0px 0px 0px"/>
+<property name="border">
+<border color="#000000" size="1px" style="none"/>
+</property>
+</properties>
+</component>
+<component id="Component_bttCancel" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Bỏ Qua"/>
+<property name="font">
+<font bold="true" size="12pt"/>
+</property>
+<property name="insets" value="100px 0px 0px 0px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="width" value="650px"/>
+<property name="border">
+<border color="#000000" size="1px" style="solid"/>
+</property>
+</properties>
+</component>
+</children>
+</component>
+</form>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- 
+	採用xml的格式，可以擁有火線作業的能力，也就是說，只要更改log4.xml的設定
+	在一定時間內(10秒，可在Echo2AppServlet裡變更)會馬上重load設定檔，
+	不用重新啟動伺服器，這在實際運作時，會很有用。
+-->
+
+<log4j:configuration debug="true"
+	xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<!-- direct log messages to stdout -->
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%5d{HH:mm:ss,SSS} %5p %c{1} %x - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="fileAppender"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/log/output.txt" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{ABSOLUTE} %5p %c %x - %m%n" />
+		</layout>
+	</appender>
+	
+	<!-- 以下的logger可依需求狀態調整 -->
+	<logger name="dsc.echo2app.program"><level value="DEBUG" /></logger>
+	<logger name="dsc.util.hibernate.AnnotationSessionFactoryBean"><level value="WARN" /></logger>
+	<logger name="dsc.echo2app.component.binder"><level value="WARN" /></logger>
+	<logger name="org.hibernate.SQL"><level value="WARN" /></logger>
+	<logger name="org.hibernate.type"><level value="WARN" /></logger>
+	<logger name="dsc.dao"><level value="INFO" /></logger>
+	<logger name="dsc.dao.DataObjectSet"><level value="INFO" /></logger>	 
+	<logger name="StopWatch"><level value="WARN" /></logger>
+	<logger name="ds.program.fvhr">
+		<level value="DEBUG"></level>
+	</logger>
+	<logger name="fv">
+		<level value="DEBUG"></level>
+	</logger>
+	
+	<!--<logger name="org.apache.commons.beanutils">
+		<level value="DEBUG"></level>
+	</logger>
+	
+	--><!-- ==================== Hiberante Logger ============================= -->
+	<!-- 
+		org.hibernate.SQL:			Log all SQL DML statements as they are executed
+		org.hibernate.type:			Log all JDBC parameters
+		org.hibernate.tool.hbm2ddl:	Log all SQL DDL statements as they are executed
+		org.hibernate.pretty:		Log the state of all entities (max 20 entities) associated with the session at flush time
+		org.hibernate.cache:		Log all second-level cache activity
+		org.hibernate.transaction:	Log transaction related activity
+		org.hibernate.jdbc:			Log all JDBC resource acquisition
+		org.hibernate.hql.ast.AST: 	Log HQL and SQL ASTs during query parsing
+		org.hibernate.secure:		Log all JAAS authorization requests
+		org.hibernate:				Log everything (a lot of information, but very useful for troubleshooting
+	 -->
+	<!--  =================================================================  -->
+	<!-- 最底層的root logger，所有logger的祖先，設定成debug level會衝擊效能，建議值為warn或error -->
+	<root>
+		<level value="WARN" />
+		<appender-ref ref="STDOUT" />		
+	</root>
+
+</log4j:configuration>

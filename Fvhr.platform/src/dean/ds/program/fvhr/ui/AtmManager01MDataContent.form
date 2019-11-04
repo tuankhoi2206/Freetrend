@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_MANAGER.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_CMND_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_MANAGER.CMND"/>
+            </properties>
+          </component>
+          <component id="Component_CMND_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="CMND_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_ATM_CODE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_MANAGER.ATM_CODE"/>
+            </properties>
+          </component>
+          <component id="Component_ATM_CODE_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ATM_CODE_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_NO_ACC_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_MANAGER.NO_ACC"/>
+            </properties>
+          </component>
+          <component id="Component_NO_ACC_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NO_ACC_DscField4"/>
+            </properties>
+          </component>
+          <component id="Component_BANK_NAME_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_MANAGER.BANK_NAME"/>
+            </properties>
+          </component>
+          <component id="Component_BANK_NAME_DscField5"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="BANK_NAME_DscField5"/>
+            </properties>
+          </component>
+          <component id="Component_USER_UPDATED_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_MANAGER.USER_UPDATED"/>
+            </properties>
+          </component>
+          <component id="Component_USER_UPDATED_DscField6"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="USER_UPDATED_DscField6"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_UPDATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_MANAGER.DATE_UPDATE"/>
+            </properties>
+          </component>
+          <component id="Component_DATE_UPDATE_DscField7"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="DATE_UPDATE_DscField7"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_ATM_MANAGER.NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_DscField8"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_DscField8"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

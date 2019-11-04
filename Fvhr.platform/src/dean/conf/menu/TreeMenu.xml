@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TreeMenu>
+	<menuitem id="DSC_USER" type="module"
+		icon="/dsc/echo2app/resource/image/group.png">
+		<menuitem id="CHPWD" type="program"
+			icon="/dsc/echo2app/resource/image/key.png" />
+		<menuitem id="DSPB00" type="program" />
+		<menuitem id="DSPB01" type="program" />
+		<menuitem id="HRAdmin" type="program" />
+	</menuitem>
+	<menuitem id="QLNS" type="module">
+		<menuitem id="HRData" type="module">
+			<menuitem id="Employee01M" type="program" />
+			<menuitem id="BangChamCong" type="program" />
+			<menuitem id="NDataDaily" type="program" />
+			<menuitem id="XNDL" type="program" />
+			<menuitem id="ExportExelICcard" type="program"></menuitem>
+			<menuitem id="KiemTraHopDong" type="program" />
+			<menuitem id="N_GET_DATAMAIN00M" type="program"></menuitem>
+			<menuitem id="Quanlydanhsachphongban" type="module">
+				<menuitem id="N_FACTORY00M" type="program"></menuitem>
+				<menuitem id="N_DEPT_NAME00M" type="program"></menuitem>
+				<menuitem id="N_DEPARTMENT00M" type="program"></menuitem>
+			</menuitem>
+			<menuitem id="DieuDong" type="module">
+				<menuitem id="Dieudongdonvi" type="program" />
+				<menuitem id="ChangeDepsn_view" type="program" />
+			</menuitem>
+			<menuitem id="WorkingData" type="module">
+				<menuitem id="DanhSachCongViec" type="program" />
+				<menuitem id="PhanCongCongViec" type="program" />
+			</menuitem>
+			<!-- Tien -->
+			<menuitem id="Quanlycalamviec" type="module">
+				<menuitem id="RegisterShift" type="program" />
+				<menuitem id="QL_SPWDAY" type="program" />
+			</menuitem>
+			<!-- end Tien -->
+			<menuitem id="TTBaoHiem" type="module">
+				<menuitem id="ThongTinBHYT" type="program" />
+				<menuitem id="ThongTinBHXH" type="program" />
+				<menuitem id="ThongTinNoiDKKCB" type="program" />
+				<menuitem id="N_CHANGE_HOSPITAL" type="program"></menuitem>
+			</menuitem>
+
+			<menuitem id="QLPhep" type="program" />
+			<menuitem id="DKTangca" type="program" />
+			<menuitem id="ChangeICCard" type="program" />
+			<!-- H.A -->
+			<menuitem id="N_EMP_QUIT" type="program" />
+			<menuitem id="N_KYLUAT01MProgram" type="program" />
+			<menuitem id="TSAN_VSOM_CNHO" type="module">
+				<menuitem id="N_TIME_BEAR01M" type="program" />
+				<menuitem id="DKTROCAP_CONNHO" type="program" />
+				<menuitem id="Bear" type="program" />
+			</menuitem>
+			<menuitem id="QLLuongCBHD" type="module">
+				<menuitem id="lenchuc_lenluong" type="program" />
+				<menuitem id="ghhd" type="program" />
+				<menuitem id="labour" type="program" />
+			</menuitem>
+			<!-- Het H.A -->
+		</menuitem>
+
+		<menuitem id="AccountingData" type="module">
+			<menuitem id="ABasicData" type="module">
+				<menuitem id="DanhSachUngLuong" type="program" />
+				<menuitem id="AtmManager01" type="program" />
+				<menuitem id="ListDependent01" type="program" />
+				<menuitem id="Emp_Dependent" type="program" />
+				<menuitem id="DeductOther01M" type="program" />
+				<menuitem id="N_BONUS" type="program" />
+				<menuitem id="MST" type="program" />
+				<menuitem id="TangCaNgoai" type="program" />
+				<menuitem id="JOB_INFO" type="program" />
+				<menuitem id="KTTamung" type="program" />
+				<menuitem id="TienThuongT13" type="program" />
+				<menuitem id="BH_OmDau_ThaiSan" type="program" />
+				<menuitem id="DSHR7100M" type="program"></menuitem>
+			</menuitem>
+			<menuitem id="SalaryData" type="module">
+				<!-- <menuitem id="ExcelSalaryData" type="program" /> -->
+				<menuitem id="LuongThoiViec" type="program" />
+				<menuitem id="luongthangtruoc" type="program" />
+				<menuitem id="ATT" type="program" />
+				-->
+				<menuitem id="KiemTraTienTruBHYT" type="program" />
+			</menuitem>
+		</menuitem>
+		<menuitem id="HRReport" type="module">
+			<!--menuitem id="InsuranseReport" type="program" / -->
+			<!-- <menuitem id="N_HEALTH_R" type="program" /> -->
+			<menuitem id="BangUngTienBH" type="program" />
+			<menuitem id="BaoCaoTongHop" type="program" />
+			<menuitem id="BaocaoTonghopOld" type="program"></menuitem>
+			<menuitem id="BaoCaoCR" type="program" />
+			<menuitem id="BaoCaoTangCa" type="program" />
+			<menuitem id="CNVThuViecHH" type="program" />
+			<menuitem id="Ducls" type="program" />
+			<menuitem id="QuitWorkReport" type="module">
+				<menuitem id="QuitWork00R" type="program" />
+			</menuitem>
+			<menuitem id="ATTReport" type="module">
+				<menuitem id="ATTReport" type="program" />
+				<menuitem id="Salary2Excel" type="program" />
+			</menuitem>
+
+			<!-- H.A -->
+			<menuitem id="BaoCaoBaoHiem" type="module">
+				<!-- Chay ds hien hanh cuoi thang de so sanh luong, ngay cong, cap nhat 
+					ky trinh va QT20.... -->
+				<menuitem id="CapNhatKyTrinhXHTN" type="program" />
+				<!-- Chay trinh ky Rody -->
+				<menuitem id="KyTrinhRody" type="program" />
+				<!-- Cac loai bao cao cho bao hiem: Tang, giam, QT20 tay,v.v.v.v -->
+				<menuitem id="InsuranseReport" type="program" />
+				<!--Ap dung 2 lan trong thang :092013 Cac loai bao cao cho bao hiem: 
+					Tang, giam, QT20 tay,v,v,v,v -->
+				<menuitem id="InsuranseReport2Lan" type="program" />
+				<menuitem id="HealthProgram" type="program" />
+				<menuitem id="HealthInsurance" type="program" />
+			</menuitem>
+			<!--Het H.A -->
+
+		</menuitem>
+		<menuitem id="Training" type="module">
+			<menuitem id="MonHoc" type="program" />
+			<menuitem id="KhoaHoc" type="program" />
+			<menuitem id="TrainerList" type="program" />
+			<menuitem id="TTHuanLuyen" type="program" />
+			
+		</menuitem>
+		<menuitem id="DLIT" type="module">
+			<menuitem id="N_GET_DATAMAIN00M" type="program"></menuitem>
+		<menuitem id="N_ACTION_DAILY00M" type="program"></menuitem>
+			
+		</menuitem>
+	</menuitem>
+</TreeMenu>
+<!-- 增加模組三個步驟 1�TreeMenu.Treemenu.xml 2�ProgramIDClass.ProgramIDClass.properties 
+	3�ModuleProgramName.TaskIDClass.properties -->

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+
+
+
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+
+<property name="separatorPosition" value="26px"/>
+</properties>
+<children>
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Tháng: "/>
+</properties>
+</component>
+<component id="Component_sfMonth" type="nextapp.echo2.app.SelectField" visibility="private"/>
+<component id="Component_label5" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Năm: "/>
+</properties>
+</component>
+<component id="Component_sfYear" type="nextapp.echo2.app.SelectField" visibility="private"/>
+</children>
+<properties>
+
+
+</properties>
+</component>
+<component id="Component_splitPane2" type="nextapp.echo2.app.SplitPane">
+<children>
+<component id="Component_conditionGrid" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+
+<component id="Component_radEmpsn" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Chọn theo số thẻ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="font">
+<font bold="true" size="10pt" underline="true"/>
+</property>
+<property name="actionCommand" value="cmd_emp"/>
+<property name="buttonGroup" value="group_emp"/>
+<property name="selected" value="true"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="empGroupSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Số thẻ"/>
+</properties>
+</component>
+<component id="Component_txtEmpsn" type="dsc.echo2app.component.DscField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="maximumLength" value="8"/>
+
+<property name="inputType" value="dsc.echo2app.component.DscField.INPUT_TYPE_TEXT"/>
+</properties>
+
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doSearch"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radDept" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Chọn theo đơn vị"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+<property name="font">
+<font bold="true" size="10pt" underline="true"/>
+</property>
+<property name="actionCommand" value="cmd_dept"/>
+<property name="buttonGroup" value="group_emp"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="empGroupSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Xưởng"/>
+</properties>
+</component>
+<component id="Component_sfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="100px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="sfFactChanged"/>
+</event-set>
+</events>
+</component>
+
+
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Lean"/>
+</properties>
+</component>
+<component id="Component_sfLean" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="140px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="sfLeanChanged"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label6" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đơn vị"/>
+</properties>
+</component>
+<component id="Component_sfDept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="180px"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+
+</component>
+
+
+
+
+</children>
+<properties>
+
+<property name="insets" value="4px"/>
+</properties>
+</component>
+<component id="Component_conditionGrid2" type="nextapp.echo2.app.Grid" visibility="private">
+<children>
+<component id="Component_radATM" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+
+
+<property name="text" value="Nhóm ATM"/>
+
+
+
+<property name="buttonGroup" value="group_emp"/>
+<property name="font">
+<font bold="true" size="10pt" underline="true"/>
+</property>
+<property name="actionCommand" value="cmd_atm_group"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="empGroupSelected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_sfATM" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_radDeptGroup" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+
+<property name="buttonGroup" value="group_emp"/>
+<property name="font">
+<font bold="true" size="10pt" underline="true"/>
+</property>
+
+
+<property name="text" value="Chọn theo nhóm đơn vị "/>
+<property name="actionCommand" value="cmd_dept_group"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="empGroupSelected"/>
+</event-set>
+</events>
+</component>
+
+<component id="Component_sfDeptGroup" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+<component id="Component_chkATM" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Phân nhóm theo"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="enabled" value="false"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="atmOption"/>
+</event-set>
+</events>
+</component>
+<component id="Component_leanGrid" type="nextapp.echo2.app.Grid" visibility="private">
+<properties>
+<property name="size" value="1"/>
+
+<property name="enabled" value="false"/>
+</properties>
+<children>
+
+
+
+
+
+
+
+
+
+
+
+<component id="Component_radLeanCBATM" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="CB sử dụng ATM"/>
+<property name="buttonGroup" value="rad1"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radLeanCB0ATM" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="CB không sử dụng ATM"/>
+<property name="buttonGroup" value="rad1"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radLeanCNATM" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="buttonGroup" value="rad1"/>
+<property name="text" value="CN sử dụng ATM"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radLeanCN0ATM" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="buttonGroup" value="rad1"/>
+<property name="text" value="CN không sử dụng ATM"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radLeanCNCB0ATM" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="buttonGroup" value="rad1"/>
+<property name="text" value="CN_CB không theo nhóm ATM"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+</properties>
+</component>
+<component id="Component_radLeanCNCBATM" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="buttonGroup" value="rad1"/>
+
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="text" value="CN_CB theo nhóm ATM"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="size" value="1"/>
+<property name="insets" value="4px"/>
+</properties>
+</component>
+</children>
+<properties>
+
+
+<property name="separatorPosition" value="250px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

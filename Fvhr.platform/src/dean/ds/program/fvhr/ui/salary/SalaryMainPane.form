@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_splitPane" type="nextapp.echo2.app.SplitPane" visibility="private">
+<children>
+<component id="Component_browserContent" type="dsc.echo2app.program.BrowserContent" visibility="private"/>
+<component id="Component_dataContent" type="ds.program.fvhr.ui.salary.AwesomeSalaryDataContent" visibility="private"/>
+</children>
+<properties>
+<property name="resizable" value="true"/>
+
+<property name="separatorHorizontalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitHerzBar.png"/>
+</image>
+</fill-image>
+</property>
+<property name="separatorPosition" value="300px"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

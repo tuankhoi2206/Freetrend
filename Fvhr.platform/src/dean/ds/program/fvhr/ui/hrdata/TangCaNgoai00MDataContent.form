@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_EMPSN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_TCA_NGOAI_NV.EMPSN"/>
+            </properties>
+          </component>
+          <component id="Component_EMPSN_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="EMPSN_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_NAM_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_TCA_NGOAI_NV.NAM"/>
+            </properties>
+          </component>
+          <component id="Component_NAM_SelectField1"
+            type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="NAM_SelectField1"/>
+            </properties>
+          </component>
+          <component id="Component_THANG_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_TCA_NGOAI_NV.THANG"/>
+            </properties>
+          </component>
+          <component id="Component_THANG_SelectField2"
+            type="nextapp.echo2.app.SelectField" visibility="private">
+            <properties>
+              <property name="id" value="THANG_SelectField2"/>
+            </properties>
+          </component>
+          <component id="Component_TCA_NGAY_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_TCA_NGOAI_NV.TCA_NGAY"/>
+            </properties>
+          </component>
+          <component id="Component_TCA_NGAY_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TCA_NGAY_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_TCA_DEM_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_TCA_NGOAI_NV.TCA_DEM"/>
+            </properties>
+          </component>
+          <component id="Component_TCA_DEM_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TCA_DEM_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_TCA_CN_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_TCA_NGOAI_NV.TCA_CN"/>
+            </properties>
+          </component>
+          <component id="Component_TCA_CN_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TCA_CN_DscField4"/>
+            </properties>
+          </component>
+          <component id="Component_TCA_LE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_TCA_NGOAI_NV.TCA_LE"/>
+            </properties>
+          </component>
+          <component id="Component_TCA_LE_DscField5"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="TCA_LE_DscField5"/>
+            </properties>
+          </component>
+          <component id="Component_SODEM_TIENCOM_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_TCA_NGOAI_NV.SODEM_TIENCOM"/>
+            </properties>
+          </component>
+          <component id="Component_SODEM_TIENCOM_DscField6"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="SODEM_TIENCOM_DscField6"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="N_N_TCA_NGOAI_NV.NOTE"/>
+            </properties>
+          </component>
+          <component id="Component_NOTE_TextArea1"
+            type="nextapp.echo2.app.TextArea" visibility="private">
+            <properties>
+              <property name="id" value="NOTE_TextArea1"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

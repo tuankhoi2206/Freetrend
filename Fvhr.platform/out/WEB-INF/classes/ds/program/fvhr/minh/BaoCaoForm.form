@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane">
+<properties>
+<property name="resizable" value="false"/>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="separatorPosition" value="80px"/>
+</properties>
+<children>
+<component id="Component_contentPane2" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+
+<component id="Component_button1" type="nextapp.echo2.app.Button">
+<properties>
+<property name="text" value="BÁO CÁO BẢO HIỂM THEO THÁNG"/>
+<property name="foreground" value="#ff0000"/>
+<property name="font">
+<font size="20pt"/>
+</property>
+<property name="width" value="600px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="200px 20px 0px 20px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+<component id="Component_splitPane2" type="nextapp.echo2.app.SplitPane">
+<children>
+<component id="Component_column1" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_ckbLan1" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Chạy ký trình lần 1"/>
+<property name="foreground" value="#136993"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverForeground" value="#43afc2"/>
+<property name="selected" value="true"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row15" type="nextapp.echo2.app.Row">
+<children>
+
+</children>
+</component>
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Tháng"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_slfThang" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="50px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="20px 5px 0px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="năm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="20px 5px 0px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_slfNam" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="70px"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="20px 5px 10px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row4" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label4" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Xưởng"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_slfXuong" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="19px 5px 10px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="187px"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row5" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label5" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Nhóm"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_slfNhom" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="25px 5px 10px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="187px"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row6" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label6" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đơn vị"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="0px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_slfDonvi" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="19px 5px 10px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="width" value="187px"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row8" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label7" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Lựa chọn"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="50px 10px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="foreground" value="#136993"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row7" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_column4" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_row11" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_rbtnXH" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="5px 5px 5px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="rolloverForeground" value="#43afc2"/>
+<property name="foreground" value="#136993"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="text" value="Báo Cáo BHXH"/>
+</properties>
+</component>
+<component id="Component_rbtnTN" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="5px 5px 5px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="rolloverForeground" value="#43afc2"/>
+<property name="foreground" value="#136993"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="text" value="Báo Cáo BHTN"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row12" type="nextapp.echo2.app.Row">
+<children>
+
+<component id="Component_rbtnXHTN" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="insets" value="5px 5px 5px 5px"/>
+</properties>
+</layout-data>
+</property>
+<property name="rolloverForeground" value="#43afc2"/>
+<property name="foreground" value="#136993"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="text" value="BC BHXH_TN"/>
+<property name="selected" value="true"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</children>
+<properties>
+<property name="border">
+<border color="#000000" size="1px" style="solid"/>
+</property>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+
+<property name="insets" value="0px 0px 5px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_row9" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnBCTH" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="foreground" value="#ffffff"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+
+<property name="width" value="125px"/>
+
+<property name="insets" value="0px 20px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+
+<property name="rolloverEnabled" value="true"/>
+
+<property name="text" value="BC TỔNG HỢP"/>
+<property name="insets" value="0px 10px"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="background" value="#43afc2"/>
+</properties>
+</component>
+<component id="Component_btnExcel" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="foreground" value="#ffffff"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+
+<property name="width" value="125px"/>
+</properties>
+</layout-data>
+</property>
+
+<property name="rolloverEnabled" value="true"/>
+
+<property name="text" value="XUẤT EXCEL"/>
+<property name="insets" value="0px 10px"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="background" value="#43afc2"/>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</component>
+<component id="Component_row10" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnBCCT" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="foreground" value="#ffffff"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+
+<property name="width" value="125px"/>
+</properties>
+</layout-data>
+</property>
+
+<property name="rolloverEnabled" value="true"/>
+
+<property name="text" value="BC CHI TIẾT"/>
+<property name="insets" value="0px 10px"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="background" value="#43afc2"/>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+</properties>
+</component>
+<component id="Component_btnHuy" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="foreground" value="#ffffff"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+<property name="width" value="125px"/>
+</properties>
+</layout-data>
+</property>
+
+<property name="rolloverEnabled" value="true"/>
+
+<property name="text" value="BỎ QUA"/>
+<property name="insets" value="0px 10px"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="background" value="#43afc2"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</component>
+<component id="Component_row13" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnMua1" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="foreground" value="#ffffff"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+
+
+<property name="width" value="250px"/>
+</properties>
+</layout-data>
+</property>
+
+<property name="rolloverEnabled" value="true"/>
+
+
+<property name="insets" value="0px 10px"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="background" value="#43afc2"/>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+
+
+
+
+<property name="text" value="DANH SÁCH BỔ SUNG/THU HỒI"/>
+<property name="disabledBackground" value="#c0c0c0"/>
+<property name="disabledBorder">
+<border color="#c0c0c0" size="2px" style="groove"/>
+</property>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+
+</children>
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</component>
+<component id="Component_row14" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnMua2" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="foreground" value="#ffffff"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+
+
+<property name="width" value="250px"/>
+</properties>
+</layout-data>
+</property>
+
+<property name="rolloverEnabled" value="true"/>
+
+
+<property name="insets" value="0px 10px"/>
+<property name="border">
+<border color="#80ffff" size="2px" style="groove"/>
+</property>
+<property name="background" value="#43afc2"/>
+<property name="rolloverBorder">
+<border color="#80ffff" size="2px" style="outset"/>
+</property>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedBorder">
+<border color="#80ffff" size="2px" style="inset"/>
+</property>
+
+
+<property name="visible" value="false"/>
+<property name="text" value="CHI MUA LAN 2"/>
+</properties>
+</component>
+
+</children>
+<properties>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="insets" value="10px 0px 5px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_column2" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_tblData" type="nextapp.echo2.app.Table" visibility="private">
+<properties>
+<property name="width" value="600px"/>
+<property name="rolloverEnabled" value="true"/>
+
+<property name="border">
+<border color="#c0c0c0" size="1px" style="solid"/>
+</property>
+<property name="rolloverBackground" value="#aaf4c2"/>
+</properties>
+</component>
+<component id="Component_row" type="nextapp.echo2.app.Row" visibility="private">
+<children>
+
+</children>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="insets" value="5px 0px 0px 0px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="resizable" value="false"/>
+
+<property name="separatorPosition" value="275px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

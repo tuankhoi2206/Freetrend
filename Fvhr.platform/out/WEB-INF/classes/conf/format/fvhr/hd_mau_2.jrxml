@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="hd_2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[Select e.empsn,d.name_dept,e.fname||' '||e.lname Fname, c.id,c.limit,b.date_s, b.expire ,b.poss,d.name_dept_name,decode(length(salary),7,substr(salary,0,1)||'.'||substr(salary,2,3)||'.'||substr(salary,4,3),
+substr(salary,0,2)||'.'||substr(salary,3,3)||'.'||substr(salary,6,3)
+) as salary,
+decode(length(e.birthday),10,SUBSTR(e.BIRTHDAY,1,2),'' ) as NGAY_SINH,
+decode(length(e.birthday),10,SUBSTR(e.BIRTHDAY,4,2),'' ) as THANG_SINH,
+decode(length(e.birthday),10,SUBSTR(e.BIRTHDAY,7,4),e.birthday ) as NAM_SINH,
+SUBSTR(e.BIRTHDAY,7,4) AS NAM_SINH,e.BIRTHPLACE,e.PERMANENT_ADDRESS,e.ID_NO,e.id_place ,e.ngaycap_id as NGAY_CAP,
+ SUBSTR(TO_CHAR(B.DATE_S,'DD/MM/YYYY'),1,2) AS NGAY_KY  ,
+  SUBSTR(TO_CHAR(B.DATE_S,'DD/MM/YYYY'),4,2) AS THANG_KY  , SUBSTR(TO_CHAR(B.DATE_S,'DD/MM/YYYY'),7,4) AS NAM_KY  ,
+  SUBSTR(TO_CHAR(B.Expire,'DD/MM/YYYY'),1,2) AS NGAY_HH  , SUBSTR(TO_CHAR(B.Expire,'DD/MM/YYYY'),4,2) AS THANG_HH  ,
+  SUBSTR(TO_CHAR(B.Expire,'DD/MM/YYYY'),7,4) AS NAM_HH  , SUBSTR(TO_CHAR(e.date_hired,'DD/MM/YYYY'),1,2) AS NGAY_NX  ,
+  SUBSTR(TO_CHAR(e.date_hired,'DD/MM/YYYY'),4,2) AS THANG_NX  , SUBSTR(TO_CHAR(e.date_hired,'DD/MM/YYYY'),7,4) AS NAM_NX  ,
+  e.date_hired, e.education,b.times,d.name_group,b.id_labour From n_employee e,n_department d,  n_labour b, n_labourkind c
+  where d.name_fact='FVN' and name_group='QL' and e.depsn=d.id_dept and e.empsn=b.empsn and b.limit=c.id   and B.TIMES>1 and B.TIMES<=3
+  and b.date_s=to_date('01/08/2013','dd/mm/yyyy')]]>
+	</queryString>
+	<field name="EMPSN" class="java.lang.String"/>
+	<field name="NAME_DEPT" class="java.lang.String"/>
+	<field name="FNAME" class="java.lang.String"/>
+	<field name="ID" class="java.lang.String"/>
+	<field name="LIMIT" class="java.lang.String"/>
+	<field name="DATE_S" class="java.sql.Timestamp"/>
+	<field name="EXPIRE" class="java.sql.Timestamp"/>
+	<field name="POSS" class="java.lang.String"/>
+	<field name="NAME_DEPT_NAME" class="java.lang.String"/>
+	<field name="SALARY" class="java.lang.String"/>
+	<field name="NGAY_SINH" class="java.lang.String"/>
+	<field name="THANG_SINH" class="java.lang.String"/>
+	<field name="NAM_SINH" class="java.lang.String"/>
+	<field name="BIRTHPLACE" class="java.lang.String"/>
+	<field name="PERMANENT_ADDRESS" class="java.lang.String"/>
+	<field name="ID_NO" class="java.lang.String"/>
+	<field name="ID_PLACE" class="java.lang.String"/>
+	<field name="NGAY_CAP" class="java.sql.Timestamp"/>
+	<field name="NGAY_KY" class="java.lang.String"/>
+	<field name="THANG_KY" class="java.lang.String"/>
+	<field name="NAM_KY" class="java.lang.String"/>
+	<field name="NGAY_HH" class="java.lang.String"/>
+	<field name="THANG_HH" class="java.lang.String"/>
+	<field name="NAM_HH" class="java.lang.String"/>
+	<field name="NGAY_NX" class="java.lang.String"/>
+	<field name="THANG_NX" class="java.lang.String"/>
+	<field name="NAM_NX" class="java.lang.String"/>
+	<field name="DATE_HIRED" class="java.sql.Timestamp"/>
+	<field name="EDUCATION" class="java.lang.String"/>
+	<field name="TIMES" class="java.math.BigDecimal"/>
+	<field name="NAME_GROUP" class="java.lang.String"/>
+	<field name="ID_LABOUR" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<textField>
+				<reportElement x="219" y="305" width="114" height="24"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SALARY}.toString()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="538" y="0" width="17" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_PB_ID_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="SYSID"/>
+            </properties>
+          </component>
+          <component id="Component_PB_ID_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_ID_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_PB_PRG_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_PRG"/>
+            </properties>
+          </component>
+          <component id="Component_PB_PRG_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_PRG_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_PB_NA_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_NA"/>
+            </properties>
+          </component>
+          <component id="Component_PB_NA_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_NA_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_MENUID_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="MENUID"/>
+            </properties>
+          </component>
+          <component id="Component_MENUID_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="MENUID_DscField4"/>
+            </properties>
+          </component>
+          <component id="Component_PB_SYSID_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_SYSID"/>
+            </properties>
+          </component>
+          <component id="Component_PB_SYSID_DscField5"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_SYSID_DscField5"/>
+            </properties>
+          </component>
+          <component id="Component_PB_SUBID_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="DSPB00.PB_SUBID"/>
+            </properties>
+          </component>
+          <component id="Component_PB_SUBID_DscField6"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_SUBID_DscField6"/>
+            </properties>
+          </component>
+          <component id="Component_ISOK_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="DSPB00.ISOK"/>
+            </properties>
+          </component>
+          <component id="Component_ISOK_DscField7"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="ISOK_DscField7"/>
+            </properties>
+          </component>
+          <component id="Component_UP_DATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="UP_DATE"/>
+            </properties>
+          </component>
+          <component id="Component_UP_DATE_DscDateField1"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="UP_DATE_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_UP_USER_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="UP_USER"/>
+            </properties>
+          </component>
+          <component id="Component_UP_USER_DscField8"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="UP_USER_DscField8"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

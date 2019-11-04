@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+    <children>
+      <component id="Component_rootLayout" type="nextapp.echo2.app.Grid" visibility="private">
+        <children>
+          <component id="Component_PB_USERID_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_USERID"/>
+            </properties>
+          </component>
+          <component id="Component_PB_USERID_DscField1"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_USERID_DscField1"/>
+            </properties>
+          </component>
+          <component id="Component_PB_NAME_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_NAME"/>
+            </properties>
+          </component>
+          <component id="Component_PB_NAME_DscField2"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_NAME_DscField2"/>
+            </properties>
+          </component>
+          <component id="Component_PB_CNAME_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_CNAME"/>
+            </properties>
+          </component>
+          <component id="Component_PB_CNAME_DscField3"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_CNAME_DscField3"/>
+            </properties>
+          </component>
+          <component id="Component_PB_PASS_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_PASS"/>
+            </properties>
+          </component>
+          <component id="Component_PB_PASS_DscField4"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_PASS_DscField4"/>
+            </properties>
+          </component>
+          <component id="Component_PB_DPNO_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_DPNO"/>
+            </properties>
+          </component>
+          <component id="Component_PB_DPNO_DscField5"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_DPNO_DscField5"/>
+            </properties>
+          </component>
+          <component id="Component_PB_EMAIL_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_EMAIL"/>
+            </properties>
+          </component>
+          <component id="Component_PB_EMAIL_DscField6"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_EMAIL_DscField6"/>
+            </properties>
+          </component>
+          <component id="Component_PB_EMPASSWD_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_EMPASSWD"/>
+            </properties>
+          </component>
+          <component id="Component_PB_EMPASSWD_DscField7"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_EMPASSWD_DscField7"/>
+            </properties>
+          </component>
+          <component id="Component_PB_EMUSER_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_EMUSER"/>
+            </properties>
+          </component>
+          <component id="Component_PB_EMUSER_DscField8"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_EMUSER_DscField8"/>
+            </properties>
+          </component>
+          <component id="Component_PB_FANO_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="PB_FANO"/>
+            </properties>
+          </component>
+          <component id="Component_PB_FANO_DscField9"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="PB_FANO_DscField9"/>
+            </properties>
+          </component>
+          <component id="Component_UP_DATE_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="UP_DATE"/>
+            </properties>
+          </component>
+          <component id="Component_UP_DATE_DscDateField1"
+            type="dsc.echo2app.component.DscDateField" visibility="private">
+            <properties>
+              <property name="id" value="UP_DATE_DscDateField1"/>
+            </properties>
+          </component>
+          <component id="Component_UP_USER_CaptionLabel"
+            type="nextapp.echo2.app.Label" visibility="private">
+            <properties>
+              <property name="text" value="UP_USER"/>
+            </properties>
+          </component>
+          <component id="Component_UP_USER_DscField10"
+            type="dsc.echo2app.component.DscField" visibility="private">
+            <properties>
+              <property name="id" value="UP_USER_DscField10"/>
+            </properties>
+          </component>
+        </children>
+        <properties>
+          <property name="size" value="4"/>
+          <property name="width" value="100%"/>
+        </properties>
+      </component>
+    </children>
+  </component>
+</form>

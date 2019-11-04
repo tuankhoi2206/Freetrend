@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<properties>
+<property name="styleName" value="Default.Window"/>
+<property name="modal" value="true"/>
+<property name="title" value="Kiểm tra dữ liệu quét thẻ"/>
+<property name="height" value="500px"/>
+<property name="width" value="600px"/>
+<property name="defaultCloseOperation" value="nextapp.echo2.app.WindowPane.DISPOSE_ON_CLOSE"/>
+</properties>
+<children>
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="resizable" value="true"/>
+<property name="separatorVerticalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitVertBar.png"/>
+</image>
+</fill-image>
+</property>
+</properties>
+<children>
+<component id="Component_column1" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Từ ngày"/>
+</properties>
+</component>
+<component id="Component_sfFrom" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="upDays"/>
+</event-set>
+</events>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="Đến ngày"/>
+</properties>
+</component>
+<component id="Component_sfTo" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="upDays"/>
+</event-set>
+</events>
+</component>
+<component id="Component_lblMonth" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="()"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="5px"/>
+</properties>
+</component>
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_lblTitle" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="foreground" value="#008080"/>
+<property name="text" value="Số ngày phải làm: "/>
+</properties>
+</component>
+<component id="Component_lblDaysOfMonth" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="31"/>
+<property name="foreground" value="#ff0000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="5px"/>
+</properties>
+</component>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_chkOption" type="nextapp.echo2.app.CheckBox" visibility="private">
+<properties>
+<property name="text" value="Chỉ liệt kê dữ liệu chênh lệch"/>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_row4" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_btnSearch" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="text" value="Tìm kiếm"/>
+<property name="border">
+<border color="#004080" size="1px" style="solid"/>
+</property>
+<property name="background" value="#c0c0c0"/>
+<property name="foreground" value="#004000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="insets" value="3px"/>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedForeground" value="#00ff00"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverForeground" value="#ff8000"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/btnQuery.gif"/>
+</property>
+</properties>
+</component>
+<component id="Component_btnExcel" type="nextapp.echo2.app.Button" visibility="private">
+<properties>
+<property name="border">
+<border color="#004080" size="1px" style="solid"/>
+</property>
+<property name="background" value="#c0c0c0"/>
+<property name="foreground" value="#004000"/>
+<property name="font">
+<font bold="true" size="10pt"/>
+</property>
+<property name="insets" value="3px"/>
+<property name="pressedEnabled" value="true"/>
+<property name="pressedForeground" value="#00ff00"/>
+<property name="rolloverEnabled" value="true"/>
+<property name="rolloverForeground" value="#ff8000"/>
+<property name="text" value="Xuất ra Excel"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/btnExcel.gif"/>
+</property>
+<property name="disabledForeground" value="#808080"/>
+<property name="enabled" value="false"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="5px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="5px"/>
+<property name="insets" value="5px 0px 0px 0px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

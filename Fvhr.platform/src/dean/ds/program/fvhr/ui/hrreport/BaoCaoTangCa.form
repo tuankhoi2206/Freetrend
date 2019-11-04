@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_splitPane" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="resizable" value="true"/>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="separatorVerticalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitVertBar.png"/>
+</image>
+</fill-image>
+</property>
+</properties>
+<children>
+<component id="Component_conditionSplitPane" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+
+
+<property name="separatorHorizontalImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/SplitHerzBar.png"/>
+</image>
+</fill-image>
+</property>
+<property name="resizable" value="true"/>
+<property name="separatorPosition" value="265px"/>
+</properties>
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+
+<property name="text" value="Xưởng"/>
+</properties>
+</component>
+<component id="Component_sfFact" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="factChanged"/>
+</event-set>
+</events>
+<properties>
+<property name="width" value="210px"/>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label">
+<properties>
+
+<property name="text" value="Nhóm"/>
+</properties>
+</component>
+<component id="Component_sfLean" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="leanChanged"/>
+</event-set>
+</events>
+<properties>
+<property name="width" value="210px"/>
+</properties>
+</component>
+<component id="Component_label3" type="nextapp.echo2.app.Label">
+<properties>
+
+<property name="text" value="Đơn vị"/>
+</properties>
+</component>
+<component id="Component_sfDept" type="nextapp.echo2.app.SelectField" visibility="private">
+<properties>
+<property name="width" value="210px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="3px"/>
+</properties>
+</component>
+<component id="Component_paramSplitPane" type="nextapp.echo2.app.SplitPane" visibility="private">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+
+<property name="separatorPosition" value="35px"/>
+</properties>
+<children>
+
+
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_radBC" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Báo cáo tổng hợp tháng"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="background" value="#0080c0"/>
+</properties>
+</layout-data>
+</property>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="buttonGroup" value="opt"/>
+<property name="selected" value="true"/>
+<property name="foreground" value="#80ffff"/>
+<property name="width" value="120px"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="rad1selected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radCR" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="OT Tracking form"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="background" value="#008080"/>
+</properties>
+</layout-data>
+</property>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="buttonGroup" value="opt"/>
+<property name="foreground" value="#80ffff"/>
+<property name="width" value="120px"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="rad2selected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radRS" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="TCa theo ngày"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="background" value="#8080c0"/>
+</properties>
+</layout-data>
+</property>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="buttonGroup" value="opt"/>
+<property name="foreground" value="#80ffff"/>
+<property name="width" value="120px"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="rad3selected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radBCThang" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="TS giờ TCa tháng"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="background" value="#804040"/>
+</properties>
+</layout-data>
+</property>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="buttonGroup" value="opt"/>
+<property name="foreground" value="#80ffff"/>
+<property name="width" value="120px"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="rad4selected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radQTQuaGio" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Quét thẻ quá giờ"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="background" value="#ff8000"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+</properties>
+</layout-data>
+</property>
+<property name="buttonGroup" value="opt"/>
+<property name="foreground" value="#80ffff"/>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="width" value="120px"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="rad5selected"/>
+</event-set>
+</events>
+</component>
+<component id="Component_radTTGT" type="nextapp.echo2.app.RadioButton" visibility="private">
+<properties>
+<property name="text" value="Trực tiếp - Gián tiếp"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="background" value="#008040"/>
+</properties>
+</layout-data>
+</property>
+<property name="alignment">
+<alignment horizontal="center"/>
+</property>
+<property name="buttonGroup" value="opt"/>
+<property name="foreground" value="#80ffff"/>
+<property name="width" value="120px"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="rad6selected"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+<property name="cellSpacing" value="1px"/>
+<property name="background" value="#c0c0c0"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

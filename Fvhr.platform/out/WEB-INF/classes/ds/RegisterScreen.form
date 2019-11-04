@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<children>
+
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane">
+<children>
+<component id="Component_grid1" type="nextapp.echo2.app.Grid">
+<children>
+<component id="Component_title" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.GridLayoutData">
+<properties>
+<property name="columnSpan" value="2"/>
+</properties>
+</layout-data>
+</property>
+
+<property name="foreground" value="#ff0000"/>
+<property name="text" value="REG"/>
+<property name="font">
+<font bold="true" size="14pt"/>
+</property>
+</properties>
+</component>
+<component id="Component_label2" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="label2"/>
+</properties>
+</component>
+<component id="Component_sn_textfield" type="nextapp.echo2.app.TextField" visibility="private"/>
+<component id="Component_label3" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="label3"/>
+</properties>
+</component>
+<component id="Component_username_textfield" type="nextapp.echo2.app.TextField" visibility="private"/>
+<component id="Component_label4" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+<property name="text" value="label4"/>
+</properties>
+</component>
+<component id="Component_mail_textfield" type="nextapp.echo2.app.TextField" visibility="private"/>
+</children>
+<properties>
+<property name="width" value="100%"/>
+</properties>
+</component>
+<component id="Component_column1" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_button1" type="nextapp.echo2.app.Button">
+<properties>
+
+<property name="text" value="OK"/>
+<property name="alignment">
+<alignment horizontal="right" vertical="center"/>
+</property>
+<property name="foreground" value="#0000ff"/>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="doRegister"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+
+<property name="insets" value="0px 0px 10px 0px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+
+<property name="separatorPosition" value="140px"/>
+</properties>
+</component>
+</children>
+<properties>
+
+
+<property name="height" value="210px"/>
+<property name="width" value="350px"/>
+<property name="styleName" value="Default.Window"/>
+</properties>
+</component>
+</children>
+</component>
+</form>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form resource-bundle="baocaobh.resource.localization.Messages" resource-bundle-id="resourceBundle">
+<component id="Component_windowPane1" type="nextapp.echo2.app.WindowPane">
+<properties>
+<property name="styleName" value="Default"/>
+<property name="modal" value="true"/>
+</properties>
+<children>
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane">
+<properties>
+
+
+<property name="styleName" value="ControlPane.Container.Bottom"/>
+</properties>
+<children>
+<component id="Component_controlsRow" type="nextapp.echo2.app.Row" visibility="private">
+<properties>
+<property name="styleName" value="ControlPane"/>
+</properties>
+</component>
+<component id="Component_contentLabel" type="nextapp.echo2.app.Label" visibility="private">
+<properties>
+
+<property name="styleName" value="MessageDialog.ContentLabel"/>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="insets" value="10px 5px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+</children>
+</component>
+</form>

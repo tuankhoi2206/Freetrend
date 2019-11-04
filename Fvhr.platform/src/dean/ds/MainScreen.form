@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form resource-bundle="resource.localization.UICaption" resource-bundle-id="resourceBundle">
+<component id="Component_contentPane1" type="nextapp.echo2.app.ContentPane">
+<children>
+
+<component id="Component_spUp" type="nextapp.echo2.app.SplitPane">
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+
+<property name="separatorHeight" value="1px"/>
+
+<property name="separatorColor" value="#808080"/>
+
+
+
+
+<property name="separatorPosition" value="60px"/>
+</properties>
+<children>
+
+
+<component id="Component_contentPane2" type="nextapp.echo2.app.ContentPane">
+<children>
+<component id="Component_column1" type="nextapp.echo2.app.Column">
+<children>
+<component id="Component_row1" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_button1" type="nextapp.echo2.app.Button">
+<properties>
+<property name="text" value="%MainScreen.CTL_TaskSchedule"/>
+
+
+<property name="styleName" value="Default.Button"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/schedule.gif"/>
+</property>
+
+<property name="font">
+<font size="11px"/>
+</property>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+
+
+
+<property name="width" value="80px"/>
+<property name="alignment">
+<alignment horizontal="left"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="actionTaskSchedule"/>
+</event-set>
+</events>
+</component>
+<component id="Component_btnLogout" type="nextapp.echo2.app.Button">
+<properties>
+
+
+<property name="text" value="%MainScreen.CTL_Logout"/>
+<property name="actionCommand" value="logout"/>
+
+
+
+
+
+
+
+
+<property name="styleName" value="Default.Button"/>
+<property name="icon" type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/logout.gif"/>
+</property>
+
+<property name="width" value="200px"/>
+<property name="font">
+<font size="11px"/>
+</property>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+
+
+
+<property name="alignment">
+<alignment horizontal="left"/>
+</property>
+<property name="insets" value="0px 0px 20px 0px"/>
+</properties>
+</layout-data>
+</property>
+<property name="alignment">
+<alignment horizontal="right"/>
+</property>
+</properties>
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="actionLogoout"/>
+</event-set>
+</events>
+</component>
+</children>
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right" vertical="bottom"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_row3" type="nextapp.echo2.app.Row">
+<children>
+<component id="Component_label1" type="nextapp.echo2.app.Label">
+<properties>
+
+<property name="text" value="%MainScreen.CTL_RunningProgram"/>
+
+
+
+<property name="font">
+<font size="11px"/>
+</property>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+
+
+
+
+
+<property name="alignment">
+<alignment horizontal="left"/>
+</property>
+<property name="width" value="80px"/>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_selRunning" type="nextapp.echo2.app.SelectField" visibility="private">
+<events>
+<event-set name="action">
+<event-handler name="actionPerformed" target="runningSelectChange"/>
+</event-set>
+</events>
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+
+
+
+
+<property name="alignment">
+<alignment horizontal="left"/>
+</property>
+<property name="insets" value="0px 0px 50px 0px"/>
+<property name="width" value="170px"/>
+</properties>
+</layout-data>
+</property>
+<property name="font">
+<font size="11px"/>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.ColumnLayoutData">
+<properties>
+<property name="alignment">
+<alignment horizontal="right" vertical="bottom"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+<property name="insets" value="0px 10px 0px 0px"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="backgroundImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/banner.gif"/>
+</image>
+</fill-image>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+<component id="Component_sppCenter" type="nextapp.echo2.app.SplitPane">
+<children>
+
+
+<component id="Component_splitPane1" type="nextapp.echo2.app.SplitPane">
+<children>
+<component id="Component_row2" type="nextapp.echo2.app.Row">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+
+<property name="backgroundImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/label.gif"/>
+</image>
+</fill-image>
+</property>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+</properties>
+</layout-data>
+</property>
+
+
+</properties>
+<children>
+<component id="Component_lblProgramList" type="nextapp.echo2.app.Label">
+<properties>
+<property name="text" value="%MainScreen.CTL_ProgramList"/>
+
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.RowLayoutData">
+<properties>
+<property name="width" value="100%"/>
+
+<property name="insets" value="2px"/>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+</component>
+</children>
+</component>
+<component id="Component_ctpProgramList" type="nextapp.echo2.app.ContentPane" visibility="private">
+<children/>
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData"/>
+</property>
+</properties>
+</component>
+</children>
+<properties>
+
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+
+<property name="separatorPosition" value="24px"/>
+</properties>
+</component>
+
+
+<component id="Component_splitPane2" type="nextapp.echo2.app.SplitPane">
+<children>
+<component id="Component_row5" type="nextapp.echo2.app.Row">
+<properties>
+<property name="layoutData">
+<layout-data type="nextapp.echo2.app.layout.SplitPaneLayoutData">
+<properties>
+<property name="backgroundImage">
+<fill-image repeat="repeat">
+<image type="nextapp.echo2.app.ResourceImageReference">
+<resource-image-reference resource="/dsc/echo2app/resource/image/label.gif"/>
+</image>
+</fill-image>
+</property>
+<property name="alignment">
+<alignment horizontal="center" vertical="bottom"/>
+</property>
+</properties>
+</layout-data>
+</property>
+</properties>
+<children>
+
+</children>
+</component>
+<component id="Component_ctpImageMap" type="nextapp.echo2.app.ContentPane" visibility="private">
+<children>
+
+
+</children>
+<properties>
+
+<property name="background" value="#ffffff"/>
+</properties>
+</component>
+</children>
+<properties>
+<property name="orientation" value="nextapp.echo2.app.SplitPane.ORIENTATION_VERTICAL_TOP_BOTTOM"/>
+<property name="separatorPosition" value="24px"/>
+</properties>
+</component>
+</children>
+<properties>
+
+<property name="resizable" value="true"/>
+<property name="separatorPosition" value="180px"/>
+
+
+
+
+<property name="separatorWidth" value="0px"/>
+</properties>
+</component>
+</children>
+</component>
+</children>
+<properties>
+
+</properties>
+</component>
+</form>

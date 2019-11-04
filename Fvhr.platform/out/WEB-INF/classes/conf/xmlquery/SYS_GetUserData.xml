@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QryWin>
+	<SQL>
+		<BaseCondition></BaseCondition>
+		<OrderBy></OrderBy>
+		<SQLStatement>SELECT A.* FROM (SELECT PB_USERID AS USER_ID, PB_CNAME AS USER_NAME, PB_DPNO AS DEPT_ID, DP_NAME AS DEPT_NAME, PB_EMAIL AS USER_EMAIL FROM DSPB02, DSPB10 WHERE DSPB02.PB_DPNO = DSPB10.DP_NO(+)) A</SQLStatement>
+	</SQL>
+	<Fields>
+		<Field Name="USER_ID" Caption="" Type="S" /> 
+		<Field Name="USER_NAME" Caption="" Type="S" />
+		<Field Name="DEPT_ID" Caption="" Type="S" />
+		<Field Name="DEPT_NAME" Caption="" Type="S" />
+		<Field Name="USER_EMAIL" Caption="" Type="S" />
+	</Fields>
+</QryWin>
